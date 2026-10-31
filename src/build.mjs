@@ -6,7 +6,9 @@ import { fileURLToPath } from 'node:url';
 import { company as C, sq, en } from './content.mjs';
 import { routes, ui } from './ui.mjs';
 import { products } from './products.mjs';
-import { posts } from './blog.mjs';
+import { posts as basePosts } from './blog.mjs';
+import { morePosts } from './blog-more.mjs';
+const posts = [...basePosts, ...morePosts];
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -659,7 +661,8 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const secs = t.sections.map((s) => ({ ...s, id: slugify(s.h) }));
     const og = `/assets/img/photos/${post.image}-og.jpg`;
     const text = strip([t.answer, ...t.sections.map((s) => s.html), ...t.faq.map((f) => f.q + ' ' + f.a)].join(' '));
-    const others = posts.filter((x) => x.id !== post.id).slice(0, 2);
+    const overlap = (x) => x.products.filter((id2) => post.products.includes(id2)).length;
+    const others = posts.filter((x) => x.id !== post.id).sort((a, b) => overlap(b) - overlap(a)).slice(0, 2);
     const prods = post.products.map((id2) => products.find((x) => x.id === id2));
     const faqId = slugify(u.product.faq);
     const body = `

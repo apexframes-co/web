@@ -40,6 +40,14 @@ Faktet kryesore / Key facts:
 - [DoP dhe shenja CE: si t’i lexoni](https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/): Çfarë janë DoP dhe shenja CE për dritaret dhe dyert sipas EN 14351-1, çfarë vlerash përmbajnë dhe pse duhet t’i kërkoni para porosisë.
 - [Grila me litar apo me motor?](https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/): Si të zgjidhni mes grilave me litar dhe me motor, çfarë ndryshon mes kutisë së jashtme dhe asaj të brendshme dhe çfarë të pyesni para porosisë.
 - [Montimi i dritareve në 8 hapa](https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/): Procedura standarde e montimit të dritareve dhe dyerve në 8 hapa, nga inspektimi te pastrimi, dhe një listë kontrolli për klientin.
+- [Dyer rrëshqitëse: llojet dhe si zgjidhen](https://www.apexframes.co/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/): Krahasim i dyerve ngritje-rrëshqitëse, rrëshqitëse klasike, paralel-rrëshqitëse me anim (PSK) dhe palosëse: si funksionojnë dhe kur ia vlen secila.
+- [Si të zgjidhni derën hyrëse](https://www.apexframes.co/blog/si-zgjidhet-dera-hyrese/): Çfarë të kontrolloni kur zgjidhni derën hyrëse: materiali, paneli apo xhami, hapja e majtë ose e djathtë, xhami i sigurisë, brava dhe dyert automatike.
+- [Çfarë është thyerja termike në alumin?](https://www.apexframes.co/blog/cfare-eshte-thyerja-termike/): Thyerja termike është ndarja izoluese brenda profilit të aluminit. Si funksionon, pse ka rëndësi dhe kur mjafton alumini pa thyerje termike.
+- [Xham i laminuar apo i kalitur](https://www.apexframes.co/blog/xham-i-laminuar-apo-i-kalitur/): Dallimi mes xhamit të laminuar (triplex) dhe të kalitur, ku përdoret secili në dyer, parapete dhe dritare dhe pse përmasat duhen të sakta para porosisë.
+- [Tendë me kasetë apo klasike](https://www.apexframes.co/blog/tende-dielli-me-kasete-apo-klasike/): Tenda me kasetë apo klasike, manuale apo me motor, dhe kur ia vlen një pergola alumini. Çfarë të vlerësoni për ballkonin ose tarracën tuaj.
+- [Ngjyrat e dritareve dhe dyerve](https://www.apexframes.co/blog/ngjyrat-e-dritareve-dhe-dyerve/): Ngjyrat e disponueshme për dritaret uPVC dhe aluminin, ngjyra e ndryshme brenda e jashtë, RAL dhe imitacione druri, dhe si ta harmonizoni me fasadën.
+- [Fasada xhami curtain wall: çfarë të dini](https://www.apexframes.co/blog/fasada-xhami-curtain-wall-cfare-duhet-te-dini/): Çfarë është një fasadë curtain wall, çfarë xhami përdoret, çfarë i duhet arkitektit dhe si ecën procesi nga projekti te montimi.
+- [Zhurma nga rruga: dritare akustike](https://www.apexframes.co/blog/si-te-zvogeloni-zhurmen-nga-rruga-me-dritare/): Çfarë ndikon në izolimin akustik të dritareve: xhami akustik, guarnicionet, profili dhe montimi. Si lexohet vlera Rw dhe çfarë të pyesni.
 
 # English
 
@@ -71,6 +79,14 @@ Faktet kryesore / Key facts:
 - [DoP and CE Marking: How to Read Them](https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/): What the DoP and CE marking mean for windows and doors under EN 14351-1, which values they contain and why you should request them before ordering.
 - [Strap or Motorised Shutters?](https://www.apexframes.co/en/blog/strap-or-motorised-shutters/): How to choose between strap-operated and motorised shutters, what differs between an outside and an inside box, and what to ask before ordering.
 - [Window Installation in 8 Steps](https://www.apexframes.co/en/blog/window-installation-8-steps/): The standard procedure for installing windows and doors in 8 steps, from inspection to clean-up, plus a client checklist.
+- [Sliding Doors: Types and How to Choose](https://www.apexframes.co/en/blog/sliding-doors-types-and-how-to-choose/): A comparison of lift & slide, standard sliding, parallel-slide-tilt (PSK) and folding doors: how they work and when each makes sense.
+- [How to Choose an Entrance Door](https://www.apexframes.co/en/blog/how-to-choose-an-entrance-door/): What to check when choosing an entrance door: material, panel or glass, left or right opening, safety glass, locks and automatic doors.
+- [What Is a Thermal Break in Aluminium?](https://www.apexframes.co/en/blog/what-is-a-thermal-break/): A thermal break is the insulating separator inside an aluminium profile. How it works, why it matters and when plain aluminium is enough.
+- [Laminated or Tempered Glass](https://www.apexframes.co/en/blog/laminated-or-tempered-glass/): The difference between laminated (triplex) and tempered glass, where each is used in doors, balustrades and windows and why dimensions must be exact before ordering.
+- [Cassette or Classic Awning](https://www.apexframes.co/en/blog/cassette-or-classic-awnings/): Cassette or classic awnings, manual or motorised, and when an aluminium pergola makes sense. What to assess for your balcony or terrace.
+- [Window and Door Colours](https://www.apexframes.co/en/blog/window-and-door-colours/): The colours available for uPVC and aluminium windows, different colours inside and out, RAL and wood effects, and how to match your facade.
+- [Glass Curtain Wall Facades: What to Know](https://www.apexframes.co/en/blog/curtain-wall-facades-what-to-know/): What a curtain wall facade is, which glass is used, what architects need and how the process runs from design to installation.
+- [Street Noise: Acoustic Windows](https://www.apexframes.co/en/blog/reduce-street-noise-with-windows/): What affects window sound insulation: acoustic glass, seals, profile and installation. How to read the Rw value and what to ask.
 
 ## Optional
 - [Full text of all pages](https://www.apexframes.co/llms-full.txt): përmbajtja e plotë / complete content
