@@ -1,6 +1,6 @@
 """Pregatit fotot: heq vijat e holla te mbivendosura, pret tekstin e pjekur ne imazh,
 eksporton WebP me disa madhesi + nje JPG 1200x630 per Open Graph.
-Perdorimi: python3 -I scripts/make_images.py <dosja_me_burimet>   (burimet: src-1.jpg ... src-11.jpg)"""
+Perdorimi: python3 -I scripts/make_images.py <dosja_me_burimet>   (burimet: src-1.jpg ... src-16.jpg)"""
 import json, sys, os
 import numpy as np
 from PIL import Image
@@ -47,6 +47,10 @@ JOBS = {
     'shutters2': ('src-9.jpg', (295, 268, 1080, 845), (0, 80, 785, 492), False),
     'sliding':   ('src-10.jpg', (310, 352, 1280, 1370), (0, 300, 970, 809), False),
     'roller':    ('src-11.jpg', (282, 232, 1024, 960), (0, 150, 742, 540), False),
+    'blackslider': ('src-12.jpg', (22, 352, 945, 1372), (0, 150, 923, 635), False),
+    'building':  ('src-13.jpg', (330, 250, 1280, 1290), (0, 150, 950, 649), False),
+    'profile':   ('src-14.jpg', (365, 555, 1010, 945), (0, 25, 645, 364), False),
+    'door':      ('src-16.jpg', (570, 320, 1280, 1500), (0, 60, 710, 433), False),
 }
 cache, manifest = {}, {}
 for name, job in JOBS.items():

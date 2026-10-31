@@ -165,7 +165,7 @@ export const posts = [
     },
   },
   {
-    id: 'declaration-of-performance-ce-marking', image: 'facade', date: DATE, updated: DATE, products: ['aluminium', 'upvc', 'facades'],
+    id: 'declaration-of-performance-ce-marking', image: 'building', date: DATE, updated: DATE, products: ['aluminium', 'upvc', 'facades'],
     slug: { sq: 'deklarata-e-performances-dop-shenja-ce', en: 'declaration-of-performance-ce-marking' },
     sq: {
       title: 'Deklarata e performancës (DoP) dhe shenja CE: si t’i lexoni', metaTitle: 'DoP dhe shenja CE: si t’i lexoni | Apex Frames',

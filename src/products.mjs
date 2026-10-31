@@ -51,7 +51,7 @@ export const products = [
     },
   },
   {
-    id: 'aluminium', icon: 'alu', image: 'family', related: ['doors', 'facades', 'glazing'], posts: ['upvc-or-aluminium', 'what-affects-window-prices'],
+    id: 'aluminium', icon: 'alu', image: 'family', gallery: ['profile', 'building'], related: ['doors', 'facades', 'glazing'], posts: ['upvc-or-aluminium', 'what-affects-window-prices'],
     slug: { sq: 'dritare-dyer-alumini', en: 'aluminium-windows-doors' },
     sq: {
       name: 'Alumin me thyerje termike',
@@ -99,7 +99,7 @@ export const products = [
     },
   },
   {
-    id: 'doors', icon: 'door', image: 'sliding', related: ['aluminium', 'upvc', 'glazing'], posts: ['declaration-of-performance-ce-marking'],
+    id: 'doors', icon: 'door', image: 'door', gallery: ['sliding', 'blackslider'], related: ['aluminium', 'upvc', 'glazing'], posts: ['declaration-of-performance-ce-marking'],
     slug: { sq: 'dyer-hyrese-automatike', en: 'entrance-automatic-doors' },
     sq: {
       name: 'Dyer hyrëse & automatike',

@@ -539,3 +539,8 @@ h1, h2 { letter-spacing: -.025em; text-wrap: balance; }
 .gallery figure { margin: 0; }
 .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); background: var(--paper); }
 @media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } }
+.ph-portrait { max-width: 400px; justify-self: end; width: 100%; }
+.ph-portrait img { aspect-ratio: 4 / 5; object-position: 50% 30%; }
+.gallery-1 { grid-template-columns: 1fr; }
+.gallery-1 img { aspect-ratio: 16 / 10; }
+@media (max-width: 920px) { .ph-portrait { max-width: none; } .ph-portrait img { aspect-ratio: 16 / 10; object-position: 50% 35%; } }

@@ -72,6 +72,10 @@ const ALT = {
   shutters2: { sq: 'Grila persiane të bardha të hapura në një dritare në perëndim të diellit', en: 'White louvred shutters open on a window at sunset' },
   sliding: { sq: 'Dyer rrëshqitëse me kornizë të bardhë dhe pamje nga malet', en: 'Sliding doors with a white frame and a mountain view' },
   roller: { sq: 'Grila me litar me lamela të bardha dhe kuti të jashtme', en: 'White strap-operated roller shutters with an external box' },
+  blackslider: { sq: 'Dyer rrëshqitëse me kornizë të zezë dhe pamje nga vreshtat', en: 'Black-framed sliding doors with a vineyard view' },
+  building: { sq: 'Fasadë ndërtese me dritare dhe parapete balkoni të zeza', en: 'Building facade with windows and black balcony railings' },
+  profile: { sq: 'Prerje e një profili alumini me thyerje termike dhe xham dopio', en: 'Cross-section of a thermally broken aluminium profile with double glazing' },
+  door: { sq: 'Derë hyrëse antracit me panel anësor xhami dhe dorezë të gjatë', en: 'Anthracite entrance door with a glass side panel and a long handle' },
 };
 function img(name, lang, { sizes = '100vw', eager = false, cls = '' } = {}) {
   const v = manifest[name];
@@ -234,7 +238,7 @@ function crumbs(lang, trail) {
 }
 const breadcrumbNode = (url, all) => ({ '@type': 'BreadcrumbList', '@id': url + '#breadcrumb', itemListElement: all.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: strip(c.name), item: abs(c.path) })) });
 
-const pageHero = ({ crumbHtml, label, h1, lead = '', extra = '', media = '' }) => `
+const pageHero = ({ crumbHtml, label, h1, lead = '', extra = '', media = '', mediaCls = '' }) => `
 <section class="page-hero">
   <div class="container">
     ${crumbHtml}
@@ -245,7 +249,7 @@ const pageHero = ({ crumbHtml, label, h1, lead = '', extra = '', media = '' }) =
         ${lead ? `<p class="lead">${lead}</p>` : ''}
         ${extra}
       </div>
-      ${media ? `<figure class="ph-media">${media}</figure>` : ''}
+      ${media ? `<figure class="ph-media${mediaCls}">${media}</figure>` : ''}
     </div>
   </div>
 </section>`;
@@ -426,7 +430,8 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const media = p.image ? img(p.image, lang, { sizes: '(max-width: 920px) 100vw, 480px', eager: true }) : `<div class="icon-panel">${icon(p.icon, 'ico')}</div>`;
     const relPosts = posts.filter((x) => x.products.includes(p.id)).slice(0, 3);
     const og = p.image ? `/assets/img/photos/${p.image}-og.jpg` : '/assets/img/og-image.png';
-    const body = `${pageHero({ crumbHtml: cr.html, label: u.pages.products.label, h1: t.h1, media })}
+    const mv = p.image ? manifest[p.image][manifest[p.image].length - 1] : null;
+    const body = `${pageHero({ crumbHtml: cr.html, label: u.pages.products.label, h1: t.h1, media, mediaCls: mv && mv.h / mv.w > 1.3 ? ' ph-portrait' : '' })}
 <section class="section section-tight">
   <div class="container prod-layout">
     <div class="prod-main">
@@ -434,7 +439,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       <p class="intro">${t.intro}</p>
       <h2>${pr.includes}</h2>
       ${checks(t.features)}
-      ${p.gallery ? `<div class="gallery">${p.gallery.map((g) => `<figure>${img(g, lang, { sizes: '(max-width: 600px) 100vw, 380px' })}</figure>`).join('')}</div>` : ''}
+      ${p.gallery ? `<div class="gallery${p.gallery.length === 1 ? ' gallery-1' : ''}">${p.gallery.map((g) => `<figure>${img(g, lang, { sizes: '(max-width: 600px) 100vw, 380px' })}</figure>`).join('')}</div>` : ''}
       <h2>${pr.bestFor}</h2>
       <ul class="chips">${t.bestFor.map((x) => `<li>${x}</li>`).join('')}</ul>
       <h2>${pr.faq}</h2>
