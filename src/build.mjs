@@ -56,7 +56,7 @@ const icons = {
   shutter: '<rect x="8" y="6" width="32" height="8" rx="1.5"/><path d="M10 14v26h28V14M10 20h28M10 26h28M10 32h28"/><path d="M41 10v20"/>',
   net: '<rect x="8" y="6" width="32" height="36" rx="1.5"/><path d="M8 15h32M8 24h32M8 33h32M17 6v36M26 6v36M35 6v36" stroke-width="1"/>',
   awning: '<path d="M6 14h36l-4 10H10z"/><path d="M8 14V8h32v6M10 24v18M38 24v18"/>',
-  stairs: '<path d="M24 4v40"/><path d="M24 10h14M24 18l-12 4M24 26h14M24 34l-12 4"/>',
+  railing: '<path d="M6 40h36M10 40V14M24 40V14M38 40V14M6 14h36"/><path d="M13 20h8v14h-8zM27 20h8v14h-8z"/>',
   check: '<path d="M10 25l9 9 19-20"/>',
   arrow: '<path d="M8 24h32M28 12l12 12-12 12"/>',
 };
@@ -83,6 +83,11 @@ const ALT = {
   building: { sq: 'Fasadë ndërtese me dritare dhe parapete balkoni të zeza', en: 'Building facade with windows and black balcony railings' },
   profile: { sq: 'Prerje e një profili alumini me thyerje termike dhe xham dopio', en: 'Cross-section of a thermally broken aluminium profile with double glazing' },
   door: { sq: 'Derë hyrëse antracit me panel anësor xhami dhe dorezë të gjatë', en: 'Anthracite entrance door with a glass side panel and a long handle' },
+  glassroof: { sq: 'Strukturë xhami me kornizë të hollë metalike dhe pamje nga një ndërtesë klasike', en: 'Glass structure with a slim metal frame and a view of a classic building' },
+  glassdoors: { sq: 'Dyer dhe ndarje alumini me xham në një ambient të ndritshëm zyrash', en: 'Aluminium glass doors and partitions in a bright office space' },
+  pleated: { sq: 'Rrjetë kundër insekteve plissé në një derë ballkoni me pamje nga deti', en: 'Plissé insect screen on a balcony door with a sea view' },
+  roll: { sq: 'Rrjetë kundër insekteve me rrotullim në një dritare dhe mostër rrjete', en: 'Roll-up insect screen on a window with a mesh sample' },
+  railing: { sq: 'Kangjellë me xham sigurie dhe shtylla e doreza të zeza në një tarracë', en: 'Safety-glass railing with black posts and handrail on a terrace' },
 };
 function img(name, lang, { sizes = '100vw', eager = false, cls = '' } = {}) {
   const v = manifest[name];
@@ -172,7 +177,7 @@ ${preload}
 
 function header(lang, current, alt, hero = false) {
   const u = ui[lang];
-  const items = ['products', 'catalogue', 'services', 'process', 'blog', 'about'];
+  const items = ['products', 'services', 'process', 'blog', 'about'];
   return `
 <a class="skip" href="#main">${content[lang].skip}</a>
 <header class="site-header${hero ? ' on-hero' : ''}" data-header>
@@ -292,7 +297,7 @@ function postCard(lang, post) {
 
 /* ---------- regjistri i faqeve ---------- */
 const pages = [];
-function wrap({ lang, key, id, current, path, alt, title, desc, og, ogAlt, type, graph, preload, noindex, article, body, hero = false, lastmod = SITE_DATE }) {
+function wrap({ lang, key, id, current, path, alt, title, desc, og, ogAlt, type, graph, preload, noindex, article, body, hero = false, lastmod = SITE_DATE, images = [] }) {
   const html = `${head({ lang, title, desc, path, alt, og, ogAlt, type, graph, preload, noindex, article })}
 <body id="top">
 ${header(lang, current, alt, hero)}
@@ -307,7 +312,7 @@ ${footer(lang)}
   const file = join(DIST, path, 'index.html');
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);
-  pages.push({ lang, key, id, path, alt, title, desc, html, og, lastmod, noindex });
+  pages.push({ lang, key, id, path, alt, title, desc, html, og, lastmod, noindex, images });
 }
 const pageNode = (lang, url, title, desc, type, extra = {}) => ({ '@type': type, '@id': url + '#webpage', url, name: title, description: desc, isPartOf: { '@id': SITE }, about: { '@id': ORG }, inLanguage: lang, breadcrumb: { '@id': url + '#breadcrumb' }, dateModified: SITE_DATE, ...extra });
 
@@ -661,6 +666,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const body = `${pageHero({ crumbHtml: cr.html, label: k.label, h1: k.h1, lead: fillN(k.lead), extra: dl, mediaCls: ' ph-natural', media: `<img src="/assets/img/catalogue/cover.webp" width="900" height="956" alt="${esc(k.heroAlt)}" fetchpriority="high">` })}
 <section class="section section-tight" id="models">
   <div class="container">
+    <aside class="answer cat-answer"><span>${u.common.answer}</span><p>${fillN(k.answer)}</p></aside>
     <div class="cat-toolbar" role="group" aria-label="${k.filtersAria}">
       <button type="button" class="chip-btn is-active" data-filter="all" aria-pressed="true">${k.filters.all} <span>${models.length}</span></button>
       ${series.map((sr) => `<button type="button" class="chip-btn" data-filter="${sr}" aria-pressed="false">${k.filters[sr]} <span>${count((m) => m.series === sr)}</span></button>`).join('\n      ')}
@@ -671,6 +677,14 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       ${models.map((m) => `<li class="cat-card" id="${m.code}" data-series="${m.series}" data-side="${m.side ? 1 : 0}"><button type="button" class="cat-btn" data-code="${m.code}" data-src="/assets/img/catalogue/models/${m.code}.webp" data-w="${m.w}" data-h="${m.h}" aria-label="${k.open} ${m.code}"><span class="cat-media"><img src="/assets/img/catalogue/models/${m.code}.webp" width="${m.w}" height="${m.h}" alt="${esc(mAlt(m))}" loading="lazy" decoding="async"></span><span class="cat-code">${m.code}${m.side ? `<small>${k.sideLabel}</small>` : ''}</span></button></li>`).join('\n      ')}
     </ul>
     <p class="fineprint" data-reveal>${k.note}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container two-col">
+    <div class="col-head">${secHead('', k.how.title, k.how.title)}
+      <p class="lead" data-reveal>${k.how.related} <a href="${pp(lang, products.find((x) => x.id === 'doors'))}">${products.find((x) => x.id === 'doors')[lang].name}</a> · <a href="${bp(lang, posts.find((x) => x.id === 'how-to-choose-entrance-door'))}">${posts.find((x) => x.id === 'how-to-choose-entrance-door')[lang].metaTitle.replace(' | Apex Frames', '')}</a></p>
+    </div>
+    <ol class="vsteps compact" data-reveal>${k.how.steps.map((x, i) => `<li><span class="dot">${String(i + 1).padStart(2, '0')}</span><div><p>${x}</p></div></li>`).join('')}</ol>
   </div>
 </section>
 <section class="section section-paper">
@@ -710,7 +724,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}
 </dialog>`;
     const list = { '@type': 'ItemList', '@id': url + '#models', name: k.h1, numberOfItems: models.length, itemListElement: models.map((m, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'ImageObject', name: `${k.model} ${m.code}`, caption: mAlt(m), contentUrl: abs(`/assets/img/catalogue/models/${m.code}.webp`) } })) };
     const doc = { '@type': 'DigitalDocument', '@id': url + '#pdf', name: k.h1 + ' (PDF)', url: abs(PDF_URL), encodingFormat: 'application/pdf', inLanguage: lang, publisher: { '@id': ORG } };
-    wrap({ lang, key: id, id, current: 'catalogue', path, alt: alt(id), title, desc, og: '/assets/img/photos/door-og.jpg', ogAlt: ALT.door[lang], preload: `<link rel="preload" as="image" type="image/webp" href="/assets/img/catalogue/cover.webp">`, body, graph: [pageNode(lang, url, title, desc, 'CollectionPage', { mainEntity: { '@id': url + '#models' }, hasPart: { '@id': url + '#pdf' } }), list, doc, faqNode(url, k.faq), breadcrumbNode(url, cr.all)] });
+    wrap({ lang, key: id, id, current: 'catalogue', path, alt: alt(id), title, desc, images: models.map((m) => `/assets/img/catalogue/models/${m.code}.webp`), og: '/assets/img/photos/door-og.jpg', ogAlt: ALT.door[lang], preload: `<link rel="preload" as="image" type="image/webp" href="/assets/img/catalogue/cover.webp">`, body, graph: [pageNode(lang, url, title, desc, 'CollectionPage', { mainEntity: { '@id': url + '#models' }, hasPart: { '@id': url + '#pdf' } }), list, doc, faqNode(url, k.faq), breadcrumbNode(url, cr.all)] });
   }
 
   /* ===== Blogu: lista ===== */
@@ -804,13 +818,14 @@ const w = (rel, data) => { const f = join(DIST, rel); mkdirSync(dirname(f), { re
 const groups = new Map();
 for (const p of pages) { if (!groups.has(p.key)) groups.set(p.key, {}); groups.get(p.key)[p.lang] = p; }
 w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${pages.map((p) => { const g = groups.get(p.key); return `  <url>
     <loc>${abs(p.path)}</loc>
     <lastmod>${p.lastmod}</lastmod>
     <xhtml:link rel="alternate" hreflang="sq" href="${abs(g.sq.path)}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${abs(g.en.path)}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${abs(g.sq.path)}"/>
+${[...(p.og ? [p.og] : []), ...p.images].map((im) => `    <image:image><image:loc>${abs(im)}</image:loc></image:image>`).join('\n')}
   </url>`; }).join('\n')}
 </urlset>
 `);
@@ -912,6 +927,7 @@ w('_headers', `/*
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
 `);
+w('_redirects', `/produktet/shkalle-helikoidale-parapete/  /produktet/kangjella-inox-alumini-xhami/  301\n/en/products/spiral-stairs-balustrades/  /en/products/stainless-aluminium-glass-railings/  301\n`);
 w('.well-known/security.txt', `Contact: mailto:${C.email}\nExpires: 2027-10-31T00:00:00.000Z\nPreferred-Languages: sq, en\nCanonical: ${abs('/.well-known/security.txt')}\n`);
 
 console.log(`${pages.length} faqe (${pages.length / 2} për gjuhë) → dist/`);

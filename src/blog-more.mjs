@@ -128,7 +128,7 @@ export const morePosts = [
 
   /* ---------- 4. Laminuar vs kalitur ---------- */
   {
-    id: 'laminated-or-tempered-glass', image: 'doors', date: DATE, updated: DATE, products: ['glazing', 'doors', 'stairs'],
+    id: 'laminated-or-tempered-glass', image: 'glassdoors', date: DATE, updated: DATE, products: ['glazing', 'doors', 'railings'],
     slug: { sq: 'xham-i-laminuar-apo-i-kalitur', en: 'laminated-or-tempered-glass' },
     sq: {
       title: 'Xham i laminuar apo i kalitur? Cili është më i sigurt',
@@ -143,7 +143,7 @@ export const morePosts = [
 <tr><td>Pika e fortë</td><td>Mbetet në vend edhe pas thyerjes</td><td>Rezistencë më e lartë ndaj goditjes</td></tr>
 <tr><td>Përdorimi tipik</td><td>Dyer, dritare, parapete, fasada</td><td>Dyer dhe parapete</td></tr></tbody></table>` },
         { h: 'Çfarë duhet ditur para porosisë', html: `<ul><li><strong>Xhami i kalitur nuk pritet pas kalitjes.</strong> Prandaj përmasat duhet të jenë të sakta para prodhimit: një arsye më shumë për matje në objekt dhe për fletën e specifikimit të miratuar.</li><li>Për <strong>dyer, parapete dhe ballkone</strong> pyesni projektuesin ose arkitektin cili lloj kërkohet nga projekti.</li><li>Kombinimet me xham akustik, Low-E ose stop-sol varen nga sistemi: shih <a href="/blog/xham-dopio-apo-i-trefishte/">xham dopio apo i trefishtë</a>.</li></ul>` },
-        { h: 'Ku përdoret te Apex Frames', html: `<p>Xhama të laminuar dhe të kalitur përdoren te dyert hyrëse, dyert rrëshqitëse, fasadat dhe parapetet me xham sigurie. Parapetet dhe shkallët helikoidale prodhohen sipas matjeve në terren dhe projektit arkitektonik.</p>` },
+        { h: 'Ku përdoret te Apex Frames', html: `<p>Xhama të laminuar dhe të kalitur përdoren te dyert hyrëse, dyert rrëshqitëse, fasadat dhe parapetet me xham sigurie. Kangjellat dhe parapetet prodhohen sipas matjeve në terren dhe projektit arkitektonik: shih <a href="/produktet/kangjella-inox-alumini-xhami/">kangjellat inox, alumini dhe xhami</a>.</p>` },
       ],
       faq: [
         { q: 'Si dallohet xhami i kalitur nga ai i zakonshëm?', a: 'Zakonisht ka një shenjë të gdhendur në cep nga prodhuesi. Kërkojeni te dokumentacioni i porosisë.' },
@@ -163,7 +163,7 @@ export const morePosts = [
 <tr><td>Strength</td><td>Stays in place even after breaking</td><td>Higher impact resistance</td></tr>
 <tr><td>Typical use</td><td>Doors, windows, balustrades, facades</td><td>Doors and balustrades</td></tr></tbody></table>` },
         { h: 'What to know before ordering', html: `<ul><li><strong>Tempered glass cannot be cut after tempering.</strong> Dimensions must be exact before production: one more reason for on-site measurement and an approved specification sheet.</li><li>For <strong>doors, balustrades and balconies</strong> ask your designer or architect which type the project requires.</li><li>Combinations with acoustic, Low-E or solar-control glass depend on the system: see <a href="/en/blog/double-or-triple-glazing/">double or triple glazing</a>.</li></ul>` },
-        { h: 'Where it is used at Apex Frames', html: `<p>Laminated and tempered glass is used in entrance doors, sliding doors, facades and safety-glass balustrades. Balustrades and spiral staircases are made to on-site measurements and the architectural design.</p>` },
+        { h: 'Where it is used at Apex Frames', html: `<p>Laminated and tempered glass is used in entrance doors, sliding doors, facades and safety-glass balustrades. Railings and balustrades are made to on-site measurements and the architectural design: see <a href="/en/products/stainless-aluminium-glass-railings/">stainless, aluminium and glass railings</a>.</p>` },
       ],
       faq: [
         { q: 'How can I tell tempered glass from ordinary glass?', a: 'It usually carries an etched mark in a corner from the manufacturer. Look for it in the order documentation.' },
@@ -344,6 +344,98 @@ export const morePosts = [
       faq: [
         { q: 'Is double glazing enough for noise?', a: 'It depends. For noisy streets acoustic glass exists; concrete values are given in the Declaration of Performance.' },
         { q: 'Does installation affect noise?', a: 'Yes. Gaps around the frame let noise through, so perimeter insulation and silicone affect the result.' },
+      ],
+    },
+  },
+
+  /* ---------- 9. Rrjeta kundër insekteve ---------- */
+  {
+    id: 'insect-screens-guide', image: 'pleated', date: DATE, updated: DATE, products: ['screens', 'aluminium', 'upvc'],
+    slug: { sq: 'rrjeta-kunder-insekteve-cilin-model-te-zgjidhni', en: 'insect-screens-which-type-to-choose' },
+    sq: {
+      title: 'Rrjeta kundër insekteve: cilin model të zgjidhni për derë ose dritare',
+      metaTitle: 'Rrjeta kundër insekteve: cilin model? | Apex Frames',
+      desc: 'Rrjeta rrëshqitëse, vertikale me rrotullim, të fiksuara në kornizë dhe plissé: si funksionon secila, çfarë materiali përdoret dhe çfarë të pyesni para porosisë.',
+      category: 'Zgjedhja e produktit', readMin: 4,
+      answer: 'Për dyer ballkoni zgjidhen zakonisht rrjetat plissé (me palosje) ose ato rrëshqitëse; për dritare, rrjetat vertikale me rrotullim ose të fiksuara në kornizë. Rrjeta është prej fiberglassi ose poliesteri me mbrojtje anti-UV, dhe sistemi plissé modular ka nga 1 deri në 4 fletë.',
+      sections: [
+        { h: 'Llojet kryesore', html: `<table><thead><tr><th>Lloji</th><th>Si funksionon</th><th>Më i përshtatshëm për</th></tr></thead><tbody>
+<tr><td>Rrëshqitëse horizontale</td><td>Rrëshqet në shina</td><td>Dritare dhe dyer me hapësirë anash</td></tr>
+<tr><td>Vertikale me rrotullim</td><td>Rrotullohet dhe mbështillet në një kuti</td><td>Dritare</td></tr>
+<tr><td>Të fiksuara në kornizë</td><td>Montohen në kornizë dhe qëndrojnë në vend</td><td>Dritare ku rrjeta nuk lëvizet shpesh</td></tr>
+<tr><td>Plissé (me palosje)</td><td>Palosen si fizarmonikë</td><td>Dyer ballkoni dhe hapje të mëdha</td></tr></tbody></table>` },
+        { h: 'Materiali dhe detajet', html: `<ul><li><strong>Rrjeta:</strong> prej fiberglassi ose poliesteri, me mbrojtje anti-UV.</li><li><strong>Sistemi plissé modular:</strong> ka nga 1 deri në 4 fletë, sipas gjerësisë së hapjes.</li><li><strong>Prag i ulët (3–7 mm)</strong> te dyert, për akses pa pengesa.</li><li><strong>Aksesorë cilësorë</strong> me frenues magnetik.</li></ul>` },
+        { h: 'Çfarë të pyesni para porosisë', html: `<ul><li>cili model përshtatet me derën ose dritaren tuaj (shih edhe <a href="/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/">llojet e dyerve rrëshqitëse</a>);</li><li>sa hapësirë ka anash për rrjetën kur hapet;</li><li>sa i ulët është pragu te dera;</li><li>cila ngjyrë përputhet me profilin e dritares ose derës.</li></ul>` },
+      ],
+      faq: [
+        { q: 'Cili model është më i mirë për derë ballkoni?', a: 'Për dyer përdoren zakonisht modelet plissé ose rrëshqitëse. Modelin e zgjedhim sipas hapjes dhe hapësirës anash gjatë vizitës teknike.' },
+        { q: 'A ka prag të ulët te dyert?', a: 'Po, sistemi plissé për dyer ka prag të ulët (3–7 mm) për akses pa pengesa.' },
+      ],
+    },
+    en: {
+      title: 'Insect Screens: Which Type to Choose for a Door or Window',
+      metaTitle: 'Insect Screens: Which Type? | Apex Frames',
+      desc: 'Sliding, vertical roll-up, fixed-frame and plissé insect screens: how each works, what material is used and what to ask before ordering.',
+      category: 'Choosing products', readMin: 4,
+      answer: 'For balcony doors, plissé (pleated) or sliding screens are usually chosen; for windows, vertical roll-up or fixed-frame screens. The mesh is fibreglass or polyester with UV protection, and the modular plissé system has from 1 to 4 leaves.',
+      sections: [
+        { h: 'The main types', html: `<table><thead><tr><th>Type</th><th>How it works</th><th>Best for</th></tr></thead><tbody>
+<tr><td>Horizontal sliding</td><td>Slides on tracks</td><td>Windows and doors with space to the side</td></tr>
+<tr><td>Vertical roll-up</td><td>Rolls up into a box</td><td>Windows</td></tr>
+<tr><td>Fixed frame</td><td>Mounted in a frame and stays in place</td><td>Windows where the screen isn’t moved often</td></tr>
+<tr><td>Plissé (pleated)</td><td>Folds like an accordion</td><td>Balcony doors and large openings</td></tr></tbody></table>` },
+        { h: 'Material and details', html: `<ul><li><strong>Mesh:</strong> fibreglass or polyester, with UV protection.</li><li><strong>Modular plissé system:</strong> from 1 to 4 leaves, depending on the opening width.</li><li><strong>Low threshold (3–7 mm)</strong> on doors, for barrier-free access.</li><li><strong>Quality hardware</strong> with a magnetic catch.</li></ul>` },
+        { h: 'What to ask before ordering', html: `<ul><li>which model fits your door or window (see also <a href="/en/blog/sliding-doors-types-and-how-to-choose/">sliding door types</a>);</li><li>how much space there is to the side for the screen when open;</li><li>how low the door threshold is;</li><li>which colour matches the window or door profile.</li></ul>` },
+      ],
+      faq: [
+        { q: 'Which model is best for a balcony door?', a: 'Plissé or sliding models are usually used for doors. We choose the model according to the opening and the space to the side during the technical visit.' },
+        { q: 'Is there a low threshold on doors?', a: 'Yes, the plissé system for doors has a low threshold (3–7 mm) for barrier-free access.' },
+      ],
+    },
+  },
+
+  /* ---------- 10. Kangjella me xham ---------- */
+  {
+    id: 'glass-railings-guide', image: 'railing', date: DATE, updated: DATE, products: ['railings', 'glazing', 'doors'],
+    slug: { sq: 'kangjella-me-xham-cfare-duhet-te-dini', en: 'glass-railings-what-to-know' },
+    sq: {
+      title: 'Kangjella me xham, inox dhe alumin: çfarë të dini para porosisë',
+      metaTitle: 'Kangjella me xham, inox dhe alumin | Apex Frames',
+      desc: 'Si zgjidhen kangjellat me xham, inox ose alumin për ballkone, tarraca dhe shkallë: materialet, xhami i sigurisë, matja dhe çfarë të pyesni.',
+      category: 'Zgjedhja e produktit', readMin: 4,
+      answer: 'Kangjellat me xham e mbrojnë ballkonin, tarracën ose shkallën pa e prerë pamjen. Struktura bëhet prej inoksi ose alumini dhe xhami është sigurie, i laminuar ose i kalitur. Prodhohen sipas matjeve në terren; lartësinë dhe kërkesat e sigurisë i përcakton projekti dhe rregullat e ndërtimit.',
+      sections: [
+        { h: 'Inoks apo alumin', html: `<table><thead><tr><th>Kriteri</th><th>Inoks</th><th>Alumin</th></tr></thead><tbody>
+<tr><td>Pamja</td><td>Metalike e pastër</td><td>E lehtë, përputhet me dritaret dhe dyert prej alumini</td></tr>
+<tr><td>Kur zgjidhet</td><td>Kur doni një detaj metalik të dukshëm</td><td>Kur doni unitet me fasadën prej alumini</td></tr>
+<tr><td>Xhami</td><td colspan="2">I njëjti xham sigurie, i laminuar ose i kalitur, në të dyja rastet</td></tr></tbody></table>` },
+        { h: 'Xhami i sigurisë', html: `<p>Panelet përdorin xham sigurie. Dallimin mes xhamit të laminuar dhe të kalitur e shpjegojmë te <a href="/blog/xham-i-laminuar-apo-i-kalitur/">xham i laminuar apo i kalitur</a>. Xhami i kalitur nuk pritet pas kalitjes, prandaj matjet duhet të jenë të sakta para prodhimit.</p>` },
+        { h: 'Si ecën porosia', html: `<ol><li>Vizitë teknike dhe matje në terren.</li><li>Fletë specifikimi, e miratuar para prodhimit.</li><li>Prodhim sipas specifikimit dhe transport.</li><li>Montim, kontroll final dhe procesverbal dorëzimi.</li></ol>` },
+        { h: 'Çfarë të pyesni', html: `<ul><li>cila lartësi dhe cilat kërkesa sigurie kërkohen nga projekti ose nga rregullat e ndërtimit (pyesni projektuesin);</li><li>cili xham sigurie propozohet;</li><li>cila ngjyrë ose finiturë ka struktura;</li><li>si fiksohet struktura në ballkon ose në dysheme.</li></ul>` },
+      ],
+      faq: [
+        { q: 'A është xhami i sigurisë i detyrueshëm?', a: 'Kjo varet nga projekti dhe rregullat e ndërtimit, prandaj pyesni projektuesin. Ne prodhojmë parapete me xham sigurie, të laminuar ose të kalitur.' },
+        { q: 'Si matet kangjella?', a: 'Matjet merren në objekt nga ekipi teknik dhe specifikimi miratohet para prodhimit.' },
+      ],
+    },
+    en: {
+      title: 'Glass, Stainless and Aluminium Railings: What to Know Before Ordering',
+      metaTitle: 'Glass, Stainless and Aluminium Railings | Apex Frames',
+      desc: 'How to choose glass, stainless or aluminium railings for balconies, terraces and stairs: materials, safety glass, measurement and what to ask.',
+      category: 'Choosing products', readMin: 4,
+      answer: 'Glass railings protect a balcony, terrace or staircase without cutting the view. The structure is stainless steel or aluminium and the glass is safety glass, laminated or tempered. They are made to on-site measurements; height and safety requirements are set by the project and building rules.',
+      sections: [
+        { h: 'Stainless steel or aluminium', html: `<table><thead><tr><th>Criteria</th><th>Stainless steel</th><th>Aluminium</th></tr></thead><tbody>
+<tr><td>Look</td><td>Clean metallic</td><td>Light, matches aluminium windows and doors</td></tr>
+<tr><td>Chosen when</td><td>You want a visible metal detail</td><td>You want unity with an aluminium facade</td></tr>
+<tr><td>Glass</td><td colspan="2">The same safety glass, laminated or tempered, in both cases</td></tr></tbody></table>` },
+        { h: 'Safety glass', html: `<p>The panels use safety glass. We explain the difference between laminated and tempered glass in <a href="/en/blog/laminated-or-tempered-glass/">laminated or tempered glass</a>. Tempered glass cannot be cut after tempering, so measurements must be exact before production.</p>` },
+        { h: 'How the order works', html: `<ol><li>Technical visit and on-site measurement.</li><li>Specification sheet, approved before production.</li><li>Manufacturing to the specification and delivery.</li><li>Installation, final inspection and handover protocol.</li></ol>` },
+        { h: 'What to ask', html: `<ul><li>which height and safety requirements apply under the project or building rules (ask your designer);</li><li>which safety glass is proposed;</li><li>which colour or finish the structure has;</li><li>how the structure is fixed to the balcony or floor.</li></ul>` },
+      ],
+      faq: [
+        { q: 'Is safety glass mandatory?', a: 'That depends on the project and building rules, so ask your designer. We make balustrades with safety glass, laminated or tempered.' },
+        { q: 'How are railings measured?', a: 'Our technical team takes measurements on site and the specification is approved before production.' },
       ],
     },
   },

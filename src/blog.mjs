@@ -91,7 +91,7 @@ export const posts = [
     },
   },
   {
-    id: 'double-or-triple-glazing', image: 'glazing', date: DATE, updated: DATE, products: ['glazing', 'facades'],
+    id: 'double-or-triple-glazing', image: 'glassroof', date: DATE, updated: DATE, products: ['glazing', 'facades'],
     slug: { sq: 'xham-dopio-apo-i-trefishte', en: 'double-or-triple-glazing' },
     sq: {
       title: 'Xham dopio apo i trefishtë? Argon, Low-E dhe si zgjidhet',

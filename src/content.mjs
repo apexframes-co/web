@@ -186,16 +186,6 @@ export const sq = {
           'Pergola alumini, me ose pa tendë',
         ],
       },
-      {
-        icon: 'stairs',
-        title: 'Shkallë helikoidale & parapete',
-        text: 'Elemente prej inoksi dhe xhami, sipas projektit arkitektonik.',
-        points: [
-          'Shkallë helikoidale prej çeliku inox',
-          'Parapete me xham sigurie',
-          'Prodhim sipas matjeve në terren',
-        ],
-      },
     ],
   },
   services: {
@@ -562,12 +552,6 @@ export const en = {
           'UV-certified fabric',
           'Aluminium pergolas, with or without canopy',
         ],
-      },
-      {
-        icon: 'stairs',
-        title: 'Spiral stairs & balustrades',
-        text: 'Stainless-steel and glass elements built to the architectural design.',
-        points: ['Stainless-steel spiral staircases', 'Safety-glass balustrades', 'Fabricated to on-site measurements'],
       },
     ],
   },

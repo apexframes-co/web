@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.apexframes.co/</loc>
     <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/doors-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/rreth-nesh/</loc>
@@ -13,6 +14,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/rreth-nesh/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/rreth-nesh/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/</loc>
@@ -20,6 +22,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/dritare-dyer-upvc/</loc>
@@ -27,6 +30,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/dritare-dyer-upvc/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/upvc-windows-doors/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/dritare-dyer-upvc/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/window-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/dritare-dyer-alumini/</loc>
@@ -34,6 +38,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/dritare-dyer-alumini/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/aluminium-windows-doors/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/dritare-dyer-alumini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassdoors-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/dyer-hyrese-automatike/</loc>
@@ -41,6 +46,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/dyer-hyrese-automatike/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/entrance-automatic-doors/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/dyer-hyrese-automatike/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/door-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/fasada-xhami/</loc>
@@ -48,6 +54,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/fasada-xhami/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/glass-facades/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/fasada-xhami/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/facade-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/xhama/</loc>
@@ -55,6 +62,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/xhama/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/glazing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/xhama/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassroof-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/grila-roleta/</loc>
@@ -62,6 +70,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/grila-roleta/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/shutters-roller-blinds/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/grila-roleta/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/shutters-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/rrjeta-kunder-insekteve/</loc>
@@ -69,6 +78,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/rrjeta-kunder-insekteve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/insect-screens/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/rrjeta-kunder-insekteve/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/pleated-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/produktet/tenda-pergola/</loc>
@@ -76,13 +86,15 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/tenda-pergola/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/awnings-pergolas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/tenda-pergola/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/awning-og.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.apexframes.co/produktet/shkalle-helikoidale-parapete/</loc>
+    <loc>https://www.apexframes.co/produktet/kangjella-inox-alumini-xhami/</loc>
     <lastmod>2026-10-31</lastmod>
-    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/shkalle-helikoidale-parapete/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/spiral-stairs-balustrades/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/shkalle-helikoidale-parapete/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/kangjella-inox-alumini-xhami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/stainless-aluminium-glass-railings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/kangjella-inox-alumini-xhami/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/railing-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/sherbimet/</loc>
@@ -90,6 +102,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/sherbimet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/services/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/sherbimet/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/aluminium-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/procesi/</loc>
@@ -97,6 +110,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/procesi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/process/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/procesi/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/per-profesionistet/</loc>
@@ -104,6 +118,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/per-profesionistet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/for-professionals/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/per-profesionistet/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/garancia/</loc>
@@ -111,6 +126,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/garancia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/warranty/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/garancia/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/pyetje-te-shpeshta/</loc>
@@ -118,6 +134,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/pyetje-te-shpeshta/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/pyetje-te-shpeshta/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/kontakt/</loc>
@@ -125,6 +142,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/kontakt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/kontakt/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/katalogu/</loc>
@@ -132,6 +150,65 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/katalogu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/catalogue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/katalogu/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/door-og.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F01.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F02.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F03.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F04.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F05.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F06.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F08.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F09.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F10.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I01.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I02.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I03.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I04.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I05.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I06.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I07.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I08.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I09.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I10.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I11.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I12.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I13.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I14.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I15.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T01.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T02.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T03.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T04.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T05.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T06.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T07.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T08.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T09.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T10.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T11.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T12.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T13.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T14.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T15.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T16.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T17.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T18.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T19.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T20.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T21.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T22.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T23.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T24.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T25.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T26.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T27.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T28.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T29.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T30.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T31.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T32.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T33.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T34.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/</loc>
@@ -139,6 +216,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/dritare-upvc-apo-alumini/</loc>
@@ -146,6 +224,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/dritare-upvc-apo-alumini/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/upvc-or-aluminium-windows/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/dritare-upvc-apo-alumini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/family-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/</loc>
@@ -153,6 +232,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/what-affects-window-prices/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/sliding-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/</loc>
@@ -160,6 +240,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/double-or-triple-glazing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassroof-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/kondensimi-ne-dritare/</loc>
@@ -167,6 +248,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/kondensimi-ne-dritare/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/window-condensation/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/kondensimi-ne-dritare/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/window-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/</loc>
@@ -174,6 +256,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/building-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/</loc>
@@ -181,6 +264,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/strap-or-motorised-shutters/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/roller-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/</loc>
@@ -188,6 +272,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/window-installation-8-steps/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/aluminium-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/</loc>
@@ -195,6 +280,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/sliding-doors-types-and-how-to-choose/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/blackslider-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/si-zgjidhet-dera-hyrese/</loc>
@@ -202,6 +288,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/si-zgjidhet-dera-hyrese/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/how-to-choose-an-entrance-door/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/si-zgjidhet-dera-hyrese/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/door-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/cfare-eshte-thyerja-termike/</loc>
@@ -209,6 +296,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/cfare-eshte-thyerja-termike/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/what-is-a-thermal-break/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/cfare-eshte-thyerja-termike/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/profile-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/xham-i-laminuar-apo-i-kalitur/</loc>
@@ -216,6 +304,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/xham-i-laminuar-apo-i-kalitur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/laminated-or-tempered-glass/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/xham-i-laminuar-apo-i-kalitur/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassdoors-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/tende-dielli-me-kasete-apo-klasike/</loc>
@@ -223,6 +312,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/tende-dielli-me-kasete-apo-klasike/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/cassette-or-classic-awnings/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/tende-dielli-me-kasete-apo-klasike/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/awning-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/ngjyrat-e-dritareve-dhe-dyerve/</loc>
@@ -230,6 +320,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/ngjyrat-e-dritareve-dhe-dyerve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/window-and-door-colours/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/ngjyrat-e-dritareve-dhe-dyerve/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/shutters-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/fasada-xhami-curtain-wall-cfare-duhet-te-dini/</loc>
@@ -237,6 +328,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/fasada-xhami-curtain-wall-cfare-duhet-te-dini/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/curtain-wall-facades-what-to-know/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/fasada-xhami-curtain-wall-cfare-duhet-te-dini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/facade-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/blog/si-te-zvogeloni-zhurmen-nga-rruga-me-dritare/</loc>
@@ -244,6 +336,23 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/si-te-zvogeloni-zhurmen-nga-rruga-me-dritare/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/reduce-street-noise-with-windows/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/si-te-zvogeloni-zhurmen-nga-rruga-me-dritare/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/aluminium-og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.apexframes.co/blog/rrjeta-kunder-insekteve-cilin-model-te-zgjidhni/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/rrjeta-kunder-insekteve-cilin-model-te-zgjidhni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/insect-screens-which-type-to-choose/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/rrjeta-kunder-insekteve-cilin-model-te-zgjidhni/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/pleated-og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.apexframes.co/blog/kangjella-me-xham-cfare-duhet-te-dini/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/kangjella-me-xham-cfare-duhet-te-dini/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/glass-railings-what-to-know/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/kangjella-me-xham-cfare-duhet-te-dini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/railing-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/privatesia/</loc>
@@ -251,6 +360,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/privatesia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/privatesia/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/kushtet/</loc>
@@ -258,6 +368,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/kushtet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/kushtet/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/</loc>
@@ -265,6 +376,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/doors-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/about/</loc>
@@ -272,6 +384,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/rreth-nesh/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/rreth-nesh/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/</loc>
@@ -279,6 +392,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/upvc-windows-doors/</loc>
@@ -286,6 +400,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/dritare-dyer-upvc/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/upvc-windows-doors/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/dritare-dyer-upvc/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/window-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/aluminium-windows-doors/</loc>
@@ -293,6 +408,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/dritare-dyer-alumini/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/aluminium-windows-doors/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/dritare-dyer-alumini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassdoors-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/entrance-automatic-doors/</loc>
@@ -300,6 +416,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/dyer-hyrese-automatike/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/entrance-automatic-doors/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/dyer-hyrese-automatike/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/door-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/glass-facades/</loc>
@@ -307,6 +424,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/fasada-xhami/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/glass-facades/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/fasada-xhami/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/facade-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/glazing/</loc>
@@ -314,6 +432,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/xhama/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/glazing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/xhama/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassroof-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/shutters-roller-blinds/</loc>
@@ -321,6 +440,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/grila-roleta/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/shutters-roller-blinds/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/grila-roleta/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/shutters-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/insect-screens/</loc>
@@ -328,6 +448,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/rrjeta-kunder-insekteve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/insect-screens/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/rrjeta-kunder-insekteve/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/pleated-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/products/awnings-pergolas/</loc>
@@ -335,13 +456,15 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/tenda-pergola/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/awnings-pergolas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/tenda-pergola/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/awning-og.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.apexframes.co/en/products/spiral-stairs-balustrades/</loc>
+    <loc>https://www.apexframes.co/en/products/stainless-aluminium-glass-railings/</loc>
     <lastmod>2026-10-31</lastmod>
-    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/shkalle-helikoidale-parapete/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/spiral-stairs-balustrades/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/shkalle-helikoidale-parapete/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/produktet/kangjella-inox-alumini-xhami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/products/stainless-aluminium-glass-railings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/produktet/kangjella-inox-alumini-xhami/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/railing-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/services/</loc>
@@ -349,6 +472,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/sherbimet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/services/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/sherbimet/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/aluminium-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/process/</loc>
@@ -356,6 +480,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/procesi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/process/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/procesi/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/for-professionals/</loc>
@@ -363,6 +488,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/per-profesionistet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/for-professionals/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/per-profesionistet/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/warranty/</loc>
@@ -370,6 +496,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/garancia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/warranty/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/garancia/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/faq/</loc>
@@ -377,6 +504,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/pyetje-te-shpeshta/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/pyetje-te-shpeshta/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/contact/</loc>
@@ -384,6 +512,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/kontakt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/kontakt/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/catalogue/</loc>
@@ -391,6 +520,65 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/katalogu/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/catalogue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/katalogu/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/door-og.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F01.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F02.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F03.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F04.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F05.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F06.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F08.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F09.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/F10.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I01.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I02.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I03.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I04.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I05.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I06.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I07.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I08.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I09.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I10.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I11.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I12.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I13.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I14.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/I15.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T01.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T02.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T03.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T04.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T05.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T06.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T07.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T08.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T09.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T10.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T11.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T12.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T13.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T14.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T15.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T16.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T17.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T18.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T19.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T20.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T21.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T22.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T23.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T24.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T25.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T26.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T27.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T28.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T29.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T30.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T31.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T32.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T33.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/catalogue/models/T34.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/</loc>
@@ -398,6 +586,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/upvc-or-aluminium-windows/</loc>
@@ -405,6 +594,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/dritare-upvc-apo-alumini/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/upvc-or-aluminium-windows/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/dritare-upvc-apo-alumini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/family-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/what-affects-window-prices/</loc>
@@ -412,6 +602,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/what-affects-window-prices/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/sliding-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/double-or-triple-glazing/</loc>
@@ -419,6 +610,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/double-or-triple-glazing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassroof-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/window-condensation/</loc>
@@ -426,6 +618,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/kondensimi-ne-dritare/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/window-condensation/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/kondensimi-ne-dritare/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/window-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/</loc>
@@ -433,6 +626,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/building-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/strap-or-motorised-shutters/</loc>
@@ -440,6 +634,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/strap-or-motorised-shutters/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/roller-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/window-installation-8-steps/</loc>
@@ -447,6 +642,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/window-installation-8-steps/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/aluminium-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/sliding-doors-types-and-how-to-choose/</loc>
@@ -454,6 +650,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/sliding-doors-types-and-how-to-choose/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/dyer-rreshqitese-llojet-dhe-si-zgjidhen/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/blackslider-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/how-to-choose-an-entrance-door/</loc>
@@ -461,6 +658,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/si-zgjidhet-dera-hyrese/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/how-to-choose-an-entrance-door/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/si-zgjidhet-dera-hyrese/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/door-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/what-is-a-thermal-break/</loc>
@@ -468,6 +666,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/cfare-eshte-thyerja-termike/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/what-is-a-thermal-break/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/cfare-eshte-thyerja-termike/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/profile-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/laminated-or-tempered-glass/</loc>
@@ -475,6 +674,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/xham-i-laminuar-apo-i-kalitur/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/laminated-or-tempered-glass/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/xham-i-laminuar-apo-i-kalitur/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/glassdoors-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/cassette-or-classic-awnings/</loc>
@@ -482,6 +682,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/tende-dielli-me-kasete-apo-klasike/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/cassette-or-classic-awnings/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/tende-dielli-me-kasete-apo-klasike/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/awning-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/window-and-door-colours/</loc>
@@ -489,6 +690,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/ngjyrat-e-dritareve-dhe-dyerve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/window-and-door-colours/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/ngjyrat-e-dritareve-dhe-dyerve/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/shutters-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/curtain-wall-facades-what-to-know/</loc>
@@ -496,6 +698,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/fasada-xhami-curtain-wall-cfare-duhet-te-dini/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/curtain-wall-facades-what-to-know/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/fasada-xhami-curtain-wall-cfare-duhet-te-dini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/facade-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/reduce-street-noise-with-windows/</loc>
@@ -503,6 +706,23 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/si-te-zvogeloni-zhurmen-nga-rruga-me-dritare/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/reduce-street-noise-with-windows/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/si-te-zvogeloni-zhurmen-nga-rruga-me-dritare/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/aluminium-og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.apexframes.co/en/blog/insect-screens-which-type-to-choose/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/rrjeta-kunder-insekteve-cilin-model-te-zgjidhni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/insect-screens-which-type-to-choose/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/rrjeta-kunder-insekteve-cilin-model-te-zgjidhni/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/pleated-og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.apexframes.co/en/blog/glass-railings-what-to-know/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/kangjella-me-xham-cfare-duhet-te-dini/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/blog/glass-railings-what-to-know/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/blog/kangjella-me-xham-cfare-duhet-te-dini/"/>
+    <image:image><image:loc>https://www.apexframes.co/assets/img/photos/railing-og.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/privacy/</loc>
@@ -510,6 +730,7 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/privatesia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/privatesia/"/>
+
   </url>
   <url>
     <loc>https://www.apexframes.co/en/terms/</loc>
@@ -517,5 +738,6 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/kushtet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/kushtet/"/>
+
   </url>
 </urlset>
