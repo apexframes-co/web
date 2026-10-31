@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node src/build.mjs",
-    "serve": "python3 -m http.server 8080"
+    "serve": "node src/build.mjs && python3 -m http.server 8080 --directory dist",
+    "images": "python3 -I scripts/make_images.py"
   }
 }

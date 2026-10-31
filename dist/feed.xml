@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apex Frames Blog</title>
+    <link>https://www.apexframes.co/blog/</link>
+    <description>Artikuj praktikë për zgjedhjen dhe montimin e dritareve dhe dyerve: uPVC apo alumin, xhama, kondensimi, DoP dhe CE, çfarë ndikon në çmim.</description>
+    <language>sq</language>
+    <lastBuildDate>Sat, 31 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.apexframes.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Dritare uPVC apo alumini? Si të zgjidhni të duhurën</title>
+      <link>https://www.apexframes.co/blog/dritare-upvc-apo-alumini/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/blog/dritare-upvc-apo-alumini/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Zgjedhja e produktit</category>
+      <description>Zgjidhni uPVC kur doni izolim të mirë me kosto më të ulët për banesa. Zgjidhni alumin me thyerje termike kur ju duhen hapje të mëdha, profile të holla ose objekt komercial. Të dyja, kur janë të certifikuara dhe të montuara mirë, janë zgjidhje afatgjata.</description>
+    </item>
+    <item>
+      <title>Çfarë ndikon në çmimin e dritareve dhe dyerve?</title>
+      <link>https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/blog/cfare-ndikon-ne-cmimin-e-dritareve/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Çmimet dhe oferta</category>
+      <description>Çmimi varet nga sistemi i profilit, madhësia, xhami, lloji i hapjes, ngjyra, aksesorët dhe montimi. Dy oferta krahasohen drejt vetëm kur specifikojnë të njëjtat elemente. Apex Frames nuk jep çmime verbale: çmimi shkruhet vetëm në ofertën e detajuar, pas matjes.</description>
+    </item>
+    <item>
+      <title>Xham dopio apo i trefishtë? Argon, Low-E dhe si zgjidhet</title>
+      <link>https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Xhama</category>
+      <description>Xhami dopio me gaz argon dhe shtresë Low-E mjafton shpesh për banesa. Xhami i trefishtë izolon më mirë, por është më i rëndë dhe më i shtrenjtë, prandaj ka kuptim për ambiente shumë të ftohta ose kur kërkohet izolim maksimal. Vlerën e saktë e jep gjithmonë deklarata e performancës.</description>
+    </item>
+    <item>
+      <title>Pse djersijnë dritaret? Kondensimi dhe si zgjidhet</title>
+      <link>https://www.apexframes.co/blog/kondensimi-ne-dritare/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/blog/kondensimi-ne-dritare/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Këshilla</category>
+      <description>Kondensimi shfaqet kur ajri i ngrohtë dhe i lagësht takon një sipërfaqe të ftohtë. Zakonisht nuk është defekt, por shenjë e lagështisë së lartë ose e ajrimit të pamjaftueshëm. Një dritare më e mirë ul rrezikun, por ajrimi mbetet thelbësor.</description>
+    </item>
+    <item>
+      <title>Deklarata e performancës (DoP) dhe shenja CE: si t’i lexoni</title>
+      <link>https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Standarde dhe dokumente</category>
+      <description>Deklarata e performancës (DoP) është dokumenti i prodhuesit që tregon vlerat e certifikuara të një dritareje ose dere, sipas standardit EN 14351-1 dhe Rregullores (BE) 305/2011. Shenja CE tregon se prodhuesi merr përgjegjësinë për ato vlera. Kërkojini të dyja para se të porosisni.</description>
+    </item>
+    <item>
+      <title>Montimi i dritareve në 8 hapa: çfarë të kërkoni nga montuesi</title>
+      <link>https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Montimi</category>
+      <description>Një montim i mirë ndjek 8 hapa: inspektim paraprak, çmontim, fiksim i kornizës, izolim perimetral me PU, mbyllje hermetike, rregullim mekanik, kontroll final dhe pastrim. Edhe dritarja më e mirë funksionon keq nëse montohet keq.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apex Frames Blog</title>
+    <link>https://www.apexframes.co/en/blog/</link>
+    <description>Practical articles on choosing and installing windows and doors: uPVC vs aluminium, glazing, condensation, DoP and CE, what affects price.</description>
+    <language>en</language>
+    <lastBuildDate>Sat, 31 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.apexframes.co/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>uPVC or Aluminium Windows? How to Choose the Right One</title>
+      <link>https://www.apexframes.co/en/blog/upvc-or-aluminium-windows/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/en/blog/upvc-or-aluminium-windows/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Choosing products</category>
+      <description>Choose uPVC when you want good insulation at a lower cost for homes. Choose thermally broken aluminium when you need large openings, slim profiles or a commercial building. Both are long-lasting when certified and properly installed.</description>
+    </item>
+    <item>
+      <title>What Affects the Price of Windows and Doors?</title>
+      <link>https://www.apexframes.co/en/blog/what-affects-window-prices/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/en/blog/what-affects-window-prices/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Pricing and quotes</category>
+      <description>Price depends on the profile system, size, glazing, opening type, colour, hardware and installation. Two quotes compare fairly only when they specify the same elements. Apex Frames gives no verbal prices: the price is written only in the detailed quote, after measurement.</description>
+    </item>
+    <item>
+      <title>Double or Triple Glazing? Argon, Low-E and How to Choose</title>
+      <link>https://www.apexframes.co/en/blog/double-or-triple-glazing/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/en/blog/double-or-triple-glazing/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Glazing</category>
+      <description>Double glazing with argon gas and a Low-E coating is often enough for homes. Triple glazing insulates better but is heavier and costs more, so it makes sense for very cold rooms or when maximum insulation is required. The exact value always comes from the Declaration of Performance.</description>
+    </item>
+    <item>
+      <title>Why Do Windows Sweat? Condensation and How to Fix It</title>
+      <link>https://www.apexframes.co/en/blog/window-condensation/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/en/blog/window-condensation/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Advice</category>
+      <description>Condensation forms when warm, humid air meets a cold surface. It is usually not a defect but a sign of high humidity or insufficient ventilation. A better window lowers the risk, but ventilation remains essential.</description>
+    </item>
+    <item>
+      <title>Declaration of Performance (DoP) and CE Marking: How to Read Them</title>
+      <link>https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Standards and documents</category>
+      <description>The Declaration of Performance (DoP) is the manufacturer’s document stating a window’s or door’s certified values, under EN 14351-1 and Regulation (EU) 305/2011. The CE marking shows the manufacturer takes responsibility for those values. Ask for both before ordering.</description>
+    </item>
+    <item>
+      <title>Window Installation in 8 Steps: What to Ask Your Installer</title>
+      <link>https://www.apexframes.co/en/blog/window-installation-8-steps/</link>
+      <guid isPermaLink="true">https://www.apexframes.co/en/blog/window-installation-8-steps/</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Installation</category>
+      <description>A good installation follows 8 steps: preliminary inspection, removal, frame fixing, PU perimeter insulation, airtight sealing, mechanical adjustment, final inspection and clean-up. Even the best window performs poorly if badly installed.</description>
+    </item>
+  </channel>
+</rss>

@@ -28,7 +28,7 @@ export const sq = {
   meta: {
     title: 'Apex Frames | Dritare, Dyer & Fasada Alumini dhe uPVC në Tiranë',
     description:
-      'Apex Frames furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC me sisteme të certifikuara europiane. Vizitë teknike dhe matje në terren, ofertë brenda 48 orëve, garanci 5 vjet.',
+      'Apex Frames furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC në Tiranë. Vizitë teknike, ofertë brenda 48 orëve, garanci 5 vjet për produktin.',
   },
   skip: 'Kalo te përmbajtja',
   nav: {
@@ -168,7 +168,7 @@ export const sq = {
       {
         icon: 'net',
         title: 'Rrjeta kundër insekteve',
-        text: 'Moskitiera për dritare dhe dyer, në ngjyrën e kornizës.',
+        text: 'Moskitiera për dritare dhe dyer, në disa modele.',
         points: [
           'Rrëshqitëse horizontale',
           'Vertikale me rrotullim',
@@ -342,7 +342,7 @@ export const sq = {
     path: '/privatesia/',
     altPath: '/en/privacy/',
     title: 'Politika e Privatësisë',
-    metaDescription: 'Si i përpunon Apex Frames SHPK të dhënat personale të vizitorëve dhe klientëve.',
+    metaDescription: 'Si i përpunon Apex Frames SHPK të dhënat personale të vizitorëve dhe klientëve: çfarë mbledhim, pse, sa kohë i ruajmë dhe cilat janë të drejtat tuaja.',
     updated: 'Përditësuar më 31 tetor 2026',
     body: `
 <p>Kjo politikë shpjegon si <strong>Apex Frames SHPK</strong> (NUIS M62116046U), me seli në Innovation Hub, Piramida e Tiranës, Bulevardi "Dëshmorët e Kombit" 5, Tiranë ("ne"), përpunon të dhënat personale kur vizitoni www.apexframes.co ose na kontaktoni. Përpunimi bëhet në përputhje me Ligjin nr. 124/2024 "Për mbrojtjen e të dhënave personale".</p>
@@ -376,7 +376,7 @@ export const sq = {
     path: '/kushtet/',
     altPath: '/en/terms/',
     title: 'Kushtet e përdorimit',
-    metaDescription: 'Kushtet e përdorimit të faqes së internetit të Apex Frames SHPK.',
+    metaDescription: 'Kushtet e përdorimit të faqes së internetit të Apex Frames SHPK: natyra informuese, të dhënat teknike, pronësia intelektuale dhe ligji i zbatueshëm.',
     updated: 'Përditësuar më 31 tetor 2026',
     body: `
 <p>Kjo faqe interneti operohet nga <strong>Apex Frames SHPK</strong>, NUIS M62116046U, Tiranë. Duke e përdorur, pranoni kushtet e mëposhtme.</p>
@@ -408,9 +408,9 @@ export const en = {
   altLabel: 'SQ',
   altName: 'Shqip',
   meta: {
-    title: 'Apex Frames | Aluminium & uPVC Windows, Doors and Facades in Tirana',
+    title: 'Apex Frames | Aluminium & uPVC Windows and Doors in Tirana',
     description:
-      'Apex Frames supplies and installs premium aluminium and uPVC windows, doors and facades using certified European systems. On-site survey and measurement, quote within 48 hours, 5-year warranty.',
+      'Apex Frames supplies and installs premium aluminium and uPVC windows, doors and facades in Tirana. Site survey, quote within 48 hours, 5-year product warranty.',
   },
   skip: 'Skip to content',
   nav: {
@@ -550,7 +550,7 @@ export const en = {
       {
         icon: 'net',
         title: 'Insect screens',
-        text: 'Fly screens for windows and doors, in the frame colour.',
+        text: 'Fly screens for windows and doors, in several models.',
         points: ['Horizontal sliding', 'Vertical roll-up', 'Fixed frame', 'Pleated (plissé)'],
       },
       {
@@ -715,7 +715,7 @@ export const en = {
     path: '/en/privacy/',
     altPath: '/privatesia/',
     title: 'Privacy Policy',
-    metaDescription: 'How Apex Frames SHPK processes the personal data of visitors and clients.',
+    metaDescription: 'How Apex Frames SHPK processes the personal data of visitors and clients: what we collect, why, how long we keep it and what your rights are.',
     updated: 'Last updated 31 October 2026',
     body: `
 <p>This policy explains how <strong>Apex Frames SHPK</strong> (Tax ID M62116046U), registered at Innovation Hub, Pyramid of Tirana, "Dëshmorët e Kombit" Blvd. 5, Tirana, Albania ("we"), processes personal data when you visit www.apexframes.co or contact us. Processing complies with Albanian Law No. 124/2024 on Personal Data Protection and, where applicable, the EU GDPR.</p>
@@ -749,7 +749,7 @@ export const en = {
     path: '/en/terms/',
     altPath: '/kushtet/',
     title: 'Terms of Use',
-    metaDescription: 'Terms of use for the Apex Frames SHPK website.',
+    metaDescription: 'Terms of use for the Apex Frames SHPK website: informational purpose, technical data, intellectual property and governing law.',
     updated: 'Last updated 31 October 2026',
     body: `
 <p>This website is operated by <strong>Apex Frames SHPK</strong>, Tax ID M62116046U, Tirana, Albania. By using it you accept the following terms.</p>

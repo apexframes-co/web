@@ -1,0 +1,4 @@
+Contact: mailto:info@apexframes.co
+Expires: 2027-10-31T00:00:00.000Z
+Preferred-Languages: sq, en
+Canonical: https://www.apexframes.co/.well-known/security.txt
