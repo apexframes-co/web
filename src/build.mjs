@@ -1,5 +1,5 @@
 // Gjeneron gjithë faqen statike në dosjen dist/:  node src/build.mjs
-import { mkdirSync, writeFileSync, readFileSync, cpSync, rmSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync, cpSync, rmSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -20,11 +20,16 @@ const year = new Date().getFullYear();
 rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
+cpSync(join(ROOT, 'files'), join(DIST, 'files'), { recursive: true });
 
 const rd = (p) => readFileSync(join(ROOT, p), 'utf8');
 const logoSvg = rd('assets/img/logo.svg').trim();
 const markSvg = rd('assets/img/logo-mark.svg').trim();
 const manifest = JSON.parse(rd('assets/img/photos/manifest.json'));
+const models = JSON.parse(rd('src/catalogue.json'));
+const PDF_URL = '/files/Apex-Frames-Katalogu-Dyer-PVC.pdf';
+const PDF_MB = (statSync(join(ROOT, 'files/Apex-Frames-Katalogu-Dyer-PVC.pdf')).size / 1048576).toFixed(1).replace(/\.0$/, '');
+const fillN = (t) => t.replace(/\{n\}/g, models.length);
 const ver = createHash('sha1').update(rd('assets/css/styles.css') + rd('assets/js/main.js')).digest('hex').slice(0, 8);
 const INLINE_JS = "document.documentElement.classList.add('js')";
 const INLINE_HASH = createHash('sha256').update(INLINE_JS).digest('base64');
@@ -167,7 +172,7 @@ ${preload}
 
 function header(lang, current, alt, hero = false) {
   const u = ui[lang];
-  const items = ['products', 'services', 'process', 'blog', 'about'];
+  const items = ['products', 'catalogue', 'services', 'process', 'blog', 'about'];
   return `
 <a class="skip" href="#main">${content[lang].skip}</a>
 <header class="site-header${hero ? ' on-hero' : ''}" data-header>
@@ -208,7 +213,7 @@ function footer(lang) {
     </div>
     <div>
       <h2>${c.footer.company}</h2>
-      <ul>${links(['about', 'services', 'process', 'partners', 'warranty', 'faq', 'blog'])}</ul>
+      <ul>${links(['catalogue', 'about', 'services', 'process', 'partners', 'warranty', 'faq', 'blog'])}</ul>
     </div>
     <div>
       <h2>${u.pages.contact.label}</h2>
@@ -441,6 +446,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       <p class="intro">${t.intro}</p>
       <h2>${pr.includes}</h2>
       ${checks(t.features)}
+      ${p.catalogue ? `<a class="cat-banner" href="${rp(lang, 'catalogue')}"><span class="cat-banner-media"><img src="/assets/img/catalogue/cover.webp" width="900" height="956" alt="${esc(u.cat.heroAlt)}" loading="lazy" decoding="async"></span><span class="cat-banner-text"><strong>${u.cat.banner.title}</strong><span>${fillN(u.cat.banner.text)}</span><em>${u.cat.banner.button} ${icon('arrow', 'ico ico-sm')}</em></span></a>` : ''}
       ${p.gallery ? `<div class="gallery${p.gallery.length === 1 ? ' gallery-1' : ''}">${p.gallery.map((g) => `<figure>${img(g, lang, { sizes: '(max-width: 600px) 100vw, 380px' })}</figure>`).join('')}</div>` : ''}
       <h2>${pr.bestFor}</h2>
       <ul class="chips">${t.bestFor.map((x) => `<li>${x}</li>`).join('')}</ul>
@@ -637,6 +643,76 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: '', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'ContactPage'), breadcrumbNode(url, cr.all)] });
   }
 
+  /* ===== Katalogu ===== */
+  {
+    const id = 'catalogue';
+    const k = u.cat;
+    const path = rp(lang, id);
+    const url = abs(path);
+    const cr = crumbs(lang, [{ name: k.label, path }]);
+    const title = fillN(k.title);
+    const desc = fillN(k.desc);
+    const series = ['T', 'I', 'F'];
+    const count = (f) => models.filter(f).length;
+    const mAlt = (m) => (m.side ? k.modelAltSide : k.modelAlt).replace('{code}', m.code);
+    const dl = `<div class="ph-actions"><a class="btn btn-primary" href="${PDF_URL}" download>${k.download} <span class="btn-meta">PDF · ${PDF_MB} MB</span></a><a class="btn btn-link" href="#models">${k.browse}</a></div>`;
+    const finImgs = ['finish-golden-oak', 'finish-nussbaum', 'finish-mahogany', 'finish-antracit-1', 'finish-antracit-2'];
+    const finSize = { 'finish-golden-oak': [219, 512], 'finish-nussbaum': [231, 550], 'finish-mahogany': [233, 549], 'finish-antracit-1': [224, 549], 'finish-antracit-2': [230, 549] };
+    const body = `${pageHero({ crumbHtml: cr.html, label: k.label, h1: k.h1, lead: fillN(k.lead), extra: dl, mediaCls: ' ph-natural', media: `<img src="/assets/img/catalogue/cover.webp" width="900" height="956" alt="${esc(k.heroAlt)}" fetchpriority="high">` })}
+<section class="section section-tight" id="models">
+  <div class="container">
+    <div class="cat-toolbar" role="group" aria-label="${k.filtersAria}">
+      <button type="button" class="chip-btn is-active" data-filter="all" aria-pressed="true">${k.filters.all} <span>${models.length}</span></button>
+      ${series.map((sr) => `<button type="button" class="chip-btn" data-filter="${sr}" aria-pressed="false">${k.filters[sr]} <span>${count((m) => m.series === sr)}</span></button>`).join('\n      ')}
+      <button type="button" class="chip-btn" data-filter="side" aria-pressed="false">${k.filters.side} <span>${count((m) => m.side)}</span></button>
+      <p class="cat-count" aria-live="polite"><strong id="cat-count">${models.length}</strong> ${k.count}</p>
+    </div>
+    <ul class="cat-grid" id="cat-grid">
+      ${models.map((m) => `<li class="cat-card" id="${m.code}" data-series="${m.series}" data-side="${m.side ? 1 : 0}"><button type="button" class="cat-btn" data-code="${m.code}" data-src="/assets/img/catalogue/models/${m.code}.webp" data-w="${m.w}" data-h="${m.h}" aria-label="${k.open} ${m.code}"><span class="cat-media"><img src="/assets/img/catalogue/models/${m.code}.webp" width="${m.w}" height="${m.h}" alt="${esc(mAlt(m))}" loading="lazy" decoding="async"></span><span class="cat-code">${m.code}${m.side ? `<small>${k.sideLabel}</small>` : ''}</span></button></li>`).join('\n      ')}
+    </ul>
+    <p class="fineprint" data-reveal>${k.note}</p>
+  </div>
+</section>
+<section class="section section-paper">
+  <div class="container">
+    ${secHead('', k.finishes.title, k.finishes.title, k.finishes.lead)}
+    <ul class="finishes">${finImgs.map((f, i) => `<li data-reveal><span class="fin-media"><img src="/assets/img/catalogue/${f}.webp" width="${finSize[f][0]}" height="${finSize[f][1]}" alt="${esc(k.finishes.names[i])}" loading="lazy" decoding="async"></span><span class="fin-name">${k.finishes.names[i]}</span></li>`).join('')}</ul>
+  </div>
+</section>
+<section class="section">
+  <div class="container two-col">
+    <div class="col-head">
+      ${secHead('', k.panel.title, k.panel.title, k.panel.lead)}
+      <h3 class="h3-sm" data-reveal>${k.panel.layersTitle}</h3>
+      <ol class="layers" data-reveal>${k.panel.layers.map((x) => `<li>${x}</li>`).join('')}</ol>
+    </div>
+    <div class="panel-figs" data-reveal>
+      <figure><img src="/assets/img/catalogue/panel-structure-1.webp" width="844" height="442" alt="${esc(k.panel.alt1)}" loading="lazy" decoding="async"></figure>
+      <figure><img src="/assets/img/catalogue/panel-structure-2.webp" width="686" height="379" alt="${esc(k.panel.alt2)}" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+<section class="section section-paper">
+  <div class="container narrow">
+    ${secHead('', k.faqTitle, k.faqTitle)}
+    ${faqList(k.faq)}
+  </div>
+</section>
+${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}
+<dialog class="lightbox" id="lightbox" aria-label="${k.model}" data-contact="${rp(lang, 'contact')}" data-side="${k.sideLabel}">
+  <button type="button" class="lb-close" aria-label="${k.close}">&times;</button>
+  <button type="button" class="lb-nav lb-prev" aria-label="${k.prev}">&#8249;</button>
+  <button type="button" class="lb-nav lb-next" aria-label="${k.next}">&#8250;</button>
+  <figure class="lb-figure">
+    <div class="lb-stage"><img id="lb-img" alt="${k.model}" width="325" height="657"></div>
+    <figcaption><strong id="lb-code"></strong><span id="lb-tag"></span><a id="lb-cta" class="btn btn-primary" href="${rp(lang, 'contact')}">${k.cta} ${icon('arrow', 'ico ico-sm')}</a></figcaption>
+  </figure>
+</dialog>`;
+    const list = { '@type': 'ItemList', '@id': url + '#models', name: k.h1, numberOfItems: models.length, itemListElement: models.map((m, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'ImageObject', name: `${k.model} ${m.code}`, caption: mAlt(m), contentUrl: abs(`/assets/img/catalogue/models/${m.code}.webp`) } })) };
+    const doc = { '@type': 'DigitalDocument', '@id': url + '#pdf', name: k.h1 + ' (PDF)', url: abs(PDF_URL), encodingFormat: 'application/pdf', inLanguage: lang, publisher: { '@id': ORG } };
+    wrap({ lang, key: id, id, current: 'catalogue', path, alt: alt(id), title, desc, og: '/assets/img/photos/door-og.jpg', ogAlt: ALT.door[lang], preload: `<link rel="preload" as="image" type="image/webp" href="/assets/img/catalogue/cover.webp">`, body, graph: [pageNode(lang, url, title, desc, 'CollectionPage', { mainEntity: { '@id': url + '#models' }, hasPart: { '@id': url + '#pdf' } }), list, doc, faqNode(url, k.faq), breadcrumbNode(url, cr.all)] });
+  }
+
   /* ===== Blogu: lista ===== */
   {
     const id = 'blog';
@@ -757,7 +833,7 @@ const llmsSection = (lang, label) => {
 ${ps.filter((p) => p.key.startsWith('product:')).map(li).join('\n')}
 
 ## ${label.company}
-${['about', 'services', 'process', 'partners', 'warranty', 'faq', 'contact'].map((k) => li(one(k))).join('\n')}
+${['catalogue', 'about', 'services', 'process', 'partners', 'warranty', 'faq', 'contact'].map((k) => li(one(k))).join('\n')}
 
 ## Blog
 ${ps.filter((p) => p.key.startsWith('post:')).map(li).join('\n')}
@@ -826,6 +902,9 @@ w('_headers', `/*
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/files/*
+  Cache-Control: public, max-age=86400
 
 /llms.txt
   Content-Type: text/plain; charset=utf-8

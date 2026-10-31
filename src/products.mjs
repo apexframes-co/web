@@ -99,7 +99,7 @@ export const products = [
     },
   },
   {
-    id: 'doors', icon: 'door', image: 'door', gallery: ['sliding', 'blackslider'], related: ['aluminium', 'upvc', 'glazing'], posts: ['declaration-of-performance-ce-marking'],
+    id: 'doors', icon: 'door', image: 'door', gallery: ['sliding', 'blackslider'], catalogue: true, related: ['aluminium', 'upvc', 'glazing'], posts: ['declaration-of-performance-ce-marking'],
     slug: { sq: 'dyer-hyrese-automatike', en: 'entrance-automatic-doors' },
     sq: {
       name: 'Dyer hyrëse & automatike',

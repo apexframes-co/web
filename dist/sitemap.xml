@@ -127,6 +127,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/kontakt/"/>
   </url>
   <url>
+    <loc>https://www.apexframes.co/katalogu/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/katalogu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/catalogue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/katalogu/"/>
+  </url>
+  <url>
     <loc>https://www.apexframes.co/blog/</loc>
     <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/blog/"/>
@@ -377,6 +384,13 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/kontakt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/kontakt/"/>
+  </url>
+  <url>
+    <loc>https://www.apexframes.co/en/catalogue/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://www.apexframes.co/katalogu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexframes.co/en/catalogue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexframes.co/katalogu/"/>
   </url>
   <url>
     <loc>https://www.apexframes.co/en/blog/</loc>

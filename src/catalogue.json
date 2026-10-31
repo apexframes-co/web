@@ -1,0 +1,408 @@
+[
+{
+"code": "F01",
+"series": "F",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "F02",
+"series": "F",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "F03",
+"series": "F",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "F04",
+"series": "F",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "F05",
+"series": "F",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "F06",
+"series": "F",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "F08",
+"series": "F",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "F09",
+"series": "F",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "F10",
+"series": "F",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "I01",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I02",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I03",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I04",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I05",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I06",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I07",
+"series": "I",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "I08",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I09",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "I10",
+"series": "I",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "I11",
+"series": "I",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "I12",
+"series": "I",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "I13",
+"series": "I",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "I14",
+"series": "I",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "I15",
+"series": "I",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T01",
+"series": "T",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "T02",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T03",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T04",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T05",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T06",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T07",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T08",
+"series": "T",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "T09",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T10",
+"series": "T",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "T11",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T12",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T13",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T14",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T15",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T16",
+"series": "T",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "T17",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T18",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T19",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T20",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T21",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T22",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T23",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T24",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T25",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T26",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T27",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T28",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T29",
+"series": "T",
+"w": 526,
+"h": 657,
+"side": true
+},
+{
+"code": "T30",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T31",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T32",
+"series": "T",
+"w": 325,
+"h": 657,
+"side": false
+},
+{
+"code": "T33",
+"series": "T",
+"w": 324,
+"h": 657,
+"side": false
+},
+{
+"code": "T34",
+"series": "T",
+"w": 316,
+"h": 639,
+"side": false
+}
+]

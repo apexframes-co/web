@@ -10,13 +10,14 @@ export const routes = {
   faq: { sq: '/pyetje-te-shpeshta/', en: '/en/faq/' },
   contact: { sq: '/kontakt/', en: '/en/contact/' },
   blog: { sq: '/blog/', en: '/en/blog/' },
+  catalogue: { sq: '/katalogu/', en: '/en/catalogue/' },
   privacy: { sq: '/privatesia/', en: '/en/privacy/' },
   terms: { sq: '/kushtet/', en: '/en/terms/' },
 };
 
 export const ui = {
   sq: {
-    nav: { products: 'Produktet', services: 'Shërbimet', process: 'Procesi', blog: 'Blog', about: 'Rreth nesh', cta: 'Kërko ofertë', menu: 'Menu', close: 'Mbyll', aria: 'Navigimi kryesor' },
+    nav: { products: 'Produktet', catalogue: 'Katalogu', services: 'Shërbimet', process: 'Procesi', blog: 'Blog', about: 'Rreth nesh', cta: 'Kërko ofertë', menu: 'Menu', close: 'Mbyll', aria: 'Navigimi kryesor' },
     crumbs: { home: 'Kreu', label: 'Rruga e faqes' },
     common: { learnMore: 'Shiko më shumë', allProducts: 'Të gjitha produktet', allPosts: 'Të gjitha artikujt', readMore: 'Lexo artikullin', minRead: 'min lexim', published: 'Publikuar', updated: 'Përditësuar', by: 'Nga ekipi i Apex Frames', answer: 'Përgjigje e shkurtër', toc: 'Në këtë artikull', related: 'Të ngjashme', illustrative: 'Imazh ilustrues', send: 'Dërgo kërkesën', directions: 'Hap në hartë' },
     home: {
@@ -48,6 +49,28 @@ export const ui = {
       blog: { title: 'Blog: këshilla për dritare, dyer dhe fasada | Apex Frames', desc: 'Artikuj praktikë për zgjedhjen dhe montimin e dritareve dhe dyerve: uPVC apo alumin, xhama, kondensimi, DoP dhe CE, çfarë ndikon në çmim.', h1: 'Blogu', label: 'Blog', lead: 'Këshilla praktike për të zgjedhur, krahasuar dhe montuar dritare, dyer dhe fasada.' },
     },
     product: { includes: 'Çfarë përfshin', bestFor: 'Kur e zgjidhni', faq: 'Pyetje të shpeshta', related: 'Produkte të ngjashme', articles: 'Artikuj të lidhur', asideTitle: 'Kërkoni ofertë për këtë produkt', asideText: 'Vizitë teknike dhe matje në objekt, ofertë me çmim përfundimtar brenda 48 orëve.', facts: [['Garanci produkti', '5 vjet'], ['Garanci montimi', '24 muaj'], ['Oferta', 'brenda 48 orëve']], serviceType: 'Furnizim dhe montim' },
+    cat: {
+      title: 'Katalogu i dyerve hyrëse PVC: {n} modele | Apex Frames',
+      desc: 'Katalogu online i dyerve hyrëse PVC me panel sanduiç: {n} modele në seritë T, I dhe F, me ose pa panel anësor, në finiturat Golden Oak, Nussbaum, Mahogany dhe Antracit.',
+      h1: 'Katalogu i dyerve hyrëse PVC', label: 'Katalogu',
+      lead: 'Shfletoni {n} modele panelesh për dyer hyrëse PVC. Zgjidhni një model dhe na dërgoni kodin e tij: ofertën me çmim përfundimtar e merrni pas matjes në objekt.',
+      download: 'Shkarko katalogun', browse: 'Shiko modelet', heroAlt: 'Tre modele dyersh hyrëse PVC nga katalogu',
+      filtersAria: 'Filtro modelet', filters: { all: 'Të gjitha', T: 'Seria T', I: 'Seria I', F: 'Seria F', side: 'Me panel anësor' },
+      count: 'modele', open: 'Zmadho modelin', model: 'Modeli', sideLabel: 'Me panel anësor', close: 'Mbyll', prev: 'Modeli i mëparshëm', next: 'Modeli tjetër', cta: 'Kërko ofertë për këtë model',
+      modelAlt: 'Derë hyrëse PVC, modeli {code}', modelAltSide: 'Derë hyrëse PVC me panel anësor, modeli {code}',
+      note: 'Modelet dhe ngjyrat në ekran mund të ndryshojnë pak nga produkti real. Kërkoni mostra ngjyrash para porosisë.',
+      finishes: { title: 'Ngjyrat dhe finiturat', lead: 'Modelet e katalogut shfaqen në të bardhë. Paneli ofrohet edhe në finiturat me dekor druri dhe antracit.', names: ['Golden Oak', 'Nussbaum', 'Mahogany', 'Antracit', 'Antracit'] },
+      panel: { title: 'Si është ndërtuar paneli sanduiç', lead: 'Paneli ka bërthamë XPS (polistiren i ekstrudiuar), të veshur me fletë PVC të ngjitur dhe film mbrojtës. Në finiturat me dekor druri shtohet një fletë e laminuar.', layersTitle: 'Shtresat, nga jashtë nga brenda', layers: ['Film mbrojtës (protective film)', 'Fletë e laminuar për finiturat me dekor druri (laminated foil)', 'Fletë PVC (PVC sheet)', 'Ngjitës (adhesive)', 'Bërthamë XPS (polistiren i ekstrudiuar)'], alt1: 'Skema e shtresave të panelit sanduiç me film mbrojtës, fletë PVC, ngjitës dhe XPS', alt2: 'Skema e panelit sanduiç me fletë të laminuar për dekor druri', alt3: 'Mostra panelesh me dekor druri' },
+      faqTitle: 'Pyetje për katalogun',
+      faq: [
+        { q: 'Si porosis një model nga katalogu?', a: 'Zgjidhni modelin dhe na dërgoni kodin e tij (p.sh. T17) me formularin e kontaktit ose me email. Pas vizitës teknike dhe matjes merrni ofertën me çmim përfundimtar.' },
+        { q: 'Çfarë ngjyrash ofrohen?', a: 'Modelet shfaqen në të bardhë, dhe paneli ofrohet edhe në finiturat Golden Oak, Nussbaum, Mahogany dhe Antracit.' },
+        { q: 'Si është ndërtuar paneli i derës?', a: 'Është panel sanduiç me film mbrojtës, fletë PVC, ngjitës dhe bërthamë XPS; për dekor druri shtohet një fletë e laminuar.' },
+        { q: 'A mund të kenë dyert përmasa sipas porosisë?', a: 'Po, dyert me panel PVC prodhohen me përmasa sipas porosisë, të konfirmuara në fletën e specifikimit para prodhimit.' },
+        { q: 'A mund ta marr katalogun në PDF?', a: 'Po, mund ta shkarkoni nga butoni në krye të faqes.' },
+      ],
+      banner: { title: 'Katalogu i dyerve hyrëse PVC', text: 'Shfletoni {n} modele panelesh në seritë T, I dhe F, me ose pa panel anësor.', button: 'Shiko katalogun' },
+    },
     servicesBullets: [
       ['Përzgjedhja e sistemit sipas objektit', 'Skeda teknike, DoP dhe CE për arkitektë e ndërtues', 'Mostra ngjyrash dhe vizualizime'],
       ['Vizitë teknike dhe matje në terren', 'Fletë specifikimi e pozicioneve, e miratuar para prodhimit', 'Preventiv me çmim përfundimtar, brenda 48 orëve'],
@@ -62,7 +85,7 @@ export const ui = {
     ],
   },
   en: {
-    nav: { products: 'Products', services: 'Services', process: 'Process', blog: 'Blog', about: 'About', cta: 'Request a quote', menu: 'Menu', close: 'Close', aria: 'Main navigation' },
+    nav: { products: 'Products', catalogue: 'Catalogue', services: 'Services', process: 'Process', blog: 'Blog', about: 'About', cta: 'Request a quote', menu: 'Menu', close: 'Close', aria: 'Main navigation' },
     crumbs: { home: 'Home', label: 'Breadcrumb' },
     common: { learnMore: 'Learn more', allProducts: 'All products', allPosts: 'All articles', readMore: 'Read article', minRead: 'min read', published: 'Published', updated: 'Updated', by: 'By the Apex Frames team', answer: 'Short answer', toc: 'In this article', related: 'Related', illustrative: 'Illustrative image', send: 'Send request', directions: 'Open in maps' },
     home: {
@@ -94,6 +117,28 @@ export const ui = {
       blog: { title: 'Blog: Advice on Windows, Doors and Facades | Apex Frames', desc: 'Practical articles on choosing and installing windows and doors: uPVC vs aluminium, glazing, condensation, DoP and CE, what affects price.', h1: 'The blog', label: 'Blog', lead: 'Practical advice on choosing, comparing and installing windows, doors and facades.' },
     },
     product: { includes: 'What’s included', bestFor: 'Best for', faq: 'Frequently asked questions', related: 'Related products', articles: 'Related articles', asideTitle: 'Request a quote for this product', asideText: 'Site visit and measurement, quote with a final price within 48 hours.', facts: [['Product warranty', '5 years'], ['Installation warranty', '24 months'], ['Quote', 'within 48 hours']], serviceType: 'Supply and installation' },
+    cat: {
+      title: 'PVC Entrance Doors Catalogue: {n} Models | Apex Frames',
+      desc: 'Online catalogue of PVC entrance doors with sandwich panel: {n} models in series T, I and F, with or without a side panel, in woodgrain and anthracite finishes.',
+      h1: 'PVC entrance doors catalogue', label: 'Catalogue',
+      lead: 'Browse {n} PVC entrance door panel models. Pick a model and send us its code: you receive the quote with a final price after the on-site measurement.',
+      download: 'Download the catalogue', browse: 'Browse the models', heroAlt: 'Three PVC entrance door models from the catalogue',
+      filtersAria: 'Filter models', filters: { all: 'All', T: 'Series T', I: 'Series I', F: 'Series F', side: 'With side panel' },
+      count: 'models', open: 'Enlarge model', model: 'Model', sideLabel: 'With side panel', close: 'Close', prev: 'Previous model', next: 'Next model', cta: 'Request a quote for this model',
+      modelAlt: 'PVC entrance door, model {code}', modelAltSide: 'PVC entrance door with side panel, model {code}',
+      note: 'Models and colours on screen may differ slightly from the real product. Ask for colour samples before ordering.',
+      finishes: { title: 'Colours and finishes', lead: 'The catalogue models are shown in white. The panel is also available in woodgrain and anthracite finishes.', names: ['Golden Oak', 'Nussbaum', 'Mahogany', 'Anthracite', 'Anthracite'] },
+      panel: { title: 'How the sandwich panel is built', lead: 'The panel has an XPS (extruded polystyrene) core, faced with a bonded PVC sheet and a protective film. Woodgrain finishes add a laminated foil.', layersTitle: 'Layers, from outside to inside', layers: ['Protective film', 'Laminated foil for woodgrain finishes', 'PVC sheet', 'Adhesive', 'XPS core (extruded polystyrene)'], alt1: 'Layer diagram of the sandwich panel with protective film, PVC sheet, adhesive and XPS', alt2: 'Sandwich panel diagram with laminated foil for woodgrain', alt3: 'Woodgrain panel samples' },
+      faqTitle: 'Catalogue questions',
+      faq: [
+        { q: 'How do I order a model from the catalogue?', a: 'Pick a model and send us its code (e.g. T17) through the contact form or by email. After the technical visit and measurement you receive a quote with a final price.' },
+        { q: 'Which colours are available?', a: 'Models are shown in white, and the panel is also available in Golden Oak, Nussbaum, Mahogany and Anthracite finishes.' },
+        { q: 'How is the door panel built?', a: 'It is a sandwich panel with a protective film, PVC sheet, adhesive and XPS core; woodgrain finishes add a laminated foil.' },
+        { q: 'Can the doors be made to size?', a: 'Yes, PVC panel doors are made to size, confirmed on the specification sheet before production.' },
+        { q: 'Can I get the catalogue as a PDF?', a: 'Yes, you can download it with the button at the top of the page.' },
+      ],
+      banner: { title: 'PVC entrance doors catalogue', text: 'Browse {n} panel models in the T, I and F series, with or without a side panel.', button: 'View the catalogue' },
+    },
     servicesBullets: [
       ['System selection for each building', 'Data sheets, DoP and CE for architects and builders', 'Colour samples and visualisations'],
       ['Site visit and on-site measurement', 'Position-by-position specification sheet, approved before production', 'Quote with a final price, within 48 hours'],

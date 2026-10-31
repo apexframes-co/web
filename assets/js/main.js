@@ -88,5 +88,66 @@
       window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
     form.addEventListener('input', (e) => e.target.classList.remove('invalid'));
+
+    // Nga katalogu: /kontakt/?model=T17 plotëson mesazhin dhe interesin
+    const model = new URLSearchParams(location.search).get('model');
+    if (model && /^[TIF]\d{2}$/.test(model)) {
+      const sq = document.documentElement.lang === 'sq';
+      const msg = form.querySelector('[name=message]');
+      if (msg && !msg.value) msg.value = sq ? `Interesohem për modelin ${model} nga katalogu i dyerve hyrëse PVC.` : `I am interested in model ${model} from the PVC entrance doors catalogue.`;
+      const sel = form.querySelector('[name=interest]');
+      if (sel && sel.options[2]) sel.selectedIndex = 2;
+    }
+  }
+
+  // Katalogu: filtra dhe zmadhim
+  const grid = document.getElementById('cat-grid');
+  const box = document.getElementById('lightbox');
+  if (grid && box) {
+    const cards = [...grid.querySelectorAll('.cat-card')];
+    const counter = document.getElementById('cat-count');
+    const chips = [...document.querySelectorAll('.chip-btn')];
+    const visible = () => cards.filter((c) => !c.hidden);
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      chips.forEach((c) => { const on = c === chip; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', String(on)); });
+      cards.forEach((c) => { c.hidden = !(f === 'all' || c.dataset.series === f || (f === 'side' && c.dataset.side === '1')); });
+      counter.textContent = visible().length;
+    }));
+
+    const img = document.getElementById('lb-img');
+    const code = document.getElementById('lb-code');
+    const tag = document.getElementById('lb-tag');
+    const cta = document.getElementById('lb-cta');
+    let current = null;
+    const show = (card) => {
+      const b = card.querySelector('.cat-btn');
+      current = card;
+      img.src = b.dataset.src; img.width = b.dataset.w; img.height = b.dataset.h;
+      img.alt = card.querySelector('img').alt;
+      code.textContent = b.dataset.code;
+      tag.textContent = card.dataset.side === '1' ? box.dataset.side : '';
+      cta.href = `${box.dataset.contact}?model=${b.dataset.code}`;
+      history.replaceState(null, '', `#${b.dataset.code}`);
+    };
+    const open = (card) => { show(card); if (!box.open) box.showModal(); };
+    const step = (d) => {
+      const list = visible(); if (!list.length) return;
+      const i = list.indexOf(current);
+      show(list[(i + d + list.length) % list.length]);
+    };
+    grid.addEventListener('click', (e) => { const b = e.target.closest('.cat-btn'); if (b) open(b.closest('.cat-card')); });
+    box.querySelector('.lb-close').addEventListener('click', () => box.close());
+    box.querySelector('.lb-prev').addEventListener('click', () => step(-1));
+    box.querySelector('.lb-next').addEventListener('click', () => step(1));
+    box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+    box.addEventListener('close', () => history.replaceState(null, '', location.pathname + location.search));
+    box.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+    const fromHash = () => {
+      const target = cards.find((c) => c.id === decodeURIComponent(location.hash.slice(1)));
+      if (target) open(target);
+    };
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
   }
 })();
