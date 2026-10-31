@@ -1,2 +1,4 @@
 .preview/
 node_modules/
+*.whl
+*.tar.gz
