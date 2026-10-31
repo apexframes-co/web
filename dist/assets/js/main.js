@@ -1,13 +1,17 @@
 (() => {
   'use strict';
   const header = document.querySelector('[data-header]');
-  const isHome = !!document.querySelector('.hero');
-  if (header && !isHome) header.classList.add('solid');
+  const hero = document.querySelector('.hero');
 
-  // Header i ngurtë pas scroll-it
-  const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 24);
+  // Header: xham i errët mbi hero, i çelët pasi dalim prej tij
+  const onScroll = () => {
+    if (!header) return;
+    const past = !hero || window.scrollY > hero.offsetHeight - 110;
+    header.classList.toggle('is-light', past);
+  };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
 
   // Menuja mobile
   const btn = document.querySelector('.menu-btn');
@@ -15,13 +19,14 @@
   if (btn && nav) {
     const set = (open) => {
       nav.classList.toggle('open', open);
+      header.classList.toggle('menu-open', open);
       btn.setAttribute('aria-expanded', String(open));
       btn.querySelector('.sr').textContent = open ? btn.dataset.labelClose : btn.dataset.labelOpen;
-      header.classList.toggle('solid', open || !isHome);
     };
     btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
     nav.addEventListener('click', (e) => e.target.closest('a') && set(false));
     document.addEventListener('keydown', (e) => e.key === 'Escape' && set(false));
+    document.addEventListener('click', (e) => { if (!header.contains(e.target)) set(false); });
   }
 
   // Animacioni i shfaqjes

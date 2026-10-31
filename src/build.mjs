@@ -154,12 +154,12 @@ ${preload}
 </head>`;
 }
 
-function header(lang, current, alt) {
+function header(lang, current, alt, hero = false) {
   const u = ui[lang];
   const items = ['products', 'services', 'process', 'blog', 'about'];
   return `
 <a class="skip" href="#main">${content[lang].skip}</a>
-<header class="site-header" data-header>
+<header class="site-header${hero ? ' on-hero' : ''}" data-header>
   <div class="container header-inner">
     <a class="brand" href="${rp(lang, 'home')}" aria-label="Apex Frames">${inline(logoSvg, 'logo')}</a>
     <nav class="nav" id="nav" aria-label="${u.nav.aria}">
@@ -276,10 +276,10 @@ function postCard(lang, post) {
 
 /* ---------- regjistri i faqeve ---------- */
 const pages = [];
-function wrap({ lang, key, id, current, path, alt, title, desc, og, ogAlt, type, graph, preload, noindex, article, body, lastmod = SITE_DATE }) {
+function wrap({ lang, key, id, current, path, alt, title, desc, og, ogAlt, type, graph, preload, noindex, article, body, hero = false, lastmod = SITE_DATE }) {
   const html = `${head({ lang, title, desc, path, alt, og, ogAlt, type, graph, preload, noindex, article })}
 <body id="top">
-${header(lang, current, alt)}
+${header(lang, current, alt, hero)}
 <main id="main">
 ${body}
 </main>
@@ -308,17 +308,16 @@ for (const lang of LANGS) {
     const featured = posts.slice(0, 3);
     const body = `
 <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="label">${c.hero.eyebrow}</p>
-      <h1>${c.hero.title}</h1>
-      <p class="lead">${u.home.lead}</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="${rp(lang, 'contact')}">${c.hero.primary} ${icon('arrow', 'ico ico-sm')}</a>
-        <a class="btn btn-link" href="${rp(lang, 'products')}">${c.hero.secondary}</a>
-      </div>
+  <div class="hero-bg" aria-hidden="false">${img('doors', lang, { sizes: '100vw', eager: true })}</div>
+  <p class="hero-note">${u.common.illustrative}</p>
+  <div class="container hero-center">
+    <p class="pill">${c.hero.eyebrow}</p>
+    <h1>${c.hero.title}</h1>
+    <p class="lead">${u.home.lead}</p>
+    <div class="actions">
+      <a class="btn btn-white" href="${rp(lang, 'contact')}">${c.hero.primary} ${icon('arrow', 'ico ico-sm')}</a>
+      <a class="btn btn-glass" href="${rp(lang, 'products')}">${c.hero.secondary}</a>
     </div>
-    <figure class="hero-photo">${img('doors', lang, { sizes: '(max-width: 920px) 100vw, 520px', eager: true })}<figcaption>${u.common.illustrative}</figcaption></figure>
   </div>
   <div class="container"><dl class="stats">${c.hero.stats.map((s) => `<div><dt>${s.value}</dt><dd>${s.label}</dd></div>`).join('')}</dl></div>
 </section>
@@ -354,7 +353,7 @@ for (const lang of LANGS) {
   </div>
 </section>
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
-    wrap({ lang, key: 'home', id: 'home', current: '', path, alt: alt('home'), title: c.meta.title, desc: c.meta.description, og: '/assets/img/photos/doors-og.jpg', ogAlt: ALT.doors[lang], preload: preloadFor('doors', '(max-width: 920px) 100vw, 520px'), body, graph: [{ '@type': 'WebPage', '@id': url + '#webpage', url, name: c.meta.title, description: c.meta.description, isPartOf: { '@id': SITE }, about: { '@id': ORG }, inLanguage: lang, dateModified: SITE_DATE, primaryImageOfPage: { '@type': 'ImageObject', url: abs('/assets/img/photos/doors-og.jpg') } }] });
+    wrap({ lang, key: 'home', id: 'home', current: '', path, alt: alt('home'), title: c.meta.title, desc: c.meta.description, og: '/assets/img/photos/doors-og.jpg', ogAlt: ALT.doors[lang], preload: preloadFor('doors', '100vw'), hero: true, body, graph: [{ '@type': 'WebPage', '@id': url + '#webpage', url, name: c.meta.title, description: c.meta.description, isPartOf: { '@id': SITE }, about: { '@id': ORG }, inLanguage: lang, dateModified: SITE_DATE, primaryImageOfPage: { '@type': 'ImageObject', url: abs('/assets/img/photos/doors-og.jpg') } }] });
   }
 
   /* ===== Rreth nesh ===== */
