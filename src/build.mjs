@@ -2,7 +2,7 @@
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { company as C, brands, sq, en } from './content.mjs';
+import { company as C, sq, en } from './content.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const year = new Date().getFullYear();
@@ -40,38 +40,32 @@ const social = {
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.8h-.01a9.8 9.8 0 01-5-1.37l-.36-.21-3.72.97 1-3.62-.24-.37a9.8 9.8 0 1118.15-5.2 9.8 9.8 0 01-9.82 9.8zm8.35-18.15A11.75 11.75 0 002 17.7L.33 23.8l6.24-1.64a11.73 11.73 0 005.61 1.43h.01A11.75 11.75 0 0020.39 3.65z"/></svg>',
 };
 
-// Ilustrimi i hero-s: profil dritareje/fasade abstrakte me ngjyrat e brandit.
+// Vizatim arkitektonik minimal i një dritareje (vija të holla).
 const heroArt = `
-<svg class="hero-art" viewBox="0 0 520 560" role="img" aria-hidden="true">
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7aa0c4"/><stop offset=".55" stop-color="#307eac"/><stop offset="1" stop-color="#2f425e"/>
-    </linearGradient>
-    <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="frameG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3a4248"/><stop offset="1" stop-color="#1f2428"/>
-    </linearGradient>
-  </defs>
-  <rect x="20" y="20" width="480" height="520" rx="6" fill="url(#frameG)"/>
-  <g class="pane p1"><rect x="44" y="44" width="210" height="300" fill="url(#sky)"/><rect x="44" y="44" width="210" height="300" fill="url(#glare)"/></g>
-  <g class="pane p2"><rect x="266" y="44" width="210" height="300" fill="url(#sky)"/><rect x="266" y="44" width="210" height="300" fill="url(#glare)" opacity=".7"/></g>
-  <g class="pane p3"><rect x="44" y="356" width="432" height="160" fill="url(#sky)" opacity=".9"/><rect x="44" y="356" width="432" height="160" fill="url(#glare)" opacity=".5"/></g>
-  <path d="M60 300 L150 150 L190 210 L230 170 L254 200 L254 344 L44 344 L44 330Z" fill="#2f425e" opacity=".45"/>
-  <path d="M266 260 L330 180 L400 250 L476 190 L476 344 L266 344Z" fill="#2f425e" opacity=".35"/>
-  <rect x="236" y="190" width="6" height="40" rx="3" fill="#cccccc"/>
-  <rect x="278" y="190" width="6" height="40" rx="3" fill="#cccccc"/>
-  <g stroke="#ffffff" stroke-opacity=".12"><path d="M44 120h432M44 200h432"/></g>
+<svg class="hero-art" viewBox="0 0 440 520" fill="none" aria-hidden="true">
+  <rect x="20" y="20" width="400" height="480" stroke="#292e32" stroke-width="2"/>
+  <rect x="36" y="36" width="368" height="448" stroke="#292e32" stroke-width="1"/>
+  <path d="M220 36v312M36 348h368" stroke="#292e32" stroke-width="1"/>
+  <rect x="52" y="52" width="152" height="280" class="glass"/>
+  <rect x="236" y="52" width="152" height="280" class="glass"/>
+  <rect x="52" y="364" width="336" height="104" class="glass glass-2"/>
+  <path d="M52 332L204 52M236 192l152-140" stroke="#307eac" stroke-width="1" stroke-dasharray="4 6" opacity=".55"/>
+  <rect x="196" y="176" width="4" height="40" rx="2" fill="#292e32"/>
+  <rect x="240" y="176" width="4" height="40" rx="2" fill="#292e32"/>
+  <g class="dim" stroke="#7aa0c4" stroke-width="1">
+    <path d="M20 510v8M420 510v8M20 514h400"/>
+    <path d="M430 20h8M430 500h8M434 20v480"/>
+  </g>
 </svg>`;
+
+const NAV = ['about', 'products', 'process', 'partners', 'faq'];
 
 function header(t, page) {
   const home = t.path;
   const h = (id) => (page === 'home' ? `#${id}` : `${home}#${id}`);
-  const links = ['about', 'products', 'services', 'process', 'partners', 'contact']
-    .map((k) => `<li><a href="${h(k)}">${t.nav[k]}</a></li>`)
-    .join('');
+  const links = NAV.map((k) => `<li><a href="${h(k)}">${t.nav[k]}</a></li>`).join('');
   const alt = page === 'home' ? t.altPath : t[page].altPath;
+  const other = t.lang === 'sq' ? 'en' : 'sq';
   return `
 <a class="skip" href="#main">${t.skip}</a>
 <header class="site-header" data-header>
@@ -79,10 +73,10 @@ function header(t, page) {
     <a class="brand" href="${home}" aria-label="Apex Frames">${inline(logo, 'logo')}</a>
     <nav class="nav" id="nav" aria-label="Main">
       <ul>${links}</ul>
-      <a class="btn btn-primary nav-cta" href="${h('contact')}">${t.nav.cta}</a>
+      <a class="btn btn-dark nav-cta" href="${h('contact')}">${t.nav.cta}</a>
     </nav>
     <div class="header-tools">
-      <a class="lang" href="${alt}" hreflang="${t.lang === 'sq' ? 'en' : 'sq'}" lang="${t.lang === 'sq' ? 'en' : 'sq'}" title="${t.altName}">${t.altLabel}</a>
+      <a class="lang" href="${alt}" hreflang="${other}" lang="${other}" title="${t.altName}">${t.altLabel}</a>
       <button class="menu-btn" type="button" aria-controls="nav" aria-expanded="false" data-label-open="${t.nav.menu}" data-label-close="${t.nav.close}"><span></span><span></span><span class="sr">${t.nav.menu}</span></button>
     </div>
   </div>
@@ -94,30 +88,15 @@ function footer(t) {
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="${t.path}" class="brand brand-light" aria-label="Apex Frames">${inline(logo, 'flogo')}</a>
+      <a href="${t.path}" class="brand" aria-label="Apex Frames">${inline(logo, 'flogo')}</a>
       <p>${t.footer.tagline}</p>
-      <div class="social">
-        <a href="${C.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${social.linkedin}</a>
-        <a href="${C.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${social.instagram}</a>
-        <a href="https://wa.me/${C.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${social.whatsapp}</a>
-      </div>
-    </div>
-    <div>
-      <h3>${t.footer.company}</h3>
-      <ul>
-        <li><a href="${t.path}#about">${t.nav.about}</a></li>
-        <li><a href="${t.path}#products">${t.nav.products}</a></li>
-        <li><a href="${t.path}#services">${t.nav.services}</a></li>
-        <li><a href="${t.path}#partners">${t.nav.partners}</a></li>
-        <li><a href="${t.path}#faq">${t.nav.faq}</a></li>
-      </ul>
     </div>
     <div>
       <h3>${t.nav.contact}</h3>
       <ul>
         <li><a href="mailto:${C.email}">${C.email}</a></li>
         <li><a href="tel:${C.phoneHref}">${C.phoneDisplay}</a></li>
-        <li>${esc(C.street)}, ${C.city}</li>
+        <li>${C.city}, ${t.lang === 'sq' ? 'Shqipëri' : 'Albania'}</li>
       </ul>
     </div>
     <div>
@@ -125,17 +104,26 @@ function footer(t) {
       <ul>
         <li><a href="${t.privacy.path}">${t.footer.privacy}</a></li>
         <li><a href="${t.terms.path}">${t.footer.terms}</a></li>
-        <li>${C.legalName}</li>
-        <li>${t.footer.nuis}: ${C.nuis}</li>
+        <li>${t.footer.nuis} ${C.nuis}</li>
       </ul>
+    </div>
+    <div>
+      <h3>${t.contact.labels.follow}</h3>
+      <div class="social">
+        <a href="${C.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${social.linkedin}</a>
+        <a href="${C.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${social.instagram}</a>
+        <a href="https://wa.me/${C.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${social.whatsapp}</a>
+      </div>
     </div>
   </div>
   <div class="container footer-bottom">
     <p>© ${year} ${C.legalName}. ${t.footer.rights}</p>
-    <p class="tm">${t.footer.trademark}</p>
+    <a href="#top">${t.footer.top} ↑</a>
   </div>
-</footer>`;
+</footer>
+`;
 }
+
 
 function head(t, { title, description, path, altPath, noindex = false, schema = '' }) {
   const other = t.lang === 'sq' ? 'en' : 'sq';
@@ -199,77 +187,66 @@ function schemaFor(t) {
   return `<script type="application/ld+json">${JSON.stringify(org)}</script>\n<script type="application/ld+json">${JSON.stringify(faq)}</script>`;
 }
 
-const sectionHead = (s, center = false) => `
-    <div class="section-head${center ? ' center' : ''}" data-reveal>
-      <p class="eyebrow">${s.eyebrow}</p>
-      <h2>${s.title}</h2>
-      ${s.lead ? `<p class="lead">${s.lead}</p>` : ''}
-    </div>`;
+const sectionHead = (n, s) => `
+      <p class="label" data-reveal><span>${n}</span>${s.eyebrow}</p>
+      <h2 data-reveal>${s.title}</h2>`;
 
 function home(t) {
   const f = t.contact.form;
   const opts = (arr) => arr.map((o) => `<option>${esc(o)}</option>`).join('');
+  const pad = (i) => String(i + 1).padStart(2, '0');
   return `${head(t, { title: t.meta.title, description: t.meta.description, path: t.path, altPath: t.altPath, schema: schemaFor(t) })}
-<body>
+<body id="top">
 ${header(t, 'home')}
 <main id="main">
 
-<section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true">${inline(mark, 'hero-mark')}</div>
+<section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow eyebrow-light">${t.hero.eyebrow}</p>
+      <p class="label">${t.hero.eyebrow}</p>
       <h1>${t.hero.title}</h1>
       <p class="lead">${t.hero.lead}</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="#contact">${t.hero.primary} ${icon('arrow', 'ico ico-sm')}</a>
-        <a class="btn btn-ghost btn-lg" href="#products">${t.hero.secondary}</a>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">${t.hero.primary} ${icon('arrow', 'ico ico-sm')}</a>
+        <a class="btn btn-link" href="#products">${t.hero.secondary}</a>
       </div>
-      <dl class="hero-stats">
-        ${t.hero.stats.map((s) => `<div><dt>${s.value}</dt><dd>${s.label}</dd></div>`).join('')}
-      </dl>
     </div>
     <div class="hero-visual">${heroArt}</div>
   </div>
-</section>
-
-<section class="brands" aria-label="${esc(t.brandsTitle)}">
-  <div class="container brands-inner">
-    <p>${t.brandsTitle}</p>
-    <ul>${brands.map((b) => `<li>${b}</li>`).join('')}</ul>
+  <div class="container">
+    <dl class="stats">
+      ${t.hero.stats.map((s) => `<div><dt>${s.value}</dt><dd>${s.label}</dd></div>`).join('')}
+    </dl>
   </div>
 </section>
 
 <section class="section" id="about">
-  <div class="container">
-    ${sectionHead(t.about)}
-    <div class="cards-3">
-      ${t.about.cards
-        .map((c, i) => `<article class="card" data-reveal style="--d:${i * 80}ms"><span class="card-num">0${i + 1}</span><h3>${c.title}</h3><p>${c.text}</p></article>`)
-        .join('')}
-    </div>
-    <div class="values" data-reveal>
-      <h3 class="values-title">${t.about.valuesTitle}</h3>
-      <ul>${t.about.values.map((v) => `<li><strong>${v.title}</strong><span>${v.text}</span></li>`).join('')}</ul>
+  <div class="container two-col">
+    <div class="col-head">${sectionHead('01', t.about)}</div>
+    <div>
+      <p class="lead" data-reveal>${t.about.lead}</p>
+      <ul class="rows">
+        ${t.about.cards.map((c) => `<li data-reveal><h3>${c.title}</h3><p>${c.text}</p></li>`).join('')}
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="section section-tint" id="products">
+<section class="section section-paper" id="products">
   <div class="container">
-    ${sectionHead(t.products)}
-    <div class="products">
+    <div class="head-row">
+      <div>${sectionHead('02', t.products)}</div>
+      <p class="lead" data-reveal>${t.products.lead}</p>
+    </div>
+    <div class="grid-lines">
       ${t.products.items
         .map(
           (p, i) => `
-      <article class="product" data-reveal style="--d:${(i % 3) * 80}ms">
-        <div class="product-top">${icon(p.icon, 'ico ico-lg')}<span class="tag">${p.tag}</span></div>
+      <article class="cell" data-reveal style="--d:${(i % 3) * 60}ms">
+        <div class="cell-top"><span class="idx">${pad(i)}</span>${icon(p.icon, 'ico ico-md')}</div>
         <h3>${p.title}</h3>
         <p>${p.text}</p>
-        <details>
-          <summary data-more="${t.products.more}" data-less="${t.products.less}">${t.products.more}</summary>
-          <ul class="checks">${p.points.map((x) => `<li>${icon('check', 'ico ico-xs')}${x}</li>`).join('')}</ul>
-        </details>
+        <ul class="mini">${p.points.slice(0, 4).map((x) => `<li>${x}</li>`).join('')}</ul>
       </article>`
         )
         .join('')}
@@ -279,72 +256,77 @@ ${header(t, 'home')}
 </section>
 
 <section class="section" id="services">
-  <div class="container split">
-    <div>
-      ${sectionHead(t.services)}
-      <div class="modes" data-reveal>
-        <h3>${t.services.modesTitle}</h3>
-        <ul class="checks">${t.services.modes.map((m) => `<li>${icon('check', 'ico ico-xs')}${m}</li>`).join('')}</ul>
-      </div>
+  <div class="container">
+    <div class="head-row">
+      <div>${sectionHead('03', t.services)}</div>
+      <p class="lead" data-reveal>${t.services.lead}</p>
     </div>
-    <ol class="service-list">
-      ${t.services.items.map((s, i) => `<li data-reveal style="--d:${i * 80}ms"><span class="num">0${i + 1}</span><div><h3>${s.title}</h3><p>${s.text}</p></div></li>`).join('')}
+    <ol class="cols-4">
+      ${t.services.items.map((s, i) => `<li data-reveal style="--d:${i * 60}ms"><span class="idx">${pad(i)}</span><h3>${s.title}</h3><p>${s.text}</p></li>`).join('')}
     </ol>
+    <div class="chips" data-reveal>
+      <span class="chips-title">${t.services.modesTitle}</span>
+      <ul>${t.services.modes.map((m) => `<li>${m}</li>`).join('')}</ul>
+    </div>
   </div>
 </section>
 
 <section class="section section-dark" id="process">
   <div class="container">
-    ${sectionHead(t.process)}
-    <ol class="steps">
-      ${t.process.steps.map((s, i) => `<li data-reveal style="--d:${i * 70}ms"><span class="step-num">${String(i + 1).padStart(2, '0')}</span><h3>${s.title}</h3><p>${s.text}</p></li>`).join('')}
+    <div class="head-row">
+      <div>${sectionHead('04', t.process)}</div>
+      <p class="lead" data-reveal>${t.process.lead}</p>
+    </div>
+    <ol class="timeline">
+      ${t.process.steps.map((s, i) => `<li data-reveal style="--d:${i * 60}ms"><span class="dot">${pad(i)}</span><h3>${s.title}</h3><p>${s.text}</p></li>`).join('')}
     </ol>
   </div>
 </section>
 
 <section class="section" id="partners">
-  <div class="container">
-    ${sectionHead(t.partners)}
-    <div class="partners">
-      ${t.partners.items.map((p, i) => `<article class="partner" data-reveal style="--d:${i * 80}ms"><h3>${p.title}</h3><p>${p.text}</p></article>`).join('')}
+  <div class="container two-col">
+    <div class="col-head">
+      ${sectionHead('05', t.partners)}
+      <p class="lead" data-reveal>${t.partners.lead}</p>
+      <a class="btn btn-dark" href="#contact" data-reveal>${t.partners.cta} ${icon('arrow', 'ico ico-sm')}</a>
     </div>
-    <div class="center-cta" data-reveal><a class="btn btn-primary btn-lg" href="#contact">${t.partners.cta} ${icon('arrow', 'ico ico-sm')}</a></div>
+    <ul class="rows rows-2">
+      ${t.partners.items.map((p) => `<li data-reveal><h3>${p.title}</h3><p>${p.text}</p></li>`).join('')}
+    </ul>
   </div>
 </section>
 
-<section class="section section-tint" id="warranty">
+<section class="section section-paper" id="warranty">
   <div class="container">
-    ${sectionHead(t.warranty, true)}
-    <div class="warranty">
-      ${t.warranty.items.map((w, i) => `<div class="w-item" data-reveal style="--d:${i * 80}ms"><span class="w-value">${w.value}</span><h3>${w.title}</h3><p>${w.text}</p></div>`).join('')}
+    <div class="head-row">
+      <div>${sectionHead('06', t.warranty)}</div>
+      <p class="fineprint" data-reveal>${t.warranty.note}</p>
     </div>
-    <p class="fineprint center" data-reveal>${t.warranty.note}</p>
+    <div class="figures">
+      ${t.warranty.items.map((w) => `<div data-reveal><span class="fig">${w.value}</span><h3>${w.title}</h3><p>${w.text}</p></div>`).join('')}
+    </div>
   </div>
 </section>
 
 <section class="section" id="faq">
-  <div class="container narrow">
-    ${sectionHead(t.faq, true)}
+  <div class="container two-col">
+    <div class="col-head">${sectionHead('07', t.faq)}</div>
     <div class="faq">
       ${t.faq.items.map((q) => `<details data-reveal><summary>${q.q}</summary><p>${q.a}</p></details>`).join('')}
     </div>
   </div>
 </section>
 
-<section class="section section-dark contact" id="contact">
-  <div class="container contact-grid">
-    <div>
-      ${sectionHead(t.contact)}
-      <ul class="contact-list" data-reveal>
-        <li>${icon('mail')}<div><span>${t.contact.labels.email}</span><a href="mailto:${C.email}">${C.email}</a></div></li>
-        <li>${icon('phone')}<div><span>${t.contact.labels.phone}</span><a href="tel:${C.phoneHref}">${C.phoneDisplay}</a></div></li>
-        <li>${icon('pin')}<div><span>${t.contact.labels.address}</span><address>${esc(C.street)}<br>${C.city}, ${t.lang === 'sq' ? 'Shqipëri' : 'Albania'}</address></div></li>
-      </ul>
-      <div class="social social-lg" data-reveal>
-        <span>${t.contact.labels.follow}</span>
-        <a href="${C.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${social.linkedin}</a>
-        <a href="${C.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${social.instagram}</a>
-      </div>
+<section class="section section-paper" id="contact">
+  <div class="container two-col">
+    <div class="col-head">
+      ${sectionHead('08', t.contact)}
+      <p class="lead" data-reveal>${t.contact.lead}</p>
+      <dl class="contact-list" data-reveal>
+        <div><dt>${t.contact.labels.email}</dt><dd><a href="mailto:${C.email}">${C.email}</a></dd></div>
+        <div><dt>${t.contact.labels.phone}</dt><dd><a href="tel:${C.phoneHref}">${C.phoneDisplay}</a></dd></div>
+        <div><dt>${t.contact.labels.address}</dt><dd>${esc(C.street)}, ${C.city}</dd></div>
+      </dl>
     </div>
     <form class="form" id="quote-form" novalidate data-reveal data-email="${C.email}" data-subject="${esc(f.subject)}" data-required="${esc(f.required)}">
       <div class="row">
@@ -362,9 +344,9 @@ ${header(t, 'home')}
       <label>${f.message} *<textarea name="message" rows="4" placeholder="${esc(f.messagePh)}" required></textarea></label>
       <label class="consent"><input type="checkbox" name="consent" required><span>${f.consent.replace('{privacy}', t.privacy.path)}</span></label>
       <p class="form-error" role="alert" hidden></p>
-      <div class="form-actions">
-        <button class="btn btn-primary btn-lg" type="submit">${f.submit} ${icon('arrow', 'ico ico-sm')}</button>
-        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/${C.whatsapp}" target="_blank" rel="noopener">${social.whatsapp}${f.whatsapp}</a>
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">${f.submit} ${icon('arrow', 'ico ico-sm')}</button>
+        <a class="btn btn-link" href="https://wa.me/${C.whatsapp}" target="_blank" rel="noopener">${social.whatsapp}${f.whatsapp}</a>
       </div>
       <p class="form-note">${f.note}</p>
     </form>

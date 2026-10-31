@@ -17,7 +17,6 @@ export const company = {
   country: 'AL',
 };
 
-export const brands = ['Salamander', 'Aluplast', 'Alumil', 'Roto', 'GEZE'];
 
 export const sq = {
   lang: 'sq',
@@ -29,7 +28,7 @@ export const sq = {
   meta: {
     title: 'Apex Frames | Dritare, Dyer & Fasada Alumini dhe uPVC në Tiranë',
     description:
-      'Apex Frames furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC me sisteme europiane Salamander, Aluplast dhe Alumil. Vizitë teknike dhe matje në terren, ofertë brenda 48 orëve, garanci 5 vjet.',
+      'Apex Frames furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC me sisteme të certifikuara europiane. Vizitë teknike dhe matje në terren, ofertë brenda 48 orëve, garanci 5 vjet.',
   },
   skip: 'Kalo te përmbajtja',
   nav: {
@@ -57,7 +56,6 @@ export const sq = {
       { value: '24 muaj', label: 'Garanci montimi' },
     ],
   },
-  brandsTitle: 'Punojmë me sisteme dhe aksesorë europianë nga',
   about: {
     eyebrow: 'Rreth nesh',
     title: 'Partneri juaj për korniza që zgjasin.',
@@ -101,7 +99,6 @@ export const sq = {
     items: [
       {
         icon: 'window',
-        tag: 'Salamander · Aluplast',
         title: 'Dritare & dyer uPVC',
         text: 'Profile uPVC me përforcim çeliku për banesa, zyra dhe objekte komerciale.',
         points: [
@@ -114,11 +111,10 @@ export const sq = {
       },
       {
         icon: 'alu',
-        tag: 'Alumil',
         title: 'Alumin me thyerje termike',
         text: 'Sisteme alumini me ndërprerje termike për objekte banimi dhe komerciale.',
         points: [
-          'Profile termike premium Alumil',
+          'Profile alumini termik premium',
           'Hapje standarde, anim-hapje dhe rrëshqitëse',
           'Sisteme panoramike dhe dyer palosëse (akordeon)',
           'Dyer hyrëse për trafik intensiv',
@@ -127,19 +123,17 @@ export const sq = {
       },
       {
         icon: 'door',
-        tag: 'uPVC · Alumin · GEZE',
         title: 'Dyer hyrëse & automatike',
         text: 'Dyer për hyrje banesash, biznesesh dhe objektesh publike.',
         points: [
           'Me një ose dy krahë, me panel sipas porosisë',
-          'Dyer automatike me sensor dhe automatizim GEZE',
+          'Dyer automatike me sensor dhe automatizim profesional',
           'Xham sigurie i laminuar ose i kalitur',
           'Brava, doreza dhe aksesorë sipas objektit',
         ],
       },
       {
         icon: 'facade',
-        tag: 'Curtain wall',
         title: 'Fasada xhami',
         text: 'Fasada alumini me termoizolim, sipas projektit të arkitektit.',
         points: [
@@ -151,7 +145,6 @@ export const sq = {
       },
       {
         icon: 'glass',
-        tag: 'Sipas porosisë',
         title: 'Xhama',
         text: 'Xhama të prodhuar sipas porosisë për dritare, dyer, fasada dhe parapete.',
         points: [
@@ -163,7 +156,6 @@ export const sq = {
       },
       {
         icon: 'shutter',
-        tag: 'Manuale · Me motor',
         title: 'Grila & roleta',
         text: 'Grila për siguri, hijezim dhe rehati, të përshtatura me dritaret tuaja.',
         points: [
@@ -175,7 +167,6 @@ export const sq = {
       },
       {
         icon: 'net',
-        tag: 'Aksesorë',
         title: 'Rrjeta kundër insekteve',
         text: 'Moskitiera për dritare dhe dyer, në ngjyrën e kornizës.',
         points: [
@@ -187,7 +178,6 @@ export const sq = {
       },
       {
         icon: 'awning',
-        tag: 'Ambiente të jashtme',
         title: 'Tenda & pergola',
         text: 'Hije dhe komoditet për ballkone, tarraca dhe ambiente biznesi.',
         points: [
@@ -198,7 +188,6 @@ export const sq = {
       },
       {
         icon: 'stairs',
-        tag: 'Inox · Xham',
         title: 'Shkallë helikoidale & parapete',
         text: 'Elemente prej inoksi dhe xhami, sipas projektit arkitektonik.',
         points: [
@@ -347,8 +336,6 @@ export const sq = {
     terms: 'Kushtet e përdorimit',
     nuis: 'NUIS',
     rights: 'Të gjitha të drejtat e rezervuara.',
-    trademark:
-      'Salamander, Aluplast, Alumil, Roto dhe GEZE janë marka tregtare të pronarëve përkatës. Përmendja e tyre tregon sistemet që furnizojmë dhe nuk nënkupton lidhje zyrtare.',
     top: 'Kthehu lart',
   },
   privacy: {
@@ -398,7 +385,7 @@ export const sq = {
 <h2>2. Të dhënat teknike</h2>
 <p>Vlerat teknike të produkteve (p.sh. transmetimi termik, izolimi akustik, klasat e performancës) përcaktohen nga deklarata e performancës (DoP) e prodhuesit për sistemin dhe konfigurimin konkret. Imazhet janë ilustruese.</p>
 <h2>3. Pronësia intelektuale</h2>
-<p>Logoja, emri "Apex Frames", tekstet dhe grafikat e kësaj faqeje janë pronë e Apex Frames SHPK dhe nuk mund të riprodhohen pa leje me shkrim. Salamander, Aluplast, Alumil, Roto dhe GEZE janë marka tregtare të pronarëve përkatës; përmendja e tyre tregon sistemet që furnizojmë dhe nuk nënkupton miratim, sponsorizim ose lidhje zyrtare.</p>
+<p>Logoja, emri "Apex Frames", tekstet dhe grafikat e kësaj faqeje janë pronë e Apex Frames SHPK dhe nuk mund të riprodhohen pa leje me shkrim.</p>
 <h2>4. Përgjegjësia</h2>
 <p>Përpiqemi që informacioni të jetë i saktë dhe i përditësuar, por nuk garantojmë që faqja do të jetë gjithmonë pa gabime ose e disponueshme. Për lidhjet drejt faqeve të palëve të treta (p.sh. rrjetet sociale) nuk mbajmë përgjegjësi.</p>
 <h2>5. Ligji i zbatueshëm</h2>
@@ -423,7 +410,7 @@ export const en = {
   meta: {
     title: 'Apex Frames | Aluminium & uPVC Windows, Doors and Facades in Tirana',
     description:
-      'Apex Frames supplies and installs premium aluminium and uPVC windows, doors and facades using European systems from Salamander, Aluplast and Alumil. On-site survey and measurement, quote within 48 hours, 5-year warranty.',
+      'Apex Frames supplies and installs premium aluminium and uPVC windows, doors and facades using certified European systems. On-site survey and measurement, quote within 48 hours, 5-year warranty.',
   },
   skip: 'Skip to content',
   nav: {
@@ -451,7 +438,6 @@ export const en = {
       { value: '24 mo', label: 'Installation warranty' },
     ],
   },
-  brandsTitle: 'We work with European systems and hardware from',
   about: {
     eyebrow: 'About us',
     title: 'Your partner for frames that last.',
@@ -495,7 +481,6 @@ export const en = {
     items: [
       {
         icon: 'window',
-        tag: 'Salamander · Aluplast',
         title: 'uPVC windows & doors',
         text: 'Steel-reinforced uPVC profiles for homes, offices and commercial buildings.',
         points: [
@@ -508,11 +493,10 @@ export const en = {
       },
       {
         icon: 'alu',
-        tag: 'Alumil',
         title: 'Thermally broken aluminium',
         text: 'Thermal-break aluminium systems for residential and commercial projects.',
         points: [
-          'Premium Alumil thermal profiles',
+          'Premium thermal aluminium profiles',
           'Standard, tilt & turn and sliding openings',
           'Panoramic systems and folding (bi-fold) doors',
           'Heavy-duty entrance doors for high traffic',
@@ -521,19 +505,17 @@ export const en = {
       },
       {
         icon: 'door',
-        tag: 'uPVC · Aluminium · GEZE',
         title: 'Entrance & automatic doors',
         text: 'Doors for homes, businesses and public buildings.',
         points: [
           'Single or double leaf, custom panels',
-          'Automatic sensor doors with GEZE automation',
+          'Automatic sensor doors with professional automation',
           'Laminated or tempered safety glass',
           'Locks, handles and hardware to suit the building',
         ],
       },
       {
         icon: 'facade',
-        tag: 'Curtain wall',
         title: 'Glass facades',
         text: 'Insulated aluminium curtain walls, engineered to the architect’s design.',
         points: [
@@ -545,7 +527,6 @@ export const en = {
       },
       {
         icon: 'glass',
-        tag: 'Made to order',
         title: 'Glazing',
         text: 'Made-to-order glass for windows, doors, facades and balustrades.',
         points: [
@@ -557,7 +538,6 @@ export const en = {
       },
       {
         icon: 'shutter',
-        tag: 'Manual · Motorised',
         title: 'Shutters & rollers',
         text: 'Shutters for security, shading and comfort, matched to your windows.',
         points: [
@@ -569,14 +549,12 @@ export const en = {
       },
       {
         icon: 'net',
-        tag: 'Accessories',
         title: 'Insect screens',
         text: 'Fly screens for windows and doors, in the frame colour.',
         points: ['Horizontal sliding', 'Vertical roll-up', 'Fixed frame', 'Pleated (plissé)'],
       },
       {
         icon: 'awning',
-        tag: 'Outdoor',
         title: 'Awnings & pergolas',
         text: 'Shade and comfort for balconies, terraces and hospitality spaces.',
         points: [
@@ -587,7 +565,6 @@ export const en = {
       },
       {
         icon: 'stairs',
-        tag: 'Stainless · Glass',
         title: 'Spiral stairs & balustrades',
         text: 'Stainless-steel and glass elements built to the architectural design.',
         points: ['Stainless-steel spiral staircases', 'Safety-glass balustrades', 'Fabricated to on-site measurements'],
@@ -732,8 +709,6 @@ export const en = {
     terms: 'Terms of Use',
     nuis: 'Tax ID (NUIS)',
     rights: 'All rights reserved.',
-    trademark:
-      'Salamander, Aluplast, Alumil, Roto and GEZE are trademarks of their respective owners. They are mentioned to identify the systems we supply and do not imply official affiliation.',
     top: 'Back to top',
   },
   privacy: {
@@ -783,7 +758,7 @@ export const en = {
 <h2>2. Technical data</h2>
 <p>Product technical values (e.g. thermal transmittance, acoustic insulation, performance classes) are determined by the manufacturer’s Declaration of Performance (DoP) for the specific system and configuration. Images are illustrative.</p>
 <h2>3. Intellectual property</h2>
-<p>The logo, the name "Apex Frames", and the texts and graphics on this site are the property of Apex Frames SHPK and may not be reproduced without written permission. Salamander, Aluplast, Alumil, Roto and GEZE are trademarks of their respective owners; they are mentioned to identify the systems we supply and do not imply endorsement, sponsorship or official affiliation.</p>
+<p>The logo, the name "Apex Frames", and the texts and graphics on this site are the property of Apex Frames SHPK and may not be reproduced without written permission.</p>
 <h2>4. Liability</h2>
 <p>We strive to keep information accurate and current but do not guarantee the site will always be error-free or available. We are not responsible for third-party sites linked from here (e.g. social networks).</p>
 <h2>5. Governing law</h2>

@@ -14,4 +14,4 @@ Any static host (GitHub Pages, Netlify, Cloudflare Pages). `CNAME` is set to `ww
 ## Content rules (from the Work Doctrine v2.0)
 - No prices on the site; prices only in the written quote.
 - Technical values (Uw, Rw, classes) only from the manufacturer's DoP.
-- Brand names are used descriptively only (see footer trademark note).
+- No third-party brand names on the site.
