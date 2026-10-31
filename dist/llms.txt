@@ -38,6 +38,7 @@ Faktet kryesore / Key facts:
 - [Xham dopio apo i trefishtë? Argon, Low-E dhe si zgjidhet](https://www.apexframes.co/blog/xham-dopio-apo-i-trefishte/): Si përbëhet xhami dopio dhe i trefishtë, çfarë bëjnë argoni dhe shtresa Low-E, kur ia vlen xhami i trefishtë dhe çfarë xhamash të tjerë ekzistojnë.
 - [Pse djersijnë dritaret? Kondensimi dhe si zgjidhet](https://www.apexframes.co/blog/kondensimi-ne-dritare/): Pse shfaqet kondensimi në dritare, çfarë mund të bëni menjëherë, kur ka lidhje me dritaren dhe çfarë të kërkoni kur i ndërroni.
 - [DoP dhe shenja CE: si t’i lexoni](https://www.apexframes.co/blog/deklarata-e-performances-dop-shenja-ce/): Çfarë janë DoP dhe shenja CE për dritaret dhe dyert sipas EN 14351-1, çfarë vlerash përmbajnë dhe pse duhet t’i kërkoni para porosisë.
+- [Grila me litar apo me motor?](https://www.apexframes.co/blog/grila-me-litar-apo-me-motor/): Si të zgjidhni mes grilave me litar dhe me motor, çfarë ndryshon mes kutisë së jashtme dhe asaj të brendshme dhe çfarë të pyesni para porosisë.
 - [Montimi i dritareve në 8 hapa](https://www.apexframes.co/blog/montimi-i-dritareve-8-hapa/): Procedura standarde e montimit të dritareve dhe dyerve në 8 hapa, nga inspektimi te pastrimi, dhe një listë kontrolli për klientin.
 
 # English
@@ -68,6 +69,7 @@ Faktet kryesore / Key facts:
 - [Double or Triple Glazing? Argon, Low-E and How to Choose](https://www.apexframes.co/en/blog/double-or-triple-glazing/): How double and triple glazing are built, what argon and Low-E coatings do, when triple glazing is worth it and which other glass types exist.
 - [Why Do Windows Sweat? Condensation and How to Fix It](https://www.apexframes.co/en/blog/window-condensation/): Why condensation forms on windows, what you can do right away, when the window is the cause and what to look for when replacing them.
 - [DoP and CE Marking: How to Read Them](https://www.apexframes.co/en/blog/declaration-of-performance-ce-marking/): What the DoP and CE marking mean for windows and doors under EN 14351-1, which values they contain and why you should request them before ordering.
+- [Strap or Motorised Shutters?](https://www.apexframes.co/en/blog/strap-or-motorised-shutters/): How to choose between strap-operated and motorised shutters, what differs between an outside and an inside box, and what to ask before ordering.
 - [Window Installation in 8 Steps](https://www.apexframes.co/en/blog/window-installation-8-steps/): The standard procedure for installing windows and doors in 8 steps, from inspection to clean-up, plus a client checklist.
 
 ## Optional

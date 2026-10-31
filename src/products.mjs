@@ -3,7 +3,7 @@
 
 export const products = [
   {
-    id: 'upvc', icon: 'window', image: null, related: ['aluminium', 'glazing', 'shutters'], posts: ['upvc-or-aluminium', 'window-condensation'],
+    id: 'upvc', icon: 'window', image: 'window', related: ['aluminium', 'glazing', 'shutters'], posts: ['upvc-or-aluminium', 'window-condensation'],
     slug: { sq: 'dritare-dyer-upvc', en: 'upvc-windows-doors' },
     sq: {
       name: 'Dritare & dyer uPVC',
@@ -51,7 +51,7 @@ export const products = [
     },
   },
   {
-    id: 'aluminium', icon: 'alu', image: 'aluminium', related: ['doors', 'facades', 'glazing'], posts: ['upvc-or-aluminium', 'what-affects-window-prices'],
+    id: 'aluminium', icon: 'alu', image: 'family', related: ['doors', 'facades', 'glazing'], posts: ['upvc-or-aluminium', 'what-affects-window-prices'],
     slug: { sq: 'dritare-dyer-alumini', en: 'aluminium-windows-doors' },
     sq: {
       name: 'Alumin me thyerje termike',
@@ -99,7 +99,7 @@ export const products = [
     },
   },
   {
-    id: 'doors', icon: 'door', image: 'doors', related: ['aluminium', 'upvc', 'glazing'], posts: ['declaration-of-performance-ce-marking'],
+    id: 'doors', icon: 'door', image: 'sliding', related: ['aluminium', 'upvc', 'glazing'], posts: ['declaration-of-performance-ce-marking'],
     slug: { sq: 'dyer-hyrese-automatike', en: 'entrance-automatic-doors' },
     sq: {
       name: 'Dyer hyrëse & automatike',
@@ -237,7 +237,7 @@ export const products = [
     },
   },
   {
-    id: 'shutters', icon: 'shutter', image: 'shutters', related: ['upvc', 'screens', 'awnings'], posts: ['upvc-or-aluminium'],
+    id: 'shutters', icon: 'shutter', image: 'shutters', gallery: ['shutters2', 'roller'], related: ['upvc', 'screens', 'awnings'], posts: [],
     slug: { sq: 'grila-roleta', en: 'shutters-roller-blinds' },
     sq: {
       name: 'Grila & roleta',

@@ -1,6 +1,6 @@
 """Pregatit fotot: heq vijat e holla te mbivendosura, pret tekstin e pjekur ne imazh,
 eksporton WebP me disa madhesi + nje JPG 1200x630 per Open Graph.
-Perdorimi: python3 -I scripts/make_images.py <dosja_me_burimet>   (burimet: src-1.jpg ... src-6.jpg)"""
+Perdorimi: python3 -I scripts/make_images.py <dosja_me_burimet>   (burimet: src-1.jpg ... src-11.jpg)"""
 import json, sys, os
 import numpy as np
 from PIL import Image
@@ -41,13 +41,25 @@ JOBS = {
     'facade':    ('src-5.jpg', (0, 800, 1200, 1600), (0, 100, 1200, 730)),
     'glazing':   ('src-5.jpg', (500, 900, 1200, 1600), (0, 0, 700, 368)),
     'awning':    ('src-6.jpg', (0, 300, 1200, 1600), (0, 380, 1200, 1010)),
+    # foto të reja (kthesat e kaltra nuk hiqen dot me algoritëm: priten jashtë kadrit; clean=False)
+    'family':    ('src-7.jpg', (400, 238, 1080, 975), (0, 0, 680, 357), False),
+    'window':    ('src-8.jpg', (60, 262, 1020, 1100), (0, 100, 960, 604), False),
+    'shutters2': ('src-9.jpg', (295, 268, 1080, 845), (0, 80, 785, 492), False),
+    'sliding':   ('src-10.jpg', (310, 352, 1280, 1370), (0, 300, 970, 809), False),
+    'roller':    ('src-11.jpg', (282, 232, 1024, 960), (0, 150, 742, 540), False),
 }
 cache, manifest = {}, {}
-for name, (src, box, og) in JOBS.items():
-    if src not in cache:
-        cache[src], n = remove_lines(Image.open(os.path.join(SRC, src)))
-        print(src, 'piksele te rregulluar:', n)
-    im = cache[src].crop(box)
+for name, job in JOBS.items():
+    src, box, og = job[:3]
+    clean = job[3] if len(job) > 3 else True
+    if (src, clean) not in cache:
+        raw = Image.open(os.path.join(SRC, src)).convert('RGB')
+        if clean:
+            cache[(src, clean)], n = remove_lines(raw)
+            print(src, 'piksele te rregulluar:', n)
+        else:
+            cache[(src, clean)] = raw
+    im = cache[(src, clean)].crop(box)
     vs = []
     for w in (640, 960, 1200):
         if w > im.width: continue

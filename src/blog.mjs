@@ -5,7 +5,7 @@ const DATE = '2026-10-31';
 
 export const posts = [
   {
-    id: 'upvc-or-aluminium', image: 'aluminium', date: DATE, updated: DATE, products: ['upvc', 'aluminium'],
+    id: 'upvc-or-aluminium', image: 'family', date: DATE, updated: DATE, products: ['upvc', 'aluminium'],
     slug: { sq: 'dritare-upvc-apo-alumini', en: 'upvc-or-aluminium-windows' },
     sq: {
       title: 'Dritare uPVC apo alumini? Si të zgjidhni të duhurën',
@@ -53,7 +53,7 @@ export const posts = [
     },
   },
   {
-    id: 'what-affects-window-prices', image: 'doors', date: DATE, updated: DATE, products: ['upvc', 'aluminium', 'glazing'],
+    id: 'what-affects-window-prices', image: 'sliding', date: DATE, updated: DATE, products: ['upvc', 'aluminium', 'glazing'],
     slug: { sq: 'cfare-ndikon-ne-cmimin-e-dritareve', en: 'what-affects-window-prices' },
     sq: {
       title: 'Çfarë ndikon në çmimin e dritareve dhe dyerve?',
@@ -129,7 +129,7 @@ export const posts = [
     },
   },
   {
-    id: 'window-condensation', image: 'shutters', date: DATE, updated: DATE, products: ['upvc', 'glazing'],
+    id: 'window-condensation', image: 'window', date: DATE, updated: DATE, products: ['upvc', 'glazing'],
     slug: { sq: 'kondensimi-ne-dritare', en: 'window-condensation' },
     sq: {
       title: 'Pse djersijnë dritaret? Kondensimi dhe si zgjidhet',
@@ -197,6 +197,50 @@ export const posts = [
       faq: [
         { q: 'Does Apex Frames provide a DoP?', a: 'Yes. Products come with the manufacturer’s Declaration of Performance and CE marking, and you can request them at quote stage.' },
         { q: 'What is Uw?', a: 'The thermal transmittance coefficient of the whole window. The lower the value, the less heat is lost.' },
+      ],
+    },
+  },
+  {
+    id: 'rope-or-motorised-shutters', image: 'roller', date: DATE, updated: DATE, products: ['shutters', 'upvc', 'aluminium'],
+    slug: { sq: 'grila-me-litar-apo-me-motor', en: 'strap-or-motorised-shutters' },
+    sq: {
+      title: 'Grila me litar apo me motor? Kuti e jashtme apo e brendshme', metaTitle: 'Grila me litar apo me motor? | Apex Frames',
+      desc: 'Si të zgjidhni mes grilave me litar dhe me motor, çfarë ndryshon mes kutisë së jashtme dhe asaj të brendshme dhe çfarë të pyesni para porosisë.',
+      category: 'Zgjedhja e produktit', readMin: 4,
+      answer: 'Grilat me litar janë zgjidhja ekonomike dhe e thjeshtë; grilat me motor dhe telekomandë janë më të rehatshme, sidomos për hapje të mëdha. Kutia e jashtme lejon montim të shpejtë dhe akses të lehtë, ndërsa kutia e brendshme jep pamje më të pastër dhe integrim estetik në fasadë.',
+      sections: [
+        { h: 'Litar apo motor', html: `<table><thead><tr><th>Kriteri</th><th>Me litar</th><th>Me motor</th></tr></thead><tbody>
+<tr><td>Përdorimi</td><td>Manual, me litar</td><td>Me telekomandë</td></tr>
+<tr><td>Hapje të mëdha</td><td>Më pak praktike</td><td>Zgjidhje e përshtatshme, me pjesë përforcuese për përmasa të mëdha</td></tr>
+<tr><td>Materiali</td><td>PVC ose alumin</td><td>Përshtatet me dritaret uPVC dhe alumini</td></tr>
+<tr><td>Montimi</td><td>I shpejtë</td><td>Motori zgjidhet sipas peshës dhe përmasave</td></tr>
+<tr><td>Kostoja</td><td>Zgjidhje ekonomike</td><td>Zakonisht më e lartë</td></tr></tbody></table>` },
+        { h: 'Kuti e jashtme apo e brendshme', html: `<ul><li><strong>Kutia e jashtme:</strong> ideale për montim të shpejtë dhe akses të lehtë.</li><li><strong>Kutia e brendshme:</strong> pamje më e pastër dhe integrim estetik në fasadë.</li></ul><p>Zgjedhja merret para matjes, sepse kutia ndikon në pamjen e fasadës dhe në hapësirën e disponueshme.</p>` },
+        { h: 'Çfarë të pyesni para porosisë', html: `<ul><li>A përshtatet grila me dritaren tuaj (uPVC ose alumin)?</li><li>Cila ngjyrë përputhet me profilin e dritares ose derës?</li><li>Për grilat me motor: cili motor zgjidhet sipas peshës dhe përmasave?</li><li>A merrni udhëzues për përdorimin e telekomandës në dorëzim?</li></ul>` },
+      ],
+      faq: [
+        { q: 'A përshtaten grilat me dritaret ekzistuese?', a: 'Grilat përshtaten me dritaret uPVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike.' },
+        { q: 'A merret udhëzues për telekomandën?', a: 'Po, për grilat me motor japim udhëzues përdorimi të telekomandës në dorëzim.' },
+      ],
+    },
+    en: {
+      title: 'Strap or Motorised Shutters? Outside or Inside Box', metaTitle: 'Strap or Motorised Shutters? | Apex Frames',
+      desc: 'How to choose between strap-operated and motorised shutters, what differs between an outside and an inside box, and what to ask before ordering.',
+      category: 'Choosing products', readMin: 4,
+      answer: 'Strap-operated shutters are the simple, economical choice; motorised shutters with remote control are more comfortable, especially for large openings. An outside box allows quick installation and easy access, while an inside box gives a cleaner look and better integration into the facade.',
+      sections: [
+        { h: 'Strap or motor', html: `<table><thead><tr><th>Criteria</th><th>Strap-operated</th><th>Motorised</th></tr></thead><tbody>
+<tr><td>Operation</td><td>Manual, with a strap</td><td>With a remote control</td></tr>
+<tr><td>Large openings</td><td>Less practical</td><td>Suitable, with reinforcement parts for large sizes</td></tr>
+<tr><td>Material</td><td>PVC or aluminium</td><td>Fits uPVC and aluminium windows</td></tr>
+<tr><td>Installation</td><td>Quick</td><td>Motor selected by weight and size</td></tr>
+<tr><td>Cost</td><td>Economical</td><td>Usually higher</td></tr></tbody></table>` },
+        { h: 'Outside or inside box', html: `<ul><li><strong>Outside box:</strong> ideal for quick installation and easy access.</li><li><strong>Inside box:</strong> a cleaner look and better aesthetic integration into the facade.</li></ul><p>The choice is made before measurement, because the box affects the facade’s appearance and the available space.</p>` },
+        { h: 'What to ask before ordering', html: `<ul><li>Does the shutter fit your window (uPVC or aluminium)?</li><li>Which colour matches the window or door profile?</li><li>For motorised shutters: which motor is selected for the weight and size?</li><li>Do you receive a user guide for the remote control at handover?</li></ul>` },
+      ],
+      faq: [
+        { q: 'Do shutters fit existing windows?', a: 'Shutters fit uPVC and aluminium windows; we confirm compatibility during the technical visit.' },
+        { q: 'Do I get a guide for the remote?', a: 'Yes, for motorised shutters we provide a remote-control user guide at handover.' },
       ],
     },
   },

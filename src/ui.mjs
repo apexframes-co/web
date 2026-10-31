@@ -18,7 +18,7 @@ export const ui = {
   sq: {
     nav: { products: 'Produktet', services: 'Shërbimet', process: 'Procesi', blog: 'Blog', about: 'Rreth nesh', cta: 'Kërko ofertë', menu: 'Menu', close: 'Mbyll', aria: 'Navigimi kryesor' },
     crumbs: { home: 'Kreu', label: 'Rruga e faqes' },
-    common: { learnMore: 'Shiko më shumë', allProducts: 'Të gjitha produktet', allPosts: 'Të gjitha artikujt', readMore: 'Lexo artikullin', minRead: 'min lexim', published: 'Publikuar', updated: 'Përditësuar', by: 'Nga ekipi i Apex Frames', answer: 'Përgjigje e shkurtër', toc: 'Në këtë artikull', related: 'Të ngjashme', illustrative: 'Vizualizim ilustrues', send: 'Dërgo kërkesën', directions: 'Hap në hartë' },
+    common: { learnMore: 'Shiko më shumë', allProducts: 'Të gjitha produktet', allPosts: 'Të gjitha artikujt', readMore: 'Lexo artikullin', minRead: 'min lexim', published: 'Publikuar', updated: 'Përditësuar', by: 'Nga ekipi i Apex Frames', answer: 'Përgjigje e shkurtër', toc: 'Në këtë artikull', related: 'Të ngjashme', illustrative: 'Imazh ilustrues', send: 'Dërgo kërkesën', directions: 'Hap në hartë' },
     home: {
       lead: 'Apex Frames është kompani në Tiranë që furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC, me sisteme të certifikuara europiane.',
       whyTitle: 'Pse Apex Frames',
@@ -64,7 +64,7 @@ export const ui = {
   en: {
     nav: { products: 'Products', services: 'Services', process: 'Process', blog: 'Blog', about: 'About', cta: 'Request a quote', menu: 'Menu', close: 'Close', aria: 'Main navigation' },
     crumbs: { home: 'Home', label: 'Breadcrumb' },
-    common: { learnMore: 'Learn more', allProducts: 'All products', allPosts: 'All articles', readMore: 'Read article', minRead: 'min read', published: 'Published', updated: 'Updated', by: 'By the Apex Frames team', answer: 'Short answer', toc: 'In this article', related: 'Related', illustrative: 'Illustrative visualisation', send: 'Send request', directions: 'Open in maps' },
+    common: { learnMore: 'Learn more', allProducts: 'All products', allPosts: 'All articles', readMore: 'Read article', minRead: 'min read', published: 'Published', updated: 'Updated', by: 'By the Apex Frames team', answer: 'Short answer', toc: 'In this article', related: 'Related', illustrative: 'Illustrative image', send: 'Send request', directions: 'Open in maps' },
     home: {
       lead: 'Apex Frames is a Tirana-based company that supplies and installs premium aluminium and uPVC windows, doors and facades, using certified European systems.',
       whyTitle: 'Why Apex Frames',

@@ -533,3 +533,9 @@ h1, h2 { letter-spacing: -.025em; text-wrap: balance; }
 .site-footer { margin-top: 0; border-radius: var(--r-lg) var(--r-lg) 0 0; }
 
 @media (prefers-reduced-motion: reduce) { .hero-bg img { animation: none; transform: none; } }
+
+/* Galeri në faqet e produkteve */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0 .5rem; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); background: var(--paper); }
+@media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } }

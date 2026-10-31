@@ -67,6 +67,11 @@ const ALT = {
   facade: { sq: 'Fasadë xhami curtain wall me strukturë alumini të zezë (vizualizim)', en: 'Glass curtain wall facade with black aluminium structure (visualisation)' },
   glazing: { sq: 'Xham fasade që reflekton qiellin dhe pemët (vizualizim)', en: 'Facade glazing reflecting sky and trees (visualisation)' },
   awning: { sq: 'Tendë dielli mbi një tarracë me pamje nga deti (vizualizim)', en: 'Awning over a terrace with a sea view (visualisation)' },
+  family: { sq: 'Familje në një kuzhinë me dyer panoramike alumini me xham', en: 'Family in a kitchen with panoramic aluminium glass doors' },
+  window: { sq: 'Dritare e bardhë me tre krahë me pamje nga qielli', en: 'White three-sash window with a view of the sky' },
+  shutters2: { sq: 'Grila persiane të bardha të hapura në një dritare në perëndim të diellit', en: 'White louvred shutters open on a window at sunset' },
+  sliding: { sq: 'Dyer rrëshqitëse me kornizë të bardhë dhe pamje nga malet', en: 'Sliding doors with a white frame and a mountain view' },
+  roller: { sq: 'Grila me litar me lamela të bardha dhe kuti të jashtme', en: 'White strap-operated roller shutters with an external box' },
 };
 function img(name, lang, { sizes = '100vw', eager = false, cls = '' } = {}) {
   const v = manifest[name];
@@ -429,6 +434,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       <p class="intro">${t.intro}</p>
       <h2>${pr.includes}</h2>
       ${checks(t.features)}
+      ${p.gallery ? `<div class="gallery">${p.gallery.map((g) => `<figure>${img(g, lang, { sizes: '(max-width: 600px) 100vw, 380px' })}</figure>`).join('')}</div>` : ''}
       <h2>${pr.bestFor}</h2>
       <ul class="chips">${t.bestFor.map((x) => `<li>${x}</li>`).join('')}</ul>
       <h2>${pr.faq}</h2>
