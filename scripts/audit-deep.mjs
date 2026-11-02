@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const D = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist');
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? walk(p) : [p]; });
 const files = walk(D).filter((f) => f.endsWith('/index.html'));
-const pages = files.map((f) => {
+const pages = files.filter((f) => !/name="robots" content="noindex"/.test(readFileSync(f, 'utf8'))).map((f) => {
   const h = readFileSync(f, 'utf8');
   const path = f.replace(D, '').replace(/index\.html$/, '');
   const main = (h.match(/<main[\s\S]*?<\/main>/) || [''])[0];

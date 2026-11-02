@@ -1289,6 +1289,10 @@ Certifikata e garancisë
 Udhëzuesi i mirëmbajtjes
 Procesverbali i dorëzimit
 
+Certifikata e garancisë online
+Kërkoni certifikatën me numër unik dhe kontrolloni afatin e garancisë 5-vjeçare në çdo kohë.
+Kërko certifikatën
+
 Çfarë mbulon garancia dhe çfarë jo
 Garancia mbulon defektet e produktit dhe të montimit brenda afateve të mësipërme. Nuk mbulon keqpërdorimin, dëmtimet mekanike aksidentale, ndërhyrjet e paautorizuara dhe dëmet nga kushtet ekstreme atmosferike.
 Si kërkoni shërbim garancie
@@ -1296,6 +1300,71 @@ Na shkruani në info@apexframes.co ose na telefononi, me numrin e dokumentit (p.
 Konfirmojmë pranimin me shkrim brenda 24 orëve.
 Analizojmë shkakun brenda 48 orëve dhe ofrojmë zgjidhje brenda 5 ditëve punë.
 Për parandalim shih kondensimin në dritare dhe montimin në 8 hapa .
+
+Keni një projekt në mendje?
+Na tregoni për objektin dhe ju kthejmë përgjigje brenda 24 orëve.
+
+Kërko ofertë
+
+---
+
+## Certifikata e garancisë online dhe kontrolli i afatit | Apex Frames
+URL: https://www.apexframes.co/garancia/certifikata/
+
+Kreu
+Garancia
+Certifikata e garancisë
+
+Certifikata e garancisë
+
+Certifikata e garancisë online
+
+Kërkoni certifikatën e garancisë 5-vjeçare për produktin që keni blerë nga Apex Frames. Pas verifikimit nga ekipi ynë merrni një numër unik (AF-…), dhe afatin e garancisë e kontrolloni online në çdo kohë.
+
+Certifikata e garancisë
+
+01 Plotësoni kërkesën
+Emri, mbiemri, emaili dhe telefoni. Sa më shumë detaje për blerjen jepni, aq më shpejt verifikohet.
+
+02 Ne e verifikojmë dhe e miratojmë
+Ekipi ynë kontrollon blerjen dhe lëshon certifikatën me numër unik, të vlefshme 5 vite nga data e blerjes.
+
+03 Merrni certifikatën
+Me kodin e kërkesës shkarkoni PDF-në. Me numrin AF-… kushdo kontrollon afatin online.
+
+Kontrolloni afatin ose statusin
+
+Shkruani numrin e certifikatës (p.sh. AF-0005657) ose kodin e kërkesës (RQ-…).
+
+Kontrollo
+
+Kërkesa për certifikatë
+
+Emri * Mbiemri *
+
+Email * Telefon *
+
+Produkti (opsional)
+Data e blerjes ose montimit (opsionale) Nr. i kontratës ose faturës (opsional)
+
+Website
+
+Pranoj që të dhënat e mia të ruhen për shqyrtimin e kërkesës dhe lëshimin e certifikatës, sipas Politikës së Privatësisë .
+
+Dërgo kërkesën
+
+Pyetje për certifikatën
+
+Sa zgjat garancia?
+Garancia mbulon defektet e materialit dhe prodhimit për 5 vite nga data e blerjes. Certifikata tregon datën e fillimit dhe datën e skadimit.
+Çfarë mbulon dhe çfarë jo?
+Shërbimi përfshin riparimin ose zëvendësimin e produktit pa kosto shtesë për klientin. Garancia vlen vetëm nëse produkti është përdorur sipas udhëzimeve; nuk mbulon përdorimin e gabuar, aksidentet, kushtet ekstreme të motit dhe ndërhyrjet e paautorizuara; shpenzimet e transportit ose montimit nuk përfshihen.
+Kush e miraton certifikatën?
+Kërkesat i shqyrton dhe i miraton ekipi i Apex Frames. Vetëm pas miratimit lëshohet numri AF-… dhe certifikata në PDF.
+Çfarë shfaqet te kontrolli publik?
+Kushdo që ka numrin AF-… sheh vetëm inicialet e mbajtësit, datën e fillimit, datën e skadimit dhe statusin. Emri i plotë, emaili dhe telefoni nuk shfaqen.
+E kam humbur kodin e kërkesës. Çfarë bëj?
+Na shkruani në info@apexframes.co me emrin, emailin dhe telefonin e kërkesës dhe ju ndihmojmë.
 
 Keni një projekt në mendje?
 Na tregoni për objektin dhe ju kthejmë përgjigje brenda 24 orëve.
@@ -3154,13 +3223,17 @@ Të dhëna që na jepni vetë kur na shkruani me email, telefon, WhatsApp ose p�
 
 Të dhëna kontraktuale kur bëheni klient: të dhënat e faturimit, matjet, specifikimet, kontratat dhe korrespondenca.
 
-Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni.
+Kërkesa për certifikatë garancie (faqja Certifikata e garancisë ): emri, mbiemri, emaili, telefoni dhe, nëse i jepni, produkti, data e blerjes dhe referenca e kontratës ose faturës. Pas miratimit ruhen edhe numri i certifikatës dhe datat e garancisë.
+
+Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni. Ndryshe nga ai, formulari i certifikatës së garancisë i ruan të dhënat e mësipërme në sistemin tonë (hostuar në Netlify), me qëllim shqyrtimin e kërkesës dhe lëshimin e certifikatës. Për mbrojtje nga abuzimi përdorim një shenjë të koduar (hash) të adresës IP, jo vetë IP-në, dhe e ruajmë vetëm për kohë të shkurtër.
+
+Kontrolli publik i certifikatës (me numrin AF-…) tregon vetëm inicialet e mbajtësit, datat dhe statusin; emri i plotë, emaili dhe telefoni nuk shfaqen.
 
 3. Pse i përpunojmë dhe baza ligjore
 
 Për t'iu përgjigjur kërkesës suaj dhe për të përgatitur ofertën — hapa para lidhjes së kontratës, me kërkesën tuaj.
 
-Për zbatimin e kontratës: matje, prodhim, montim, dorëzim dhe garanci.
+Për zbatimin e kontratës: matje, prodhim, montim, dorëzim dhe garanci, përfshirë shqyrtimin e kërkesës dhe lëshimin e certifikatës së garancisë.
 
 Për detyrime ligjore, si faturimi i fiskalizuar dhe ruajtja e dokumenteve financiare.
 
@@ -3172,7 +3245,7 @@ Nuk i shesim të dhënat tuaja. Mund t'i ndajmë vetëm me sa është e nevojshm
 
 5. Sa kohë i ruajmë
 
-Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar, dhe gjatë gjithë periudhës së garancisë.
+Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Kërkesat për certifikatë të refuzuara ruhen deri në 12 muaj. Certifikatat e lëshuara ruhen gjatë gjithë periudhës së garancisë (5 vjet) dhe për aq kohë sa kërkohet nga detyrimet ligjore. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar.
 
 6. Të drejtat tuaja
 
@@ -4514,6 +4587,10 @@ Warranty certificate
 Maintenance guide
 Handover protocol
 
+Online warranty certificate
+Request your certificate with a unique number and check the 5-year warranty term at any time.
+Request the certificate
+
 What the warranty covers and what it doesn’t
 The warranty covers product and installation defects within the periods above. It does not cover misuse, accidental mechanical damage, unauthorised alterations or damage from extreme weather.
 How to request warranty service
@@ -4521,6 +4598,71 @@ Write to info@apexframes.co or call us, with the document number (e.g. the contr
 We acknowledge it in writing within 24 hours.
 We analyse the cause within 48 hours and offer a solution within 5 working days.
 For prevention see window condensation and installation in 8 steps .
+
+Have a project in mind?
+Tell us about your building and we’ll reply within 24 hours.
+
+Request a quote
+
+---
+
+## Online Warranty Certificate and Validity Check | Apex Frames
+URL: https://www.apexframes.co/en/warranty/certificate/
+
+Home
+Warranty
+Warranty certificate
+
+Warranty certificate
+
+Online warranty certificate
+
+Request the 5-year warranty certificate for the product you bought from Apex Frames. After our team verifies it you receive a unique number (AF-…), and you can check the warranty term online at any time.
+
+Warranty certificate
+
+01 Fill in the request
+First name, last name, email and phone. The more purchase details you give, the faster it is verified.
+
+02 We verify and approve
+Our team checks the purchase and issues the certificate with a unique number, valid for 5 years from the purchase date.
+
+03 Get your certificate
+Use the request code to download the PDF. Anyone can check the term online with the AF-… number.
+
+Check validity or status
+
+Enter the certificate number (e.g. AF-0005657) or the request code (RQ-…).
+
+Check
+
+Certificate request
+
+First name * Last name *
+
+Email * Phone *
+
+Product (optional)
+Purchase or installation date (optional) Contract or invoice no. (optional)
+
+Website
+
+I agree that my data is stored to review the request and issue the certificate, in line with the Privacy Policy .
+
+Send request
+
+Certificate questions
+
+How long is the warranty?
+The warranty covers material and manufacturing defects for 5 years from the purchase date. The certificate shows the start date and the expiry date.
+What does it cover and what not?
+The service includes repair or replacement of the product at no extra cost to the client. The warranty applies only if the product was used according to instructions; it does not cover misuse, accidents, extreme weather and unauthorised alterations; transport and installation costs are not included.
+Who approves the certificate?
+Requests are reviewed and approved by the Apex Frames team. Only after approval is the AF-… number and the PDF certificate issued.
+What does the public check show?
+Anyone with the AF-… number sees only the holder’s initials, start date, expiry date and status. The full name, email and phone are never shown.
+I lost my request code. What do I do?
+Write to info@apexframes.co with the name, email and phone of the request and we will help you.
 
 Have a project in mind?
 Tell us about your building and we’ll reply within 24 hours.
@@ -6379,13 +6521,17 @@ Data you give us by email, phone, WhatsApp or the contact form: name, company, e
 
 Contract data once you become a client: billing details, measurements, specifications, contracts and correspondence.
 
-This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send.
+Warranty certificate requests (the Warranty certificate page): first name, last name, email, phone and, if you provide them, the product, purchase date and contract or invoice reference. After approval we also keep the certificate number and warranty dates.
+
+This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send. Unlike it, the warranty certificate form stores the data above in our system (hosted on Netlify) in order to review the request and issue the certificate. To protect against abuse we use a hash of the IP address, not the IP itself, and keep it only for a short time.
+
+The public certificate check (by AF-… number) shows only the holder’s initials, the dates and the status; the full name, email and phone are never shown.
 
 3. Purposes and legal basis
 
 To answer your request and prepare a quote — pre-contractual steps at your request.
 
-To perform the contract: survey, manufacturing, installation, handover and warranty.
+To perform the contract: survey, manufacturing, installation, handover and warranty, including reviewing the request and issuing the warranty certificate.
 
 To meet legal obligations such as fiscalised invoicing and retention of financial records.
 
@@ -6397,7 +6543,7 @@ We never sell your data. We share it only as needed with suppliers and carriers 
 
 5. Retention
 
-Enquiries that do not lead to a contract are kept for up to 12 months. Contract and financial documents are kept for at least 5 years under Albanian tax law, and for the full warranty period.
+Enquiries that do not lead to a contract are kept for up to 12 months. Rejected certificate requests are kept for up to 12 months. Issued certificates are kept for the whole warranty period (5 years) and for as long as legal obligations require. Contract and financial documents are kept for at least 5 years under Albanian tax law.
 
 6. Your rights
 

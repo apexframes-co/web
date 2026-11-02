@@ -12,6 +12,13 @@
 /files/*
   Cache-Control: public, max-age=86400
 
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/api/*
+  X-Robots-Tag: noindex
+
 /llms.txt
   Content-Type: text/plain; charset=utf-8
 

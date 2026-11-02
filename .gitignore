@@ -2,3 +2,7 @@
 node_modules/
 *.whl
 *.tar.gz
+.env
+.env.*
+!.env.example
+.netlify/

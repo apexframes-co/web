@@ -9,7 +9,7 @@ const issues = []; const titles = new Map(); const descs = new Map();
 const exists = (u) => { const p = u.split('#')[0].split('?')[0]; if (!p) return true; const f = join(D, p); return existsSync(f) && (statSync(f).isFile() || existsSync(join(f, 'index.html'))); };
 for (const f of files) {
   const rel = f.replace(D, ''); const h = readFileSync(f, 'utf8');
-  if (rel === '/404.html') continue;
+  if (rel === '/404.html' || /name="robots" content="noindex"/.test(h)) continue;
   const title = (h.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
   const desc = (h.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
   const h1 = (h.match(/<h1[ >]/g) || []).length;

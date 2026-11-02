@@ -1,47 +1,77 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 # Kërkuesit dhe motorët e përgjigjeve me AI mirëpriten / AI search and answer-engine crawlers are welcome
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: DuckAssistBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: MistralAI-User
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 Sitemap: https://www.apexframes.co/sitemap.xml

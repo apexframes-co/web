@@ -623,3 +623,55 @@ h1, h2 { letter-spacing: -.025em; text-wrap: balance; }
 .cat-media { display: flex; align-items: center; justify-content: center; }
 .cat-media img { max-width: 100%; max-height: 100%; }
 .cat-answer { margin-bottom: 2rem; }
+
+/* ===== Certifikata e garancisë (faqja publike dhe paneli i adminit) ===== */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.cert-check { margin-top: 2rem; }
+.check-form { display: flex; gap: .6rem; margin-bottom: 1rem; }
+.check-form input { flex: 1; min-width: 0; padding: .8rem 1rem; border: 1px solid var(--silver); border-radius: 999px; font: 500 1rem/1.2 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--ink); background: #fff; }
+.check-form input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(48, 126, 172, .15); }
+.cert-result { margin-top: .25rem; padding: 1.25rem; border-radius: var(--r); background: var(--paper); }
+.cert-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 1rem; }
+.cert-head strong { font: 400 1.5rem/1 var(--serif); letter-spacing: .04em; }
+.badge { display: inline-block; padding: .35rem .8rem; border-radius: 999px; font: 600 .76rem/1 var(--sans); letter-spacing: .04em; }
+.badge-ok { background: rgba(31, 138, 91, .14); color: #166a47; }
+.badge-warn { background: rgba(196, 130, 20, .16); color: #8a5a07; }
+.badge-bad { background: rgba(179, 38, 30, .12); color: #9b1f19; }
+.cert-facts div { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-top: 1px solid var(--line); font-size: .93rem; }
+.cert-facts dt { color: var(--muted); }
+.cert-facts dd { font-weight: 600; text-align: right; }
+.cert-msg { font-size: .95rem; color: var(--ink); }
+.progress { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; margin: 1rem 0 1.25rem; }
+.progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--blue), var(--sky)); border-radius: 999px; }
+.cert-result .btn { margin-top: .25rem; }
+.cert-success { margin-top: 0; text-align: left; }
+.cert-code { font: 400 2rem/1.1 var(--serif); letter-spacing: .08em; padding: 1rem 1.25rem; margin: .75rem 0; border-radius: var(--r); background: var(--paper); user-select: all; }
+.cert-note { color: var(--muted); font-size: .93rem; margin-bottom: .75rem; }
+.cert-cta { text-align: center; }
+.cert-cta .btn { margin-top: .5rem; }
+/* paneli i adminit */
+.login-form { max-width: 440px; margin-inline: auto; }
+.admin-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-bottom: 1.5rem; }
+.admin-next { margin: 0; color: var(--muted); }
+.admin-next strong { color: var(--ink); font-family: var(--serif); font-size: 1.2rem; letter-spacing: .04em; }
+.admin-tabs { display: flex; flex-wrap: wrap; gap: .5rem; margin-right: auto; }
+.admin-msg { padding: 1rem 1.25rem; border-radius: var(--r); margin-bottom: 1.25rem; font-size: .95rem; }
+.admin-msg-ok { background: rgba(31, 138, 91, .12); }
+.admin-msg-bad { background: rgba(179, 38, 30, .1); }
+.admin-empty { color: var(--muted); padding: 2rem 0; }
+.admin-table { font-size: .88rem; }
+.admin-table td { vertical-align: top; }
+.admin-table small { color: var(--muted); }
+.row-actions { white-space: nowrap; }
+.row-actions .btn { padding: .5rem .9rem; font-size: .8rem; margin-right: .35rem; }
+.approve-row td { background: var(--paper); }
+.approve-form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1rem; }
+.approve-form label { margin: 0; flex: 1 1 220px; }
+.approve-form input { margin-top: .4rem; width: 100%; padding: .65rem .8rem; border: 1px solid var(--silver); border-radius: 10px; font: 400 .95rem var(--sans); background: #fff; }
+@media (max-width: 600px) { .check-form { flex-direction: column; } .cert-code { font-size: 1.5rem; } }
+.check-form { flex-wrap: wrap; align-items: stretch; }
+.check-form input { flex: 1 1 180px; min-height: 48px; }
+.check-form .btn { flex: 0 0 auto; justify-content: center; }
+.cert-cta .btn, .cert-result .btn { max-width: 100%; }
+@media (max-width: 600px) { .check-form input { flex: 0 0 auto; width: 100%; } .check-form .btn { width: 100%; } }

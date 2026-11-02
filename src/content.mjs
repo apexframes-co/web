@@ -342,19 +342,21 @@ export const sq = {
 <ul>
 <li><strong>Të dhëna që na jepni vetë</strong> kur na shkruani me email, telefon, WhatsApp ose përmes formularit: emër, kompani, email, telefon, përshkrim i projektit dhe adresa e objektit.</li>
 <li><strong>Të dhëna kontraktuale</strong> kur bëheni klient: të dhënat e faturimit, matjet, specifikimet, kontratat dhe korrespondenca.</li>
+<li><strong>Kërkesa për certifikatë garancie</strong> (faqja <a href="/garancia/certifikata/">Certifikata e garancisë</a>): emri, mbiemri, emaili, telefoni dhe, nëse i jepni, produkti, data e blerjes dhe referenca e kontratës ose faturës. Pas miratimit ruhen edhe numri i certifikatës dhe datat e garancisë.</li>
 </ul>
-<p>Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni.</p>
+<p>Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni. Ndryshe nga ai, formulari i certifikatës së garancisë i ruan të dhënat e mësipërme në sistemin tonë (hostuar në Netlify), me qëllim shqyrtimin e kërkesës dhe lëshimin e certifikatës. Për mbrojtje nga abuzimi përdorim një shenjë të koduar (hash) të adresës IP, jo vetë IP-në, dhe e ruajmë vetëm për kohë të shkurtër.</p>
+<p>Kontrolli publik i certifikatës (me numrin AF-…) tregon vetëm inicialet e mbajtësit, datat dhe statusin; emri i plotë, emaili dhe telefoni nuk shfaqen.</p>
 <h2>3. Pse i përpunojmë dhe baza ligjore</h2>
 <ul>
 <li>Për t'iu përgjigjur kërkesës suaj dhe për të përgatitur ofertën — hapa para lidhjes së kontratës, me kërkesën tuaj.</li>
-<li>Për zbatimin e kontratës: matje, prodhim, montim, dorëzim dhe garanci.</li>
+<li>Për zbatimin e kontratës: matje, prodhim, montim, dorëzim dhe garanci, përfshirë shqyrtimin e kërkesës dhe lëshimin e certifikatës së garancisë.</li>
 <li>Për detyrime ligjore, si faturimi i fiskalizuar dhe ruajtja e dokumenteve financiare.</li>
 <li>Për interes legjitim: mbrojtja e të drejtave tona dhe trajtimi i ankesave.</li>
 </ul>
 <h2>4. Me kë i ndajmë</h2>
 <p>Nuk i shesim të dhënat tuaja. Mund t'i ndajmë vetëm me sa është e nevojshme me furnizues dhe transportues për realizimin e porosisë, me ofruesit e shërbimeve të email-it dhe hostimit, me kontabilistin, ose me autoritetet kur kërkohet me ligj. Të gjithë veprojnë me marrëveshje të shkruar dhe detyrim konfidencialiteti.</p>
 <h2>5. Sa kohë i ruajmë</h2>
-<p>Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar, dhe gjatë gjithë periudhës së garancisë.</p>
+<p>Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Kërkesat për certifikatë të refuzuara ruhen deri në 12 muaj. Certifikatat e lëshuara ruhen gjatë gjithë periudhës së garancisë (5 vjet) dhe për aq kohë sa kërkohet nga detyrimet ligjore. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar.</p>
 <h2>6. Të drejtat tuaja</h2>
 <p>Keni të drejtë të kërkoni akses, korrigjim, fshirje, kufizim të përpunimit, transferim të të dhënave dhe të kundërshtoni përpunimin. Na shkruani në <a href="mailto:info@apexframes.co">info@apexframes.co</a>; përgjigjemi brenda 30 ditëve. Keni gjithashtu të drejtë të ankoheni te Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale (idp.al).</p>
 <h2>7. Siguria</h2>
@@ -709,19 +711,21 @@ export const en = {
 <ul>
 <li><strong>Data you give us</strong> by email, phone, WhatsApp or the contact form: name, company, email, phone, project description and site address.</li>
 <li><strong>Contract data</strong> once you become a client: billing details, measurements, specifications, contracts and correspondence.</li>
+<li><strong>Warranty certificate requests</strong> (the <a href="/en/warranty/certificate/">Warranty certificate</a> page): first name, last name, email, phone and, if you provide them, the product, purchase date and contract or invoice reference. After approval we also keep the certificate number and warranty dates.</li>
 </ul>
-<p>This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send.</p>
+<p>This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send. Unlike it, the warranty certificate form stores the data above in our system (hosted on Netlify) in order to review the request and issue the certificate. To protect against abuse we use a hash of the IP address, not the IP itself, and keep it only for a short time.</p>
+<p>The public certificate check (by AF-… number) shows only the holder’s initials, the dates and the status; the full name, email and phone are never shown.</p>
 <h2>3. Purposes and legal basis</h2>
 <ul>
 <li>To answer your request and prepare a quote — pre-contractual steps at your request.</li>
-<li>To perform the contract: survey, manufacturing, installation, handover and warranty.</li>
+<li>To perform the contract: survey, manufacturing, installation, handover and warranty, including reviewing the request and issuing the warranty certificate.</li>
 <li>To meet legal obligations such as fiscalised invoicing and retention of financial records.</li>
 <li>Legitimate interest: protecting our rights and handling complaints.</li>
 </ul>
 <h2>4. Who we share it with</h2>
 <p>We never sell your data. We share it only as needed with suppliers and carriers to fulfil your order, with email and hosting providers, with our accountant, or with authorities where required by law. All act under written agreements and confidentiality obligations.</p>
 <h2>5. Retention</h2>
-<p>Enquiries that do not lead to a contract are kept for up to 12 months. Contract and financial documents are kept for at least 5 years under Albanian tax law, and for the full warranty period.</p>
+<p>Enquiries that do not lead to a contract are kept for up to 12 months. Rejected certificate requests are kept for up to 12 months. Issued certificates are kept for the whole warranty period (5 years) and for as long as legal obligations require. Contract and financial documents are kept for at least 5 years under Albanian tax law.</p>
 <h2>6. Your rights</h2>
 <p>You may request access, rectification, erasure, restriction, data portability, or object to processing. Write to <a href="mailto:info@apexframes.co">info@apexframes.co</a>; we reply within 30 days. You may also lodge a complaint with the Albanian Commissioner for the Right to Information and Personal Data Protection (idp.al).</p>
 <h2>7. Security</h2>

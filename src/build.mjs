@@ -39,7 +39,7 @@ const models = JSON.parse(rd('src/catalogue.json'));
 const PDF_URL = '/files/Apex-Frames-Katalogu-Dyer-PVC.pdf';
 const PDF_MB = (statSync(join(ROOT, 'files/Apex-Frames-Katalogu-Dyer-PVC.pdf')).size / 1048576).toFixed(1).replace(/\.0$/, '');
 const fillN = (t) => t.replace(/\{n\}/g, models.length);
-const ver = createHash('sha1').update(rd('assets/css/styles.css') + rd('assets/js/main.js')).digest('hex').slice(0, 8);
+const ver = createHash('sha1').update(rd('assets/css/styles.css') + rd('assets/js/main.js') + rd('assets/js/warranty.js') + rd('assets/js/admin-warranty.js')).digest('hex').slice(0, 8);
 const INLINE_JS = "document.documentElement.classList.add('js')";
 const INLINE_HASH = createHash('sha256').update(INLINE_JS).digest('base64');
 
@@ -234,7 +234,7 @@ function footer(lang) {
     </div>
     <div>
       <h2>${c.footer.company}</h2>
-      <ul>${links(['catalogue', 'about', 'services', 'process', 'partners', 'warranty', 'faq', 'blog'])}</ul>
+      <ul>${links(['catalogue', 'about', 'services', 'process', 'partners', 'warranty', 'certificate', 'faq', 'blog'])}</ul>
     </div>
     <div>
       <h2>${u.pages.contact.label}</h2>
@@ -313,7 +313,7 @@ function postCard(lang, post) {
 
 /* ---------- regjistri i faqeve ---------- */
 const pages = [];
-function wrap({ lang, key, id, current, path, alt, title, desc, og, ogAlt, type, graph, preload, noindex, article, body, hero = false, lastmod = SITE_DATE, images = [] }) {
+function wrap({ lang, key, id, current, path, alt, title, desc, og, ogAlt, type, graph, preload, noindex, article, body, hero = false, lastmod = SITE_DATE, images = [], scripts = [] }) {
   const html = `${head({ lang, title, desc, path, alt, og, ogAlt, type, graph, preload, noindex, article })}
 <body id="top">
 ${header(lang, current, alt, hero)}
@@ -322,6 +322,7 @@ ${body}
 </main>
 ${footer(lang)}
 <script src="/assets/js/main.js?v=${ver}" defer></script>
+${scripts.map((sc) => `<script src="/assets/js/${sc}?v=${ver}" defer></script>`).join('\n')}
 </body>
 </html>
 `;
@@ -598,9 +599,59 @@ ${ctaBand(lang, c.partners.title, u.home.ctaText)}`;
     </div>
     <div class="side-stack"><div class="aside-card" data-reveal><h2>${pg.docsTitle}</h2>${checks(pg.docs)}</div></div>
   </div>
-</section>${extraBlock(lang, 'warranty')}
+</section>
+<section class="section section-tight"><div class="container narrow"><aside class="aside-card cert-cta" data-reveal><h2>${u.cert.cta.title}</h2><p>${u.cert.cta.text}</p><a class="btn btn-primary" href="${rp(lang, 'certificate')}">${u.cert.cta.button} ${icon('arrow', 'ico ico-sm')}</a></aside></div></section>${extraBlock(lang, 'warranty')}
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: '', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'WebPage'), breadcrumbNode(url, cr.all)] });
+  }
+
+  /* ===== Certifikata e garancisë (publike) ===== */
+  {
+    const id = 'certificate';
+    const k = u.cert;
+    const path = rp(lang, id);
+    const url = abs(path);
+    const cr = crumbs(lang, [{ name: u.pages.warranty.label, path: rp(lang, 'warranty') }, { name: k.label, path }]);
+    const i18n = esc(JSON.stringify({ ...k.js, contact: rp(lang, 'contact') }));
+    const f = k.f;
+    const body = `${pageHero({ crumbHtml: cr.html, label: k.label, h1: k.h1, lead: k.lead })}
+<section class="section section-tight" id="cert-app" data-api="/api/warranty/" data-lang="${lang}" data-i18n="${i18n}">
+  <div class="container two-col">
+    <div class="col-head">
+      <h2 class="sr">${k.label}</h2>
+      <ol class="vsteps compact">${k.steps.map((s2, i) => `<li><span class="dot">${String(i + 1).padStart(2, '0')}</span><div><h3>${s2[0]}</h3><p>${s2[1]}</p></div></li>`).join('')}</ol>
+      <div class="aside-card cert-check">
+        <h2>${k.checkTitle}</h2>
+        <p>${k.checkLead}</p>
+        <form id="cert-check" class="check-form" novalidate><input id="cert-q" name="q" placeholder="${esc(f.checkPh)}" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="${esc(k.checkTitle)}" required><button class="btn btn-dark" type="submit">${f.check}</button></form>
+        <div id="cert-result" aria-live="polite"></div>
+      </div>
+    </div>
+    <div>
+      <form class="form" id="cert-form" novalidate>
+        <h2 class="form-title">${k.formTitle}</h2>
+        <div class="row"><label>${f.name} *<input name="name" autocomplete="given-name" maxlength="60" required></label><label>${f.surname} *<input name="surname" autocomplete="family-name" maxlength="60" required></label></div>
+        <div class="row"><label>${f.email} *<input type="email" name="email" autocomplete="email" maxlength="120" required></label><label>${f.phone} *<input type="tel" name="phone" autocomplete="tel" maxlength="24" required></label></div>
+        <label>${f.product}<input name="product" maxlength="120" placeholder="${esc(f.productPh)}"></label>
+        <div class="row"><label>${f.purchaseDate}<input type="date" name="purchaseDate" min="2000-01-01"></label><label>${f.reference}<input name="reference" maxlength="60"></label></div>
+        <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="ts" value="">
+        <label class="consent"><input type="checkbox" name="consent" required><span>${f.consent.replace('{privacy}', rp(lang, 'privacy'))}</span></label>
+        <p class="form-error" role="alert" hidden></p>
+        <div class="actions"><button class="btn btn-primary" type="submit" data-sending="${esc(f.sending)}">${f.submit} ${icon('arrow', 'ico ico-sm')}</button></div>
+      </form>
+      <div class="aside-card cert-success" id="cert-success" hidden></div>
+    </div>
+  </div>
+</section>
+<section class="section section-paper section-faq">
+  <div class="container narrow">
+    ${secHead('', k.faqTitle, k.faqTitle)}
+    ${faqList(k.faq)}
+  </div>
+</section>
+${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
+    wrap({ lang, key: id, id, current: '', path, alt: alt(id), title: k.title, desc: k.desc, body, scripts: ['warranty.js'], graph: [pageNode(lang, url, k.title, k.desc, 'WebPage'), faqNode(url, k.faq), breadcrumbNode(url, cr.all)] });
   }
 
   /* ===== Pyetje të shpeshta ===== */
@@ -726,7 +777,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     </div>
   </div>
 </section>
-<section class="section section-paper">
+<section class="section section-paper section-faq">
   <div class="container narrow">
     ${secHead('', k.faqTitle, k.faqTitle)}
     ${faqList(k.faq)}
@@ -818,6 +869,45 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
   }
 }
 
+/* ---------- paneli i adminit (vetëm SQ, noindex, jashtë sitemap-it) ---------- */
+{
+  const lang = 'sq';
+  const path = '/admin/garancia/';
+  const body = `${pageHero({ crumbHtml: '', label: 'Admin', h1: 'Certifikatat e garancisë', lead: 'Miratoni kërkesat dhe lëshoni certifikata me numër unik (AF-…), e vlefshme 5 vite.' })}
+<section class="section section-tight" id="admin-app" data-api="/api/warranty/">
+  <div class="container">
+    <form id="login" class="form login-form" novalidate>
+      <label>Fjalëkalimi i adminit<input type="password" id="pw" autocomplete="current-password" required></label>
+      <p class="form-error" role="alert" hidden></p>
+      <div class="actions"><button class="btn btn-primary" type="submit">Hyr</button></div>
+    </form>
+    <div id="panel" hidden>
+      <div class="admin-bar">
+        <p class="admin-next">Numri vijues: <strong id="admin-next"></strong></p>
+        <div class="admin-tabs" role="tablist">
+          <button type="button" class="chip-btn is-active" data-tab="pending">Në pritje <span id="n-pending">0</span></button>
+          <button type="button" class="chip-btn" data-tab="issued">Të lëshuara <span id="n-issued">0</span></button>
+          <button type="button" class="chip-btn" data-tab="rejected">Të refuzuara <span id="n-rejected">0</span></button>
+          <button type="button" class="chip-btn" data-tab="new">Lësho të re</button>
+        </div>
+        <button type="button" class="btn btn-link" id="logout">Dil</button>
+      </div>
+      <div id="admin-msg" class="admin-msg" role="status" hidden></div>
+      <div id="tab-pending"></div><div id="tab-issued" hidden></div><div id="tab-rejected" hidden></div>
+      <form id="tab-new" class="form" hidden novalidate>
+        <div class="row"><label>Emri *<input name="name" required maxlength="60"></label><label>Mbiemri *<input name="surname" required maxlength="60"></label></div>
+        <div class="row"><label>Email<input type="email" name="email" maxlength="120"></label><label>Telefon<input type="tel" name="phone" maxlength="24"></label></div>
+        <div class="row"><label>Produkti<input name="product" maxlength="120"></label><label>Data e blerjes (fillimi i garancisë)<input type="date" name="startDate"></label></div>
+        <label>Nr. i kontratës ose faturës<input name="reference" maxlength="60"></label>
+        <p class="form-error" role="alert" hidden></p>
+        <div class="actions"><button class="btn btn-primary" type="submit">Lësho certifikatën</button></div>
+      </form>
+    </div>
+  </div>
+</section>`;
+  wrap({ lang, key: 'admin', id: 'admin', current: '', path, alt: rp('en', 'home'), title: 'Admin: certifikatat e garancisë | Apex Frames', desc: 'Paneli i brendshëm për miratimin e certifikatave të garancisë.', body, noindex: true, scripts: ['admin-warranty.js'], graph: [] });
+}
+
 /* ---------- 404 ---------- */
 writeFileSync(join(DIST, '404.html'), `${head({ lang: 'sq', title: '404 | Apex Frames', desc: sq.notFound.text, path: '/404.html', alt: null, noindex: true })}
 <body class="nf">
@@ -836,10 +926,10 @@ writeFileSync(join(DIST, '404.html'), `${head({ lang: 'sq', title: '404 | Apex F
 const w = (rel, data) => { const f = join(DIST, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, data); };
 
 const groups = new Map();
-for (const p of pages) { if (!groups.has(p.key)) groups.set(p.key, {}); groups.get(p.key)[p.lang] = p; }
+for (const p of pages.filter((x) => !x.noindex)) { if (!groups.has(p.key)) groups.set(p.key, {}); groups.get(p.key)[p.lang] = p; }
 w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${pages.map((p) => { const g = groups.get(p.key); return `  <url>
+${pages.filter((x) => !x.noindex).map((p) => { const g = groups.get(p.key); return `  <url>
     <loc>${abs(p.path)}</loc>
     <lastmod>${p.lastmod}</lastmod>
     <xhtml:link rel="alternate" hreflang="sq" href="${abs(g.sq.path)}"/>
@@ -853,9 +943,11 @@ ${[...(p.og ? [p.og] : []), ...p.images].map((im) => `    <image:image><image:lo
 const aiBots = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Amazonbot', 'DuckAssistBot', 'MistralAI-User', 'CCBot'];
 w('robots.txt', `User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 # Kërkuesit dhe motorët e përgjigjeve me AI mirëpriten / AI search and answer-engine crawlers are welcome
-${aiBots.map((b) => `User-agent: ${b}\nAllow: /`).join('\n\n')}
+${aiBots.map((b) => `User-agent: ${b}\nAllow: /\nDisallow: /admin/\nDisallow: /api/`).join('\n\n')}
 
 Sitemap: ${abs('/sitemap.xml')}
 `);
@@ -868,7 +960,7 @@ const llmsSection = (lang, label) => {
 ${ps.filter((p) => p.key.startsWith('product:')).map(li).join('\n')}
 
 ## ${label.company}
-${['catalogue', 'about', 'services', 'process', 'partners', 'warranty', 'faq', 'contact'].map((k) => li(one(k))).join('\n')}
+${['catalogue', 'about', 'services', 'process', 'partners', 'warranty', 'certificate', 'faq', 'contact'].map((k) => li(one(k))).join('\n')}
 
 ## Blog
 ${ps.filter((p) => p.key.startsWith('post:')).map(li).join('\n')}
@@ -941,6 +1033,13 @@ w('_headers', `/*
 /files/*
   Cache-Control: public, max-age=86400
 
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/api/*
+  X-Robots-Tag: noindex
+
 /llms.txt
   Content-Type: text/plain; charset=utf-8
 
@@ -958,4 +1057,4 @@ w('_redirects', [
 w(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 w('.well-known/security.txt', `Contact: mailto:${C.email}\nExpires: 2027-10-31T00:00:00.000Z\nPreferred-Languages: sq, en\nCanonical: ${abs('/.well-known/security.txt')}\n`);
 
-console.log(`${pages.length} faqe (${pages.length / 2} për gjuhë) → dist/`);
+console.log(`${pages.filter((p) => !p.noindex).length} faqe publike (${pages.filter((p) => !p.noindex).length / 2} për gjuhë) + ${pages.filter((p) => p.noindex).length} private → dist/`);

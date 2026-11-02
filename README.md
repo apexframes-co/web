@@ -46,3 +46,13 @@ Vendosni foton burimore, shtoni një rresht te `JOBS` në `scripts/make_images.p
 3. Google Business Profile për adresën në Tiranë; pastaj shtojeni lidhjen te `sameAs` në `src/build.mjs`.
 4. Termat: në shqip përdorni "PVC" (jo "uPVC"); në anglisht "PVC (uPVC)".
 5. Pas çdo ndryshimi: `npm run build && node scripts/audit.mjs && node scripts/audit-deep.mjs`.
+
+## Certifikata e garancisë online (5 vite, numri nis nga AF-0005657)
+- **Klienti:** `/garancia/certifikata/` (EN: `/en/warranty/certificate/`). Plotëson emrin, mbiemrin, emailin, telefonin; merr një kod kërkese (RQ-…). Me kodin shkarkon PDF-në sapo miratohet; me numrin AF-… kushdo kontrollon afatin (shfaqen vetëm inicialet).
+- **Admini:** `/admin/garancia/` (fjalëkalimi nga `ADMIN_PASSWORD`). Aprovon/refuzon kërkesat, lëshon certifikata direkt, revokon/rikthen, hap PDF-në.
+- **Numërimi:** i vazhdueshëm dhe pa dublikime (shkrime të kushtëzuara në Netlify Blobs), nis nga AF-0005657.
+- **Afati:** 5 vite nga data e blerjes që vendos admini; skadimi llogaritet sipas orës së Tiranës.
+- **Të dhënat:** ruhen në Netlify Blobs (dyqani `warranty`). Funksioni: `netlify/functions/warranty.mjs`; logjika: `netlify/lib/`.
+- **Variablat e mjedisit:** shih `.env.example` (detyrueshme: `ADMIN_PASSWORD`).
+- **Testet:** `npm test` (7 teste të rrjedhës së plotë). Lokalisht: `npm run build && npm run dev:warranty` (ruajtje në memorie, admin: `test`).
+- Nëse ndryshoni `netlify/assets/certificate-template.pdf`, ekzekutoni `npm run cert-assets`.
