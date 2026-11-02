@@ -1340,16 +1340,19 @@ Kontrollo
 
 Kërkesa për certifikatë
 
-Emri * Mbiemri *
+Asnjë fushë nuk është e detyrueshme: jepni vetëm çfarë dëshironi. Duhet të plotësoni të paktën një detaj që ta verifikojmë blerjen (p.sh. numrin e faturës ose emrin). Pa email, kodin e kërkesës e shihni vetëm në ekran: ruajeni.
 
-Email * Telefon *
+Emri (opsional) Mbiemri (opsional)
+
+Email (opsional) Telefon (opsional)
 
 Produkti (opsional)
 Data e blerjes ose montimit (opsionale) Nr. i kontratës ose faturës (opsional)
 
 Website
 
-Pranoj që të dhënat e mia të ruhen për shqyrtimin e kërkesës dhe lëshimin e certifikatës, sipas Politikës së Privatësisë .
+Jap pëlqimin që të dhënat që plotësova të ruhen për shqyrtimin e kërkesës dhe lëshimin e certifikatës. Mund ta tërheq pëlqimin në çdo kohë, sipas Politikës së Privatësisë .
+Si i përdorim të dhënat. Kontrollues është Apex Frames SHPK. I përdorim vetëm për të shqyrtuar kërkesën dhe për të lëshuar e menaxhuar certifikatën e garancisë. Kërkesat e pamiratuara fshihen pas 12 muajsh; certifikata ruhet gjatë garancisë. Mund të kërkoni akses, korrigjim ose fshirje në çdo kohë te info@apexframes.co. Detaje: Politika e Privatësisë .
 
 Dërgo kërkesën
 
@@ -1364,7 +1367,11 @@ Kërkesat i shqyrton dhe i miraton ekipi i Apex Frames. Vetëm pas miratimit lë
 Çfarë shfaqet te kontrolli publik?
 Kushdo që ka numrin AF-… sheh vetëm inicialet e mbajtësit, datën e fillimit, datën e skadimit dhe statusin. Emri i plotë, emaili dhe telefoni nuk shfaqen.
 E kam humbur kodin e kërkesës. Çfarë bëj?
-Na shkruani në info@apexframes.co me emrin, emailin dhe telefonin e kërkesës dhe ju ndihmojmë.
+Na shkruani në info@apexframes.co me detajet që keni dhënë te kërkesa (p.sh. numrin e faturës, emrin ose emailin) dhe ju ndihmojmë.
+A mund t’i fshij të dhënat e mia?
+Po. Shkruani në info@apexframes.co dhe i fshijmë të dhënat personale (emër, email, telefon, referencë). Certifikata mbetet e vlefshme, sepse numri, datat dhe statusi ruhen pa asnjë të dhënë personale, që kontrolli online të vazhdojë të punojë.
+A më duhet të jap emrin, emailin ose telefonin?
+Jo, asnjë nga to nuk është e detyrueshme. Duhet të jepni të paktën një detaj që ta verifikojmë blerjen, p.sh. numrin e faturës. Sa më pak të dhëna jepni, aq më pak ruajmë.
 
 Keni një projekt në mendje?
 Na tregoni për objektin dhe ju kthejmë përgjigje brenda 24 orëve.
@@ -3209,7 +3216,7 @@ Kreu
 Politika e Privatësisë
 Apex Frames SHPK
 Politika e Privatësisë
-Përditësuar më 31 tetor 2026
+Përditësuar më 2 nëntor 2026
 
 Kjo politikë shpjegon si Apex Frames SHPK (NUIS M62116046U), me seli në Innovation Hub, Piramida e Tiranës, Bulevardi "Dëshmorët e Kombit" 5, Tiranë ("ne"), përpunon të dhënat personale kur vizitoni www.apexframes.co ose na kontaktoni. Përpunimi bëhet në përputhje me Ligjin nr. 124/2024 "Për mbrojtjen e të dhënave personale".
 
@@ -3223,15 +3230,17 @@ Të dhëna që na jepni vetë kur na shkruani me email, telefon, WhatsApp ose p�
 
 Të dhëna kontraktuale kur bëheni klient: të dhënat e faturimit, matjet, specifikimet, kontratat dhe korrespondenca.
 
-Kërkesa për certifikatë garancie (faqja Certifikata e garancisë ): emri, mbiemri, emaili, telefoni dhe, nëse i jepni, produkti, data e blerjes dhe referenca e kontratës ose faturës. Pas miratimit ruhen edhe numri i certifikatës dhe datat e garancisë.
+Kërkesa për certifikatë garancie (faqja Certifikata e garancisë ): asnjë fushë personale nuk është e detyrueshme . Mund të jepni emrin, mbiemrin, emailin, telefonin, produktin, datën e blerjes dhe referencën e kontratës ose faturës; duhet të jepni vetëm të paktën një detaj që ta verifikojmë blerjen. Ne ruajmë vetëm çfarë jepni. Pas miratimit ruhen edhe numri i certifikatës dhe datat e garancisë.
 
-Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni. Ndryshe nga ai, formulari i certifikatës së garancisë i ruan të dhënat e mësipërme në sistemin tonë (hostuar në Netlify), me qëllim shqyrtimin e kërkesës dhe lëshimin e certifikatës. Për mbrojtje nga abuzimi përdorim një shenjë të koduar (hash) të adresës IP, jo vetë IP-në, dhe e ruajmë vetëm për kohë të shkurtër.
+Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni. Ndryshe nga ai, formulari i certifikatës së garancisë i ruan të dhënat që plotësoni në sistemin tonë (hostuar në Netlify), me qëllim shqyrtimin e kërkesës dhe lëshimin e certifikatës. Për mbrojtje nga abuzimi përdorim një shenjë të koduar (hash) të adresës IP, jo vetë IP-në, dhe e ruajmë vetëm për kohë të shkurtër. Kodi i kërkesës që merrni nuk përmban të dhëna personale.
 
 Kontrolli publik i certifikatës (me numrin AF-…) tregon vetëm inicialet e mbajtësit, datat dhe statusin; emri i plotë, emaili dhe telefoni nuk shfaqen.
 
 3. Pse i përpunojmë dhe baza ligjore
 
 Për t'iu përgjigjur kërkesës suaj dhe për të përgatitur ofertën — hapa para lidhjes së kontratës, me kërkesën tuaj.
+
+Pëlqimi juaj për të dhënat që plotësoni vullnetarisht te kërkesa për certifikatë garancie. Mund ta tërhiqni pëlqimin në çdo kohë (info@apexframes.co), pa cenuar ligjshmërinë e përpunimit që ka ndodhur më parë; pas miratimit, ruajtja e certifikatës mbështetet te përmbushja e detyrimit tonë të garancisë ndaj jush.
 
 Për zbatimin e kontratës: matje, prodhim, montim, dorëzim dhe garanci, përfshirë shqyrtimin e kërkesës dhe lëshimin e certifikatës së garancisë.
 
@@ -3243,17 +3252,19 @@ Për interes legjitim: mbrojtja e të drejtave tona dhe trajtimi i ankesave.
 
 Nuk i shesim të dhënat tuaja. Mund t'i ndajmë vetëm me sa është e nevojshme me furnizues dhe transportues për realizimin e porosisë, me ofruesit e shërbimeve të email-it dhe hostimit, me kontabilistin, ose me autoritetet kur kërkohet me ligj. Të gjithë veprojnë me marrëveshje të shkruar dhe detyrim konfidencialiteti.
 
+Transferime jashtë Shqipërisë. Sistemi i certifikatave hostohet te Netlify, Inc. (SHBA), dhe emailet automatike (nëse aktivizohen) dërgohen përmes një ofruesi të emailit. Të dhënat mund të ruhen ose përpunohen jashtë Shqipërisë. Këto transferime mbështeten te marrëveshja e përpunimit të të dhënave e ofruesit dhe klauzolat standarde kontraktuale që ajo përfshin. Faqja nuk transferon të dhëna te rrjetet sociale pa veprimin tuaj.
+
 5. Sa kohë i ruajmë
 
-Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Kërkesat për certifikatë të refuzuara ruhen deri në 12 muaj. Certifikatat e lëshuara ruhen gjatë gjithë periudhës së garancisë (5 vjet) dhe për aq kohë sa kërkohet nga detyrimet ligjore. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar.
+Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Kërkesat për certifikatë që nuk miratohen (në pritje ose të refuzuara) fshihen automatikisht pas 12 muajsh. Certifikatat e lëshuara ruhen gjatë periudhës së garancisë (5 vite); 12 muaj pas skadimit, të dhënat personale fshihen ose anonimizohen dhe mbeten vetëm numri, datat dhe statusi, pa asnjë të dhënë personale. Mund të kërkoni fshirjen më herët. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar.
 
 6. Të drejtat tuaja
 
-Keni të drejtë të kërkoni akses, korrigjim, fshirje, kufizim të përpunimit, transferim të të dhënave dhe të kundërshtoni përpunimin. Na shkruani në info@apexframes.co ; përgjigjemi brenda 30 ditëve. Keni gjithashtu të drejtë të ankoheni te Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale (idp.al).
+Keni të drejtë të kërkoni akses, korrigjim, fshirje, kufizim të përpunimit, transferim të të dhënave, të kundërshtoni përpunimin dhe të tërhiqni pëlqimin e dhënë. Na shkruani në info@apexframes.co ; përgjigjemi brenda 30 ditëve. Keni gjithashtu të drejtë të ankoheni te Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale (idp.al).
 
 7. Siguria
 
-Zbatojmë masa teknike dhe organizative të arsyeshme: akses i kufizuar vetëm për personelin e autorizuar, komunikim nga adresa zyrtare e kompanisë dhe arkivim i strukturuar i dokumenteve.
+Zbatojmë masa teknike dhe organizative të arsyeshme: akses i kufizuar vetëm për personelin e autorizuar, komunikim nga adresa zyrtare e kompanisë dhe arkivim i strukturuar i dokumenteve. Paneli i brendshëm i certifikatave mbrohet me fjalëkalim dhe qasja kufizohet te personeli i autorizuar. Në rast shkeljeje të të dhënave që sjell rrezik, e njoftojmë Komisionerin brenda 72 orëve dhe, kur rreziku është i lartë, edhe personat e prekur.
 
 8. Ndryshimet
 
@@ -4638,16 +4649,19 @@ Check
 
 Certificate request
 
-First name * Last name *
+No field is mandatory: give only what you wish. Please fill in at least one detail so we can verify the purchase (e.g. the invoice number or your name). Without an email, you see the request code only on screen: keep it.
 
-Email * Phone *
+First name (optional) Last name (optional)
+
+Email (optional) Phone (optional)
 
 Product (optional)
 Purchase or installation date (optional) Contract or invoice no. (optional)
 
 Website
 
-I agree that my data is stored to review the request and issue the certificate, in line with the Privacy Policy .
+I consent to the details I filled in being stored to review the request and issue the certificate. I can withdraw my consent at any time, as set out in the Privacy Policy .
+How we use your data. The controller is Apex Frames SHPK. We use it only to review the request and to issue and manage the warranty certificate. Unapproved requests are deleted after 12 months; the certificate is kept during the warranty. You can request access, correction or erasure at any time at info@apexframes.co. Details: Privacy Policy .
 
 Send request
 
@@ -4662,7 +4676,11 @@ Requests are reviewed and approved by the Apex Frames team. Only after approval 
 What does the public check show?
 Anyone with the AF-… number sees only the holder’s initials, start date, expiry date and status. The full name, email and phone are never shown.
 I lost my request code. What do I do?
-Write to info@apexframes.co with the name, email and phone of the request and we will help you.
+Write to info@apexframes.co with the details you gave in the request (e.g. the invoice number, name or email) and we will help you.
+Can I have my data deleted?
+Yes. Write to info@apexframes.co and we delete the personal data (name, email, phone, reference). The certificate stays valid, because the number, dates and status are kept without any personal data so the online check keeps working.
+Do I have to give my name, email or phone?
+No, none of them is mandatory. You only need to give at least one detail so we can verify the purchase, e.g. the invoice number. The less data you give, the less we store.
 
 Have a project in mind?
 Tell us about your building and we’ll reply within 24 hours.
@@ -6507,7 +6525,7 @@ Home
 Privacy Policy
 Apex Frames SHPK
 Privacy Policy
-Last updated 31 October 2026
+Last updated 2 November 2026
 
 This policy explains how Apex Frames SHPK (Tax ID M62116046U), registered at Innovation Hub, Pyramid of Tirana, "Dëshmorët e Kombit" Blvd. 5, Tirana, Albania ("we"), processes personal data when you visit www.apexframes.co or contact us. Processing complies with Albanian Law No. 124/2024 on Personal Data Protection and, where applicable, the EU GDPR.
 
@@ -6521,15 +6539,17 @@ Data you give us by email, phone, WhatsApp or the contact form: name, company, e
 
 Contract data once you become a client: billing details, measurements, specifications, contracts and correspondence.
 
-Warranty certificate requests (the Warranty certificate page): first name, last name, email, phone and, if you provide them, the product, purchase date and contract or invoice reference. After approval we also keep the certificate number and warranty dates.
+Warranty certificate requests (the Warranty certificate page): no personal field is mandatory . You may give your first name, last name, email, phone, product, purchase date and contract or invoice reference; you only need to give at least one detail so we can verify the purchase. We store only what you give. After approval we also keep the certificate number and warranty dates.
 
-This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send. Unlike it, the warranty certificate form stores the data above in our system (hosted on Netlify) in order to review the request and issue the certificate. To protect against abuse we use a hash of the IP address, not the IP itself, and keep it only for a short time.
+This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send. Unlike it, the warranty certificate form stores the details you fill in in our system (hosted on Netlify) in order to review the request and issue the certificate. To protect against abuse we use a hash of the IP address, not the IP itself, and keep it only for a short time. The request code you receive contains no personal data.
 
 The public certificate check (by AF-… number) shows only the holder’s initials, the dates and the status; the full name, email and phone are never shown.
 
 3. Purposes and legal basis
 
 To answer your request and prepare a quote — pre-contractual steps at your request.
+
+Your consent for the details you voluntarily fill in on the warranty certificate request. You can withdraw consent at any time (info@apexframes.co), without affecting the lawfulness of earlier processing; after approval, keeping the certificate relies on performing our warranty obligation to you.
 
 To perform the contract: survey, manufacturing, installation, handover and warranty, including reviewing the request and issuing the warranty certificate.
 
@@ -6541,17 +6561,19 @@ Legitimate interest: protecting our rights and handling complaints.
 
 We never sell your data. We share it only as needed with suppliers and carriers to fulfil your order, with email and hosting providers, with our accountant, or with authorities where required by law. All act under written agreements and confidentiality obligations.
 
+Transfers outside Albania. The certificate system is hosted by Netlify, Inc. (USA), and automatic emails (if enabled) are sent through an email provider. Data may be stored or processed outside Albania. These transfers rely on the provider’s data processing agreement and the standard contractual clauses it includes. The website does not transfer data to social networks without your action.
+
 5. Retention
 
-Enquiries that do not lead to a contract are kept for up to 12 months. Rejected certificate requests are kept for up to 12 months. Issued certificates are kept for the whole warranty period (5 years) and for as long as legal obligations require. Contract and financial documents are kept for at least 5 years under Albanian tax law.
+Enquiries that do not lead to a contract are kept for up to 12 months. Certificate requests that are not approved (pending or rejected) are deleted automatically after 12 months. Issued certificates are kept during the warranty (5 years); 12 months after expiry the personal data is deleted or anonymised and only the number, dates and status remain, with no personal data. You can ask for earlier erasure. Contract and financial documents are kept for at least 5 years under Albanian tax law.
 
 6. Your rights
 
-You may request access, rectification, erasure, restriction, data portability, or object to processing. Write to info@apexframes.co ; we reply within 30 days. You may also lodge a complaint with the Albanian Commissioner for the Right to Information and Personal Data Protection (idp.al).
+You may request access, rectification, erasure, restriction, data portability, object to processing, and withdraw consent you have given. Write to info@apexframes.co ; we reply within 30 days. You may also lodge a complaint with the Albanian Commissioner for the Right to Information and Personal Data Protection (idp.al).
 
 7. Security
 
-We apply reasonable technical and organisational measures: access limited to authorised staff, communication from official company addresses and structured document archiving.
+We apply reasonable technical and organisational measures: access limited to authorised staff, communication from official company addresses and structured document archiving. The internal certificate panel is password-protected and access is limited to authorised staff. In case of a personal data breach that poses a risk, we notify the Commissioner within 72 hours and, where the risk is high, the affected individuals.
 
 8. Changes
 

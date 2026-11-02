@@ -630,13 +630,15 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     <div>
       <form class="form" id="cert-form" novalidate>
         <h2 class="form-title">${k.formTitle}</h2>
-        <div class="row"><label>${f.name} *<input name="name" autocomplete="given-name" maxlength="60" required></label><label>${f.surname} *<input name="surname" autocomplete="family-name" maxlength="60" required></label></div>
-        <div class="row"><label>${f.email} *<input type="email" name="email" autocomplete="email" maxlength="120" required></label><label>${f.phone} *<input type="tel" name="phone" autocomplete="tel" maxlength="24" required></label></div>
+        <p class="form-hint">${f.hint}</p>
+        <div class="row"><label>${f.name}<input name="name" autocomplete="given-name" maxlength="60"></label><label>${f.surname}<input name="surname" autocomplete="family-name" maxlength="60"></label></div>
+        <div class="row"><label>${f.email}<input type="email" name="email" autocomplete="email" maxlength="120"></label><label>${f.phone}<input type="tel" name="phone" autocomplete="tel" maxlength="24"></label></div>
         <label>${f.product}<input name="product" maxlength="120" placeholder="${esc(f.productPh)}"></label>
         <div class="row"><label>${f.purchaseDate}<input type="date" name="purchaseDate" min="2000-01-01"></label><label>${f.reference}<input name="reference" maxlength="60"></label></div>
         <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <input type="hidden" name="ts" value="">
         <label class="consent"><input type="checkbox" name="consent" required><span>${f.consent.replace('{privacy}', rp(lang, 'privacy'))}</span></label>
+        <p class="form-info">${f.info.replace('{privacy}', rp(lang, 'privacy'))}</p>
         <p class="form-error" role="alert" hidden></p>
         <div class="actions"><button class="btn btn-primary" type="submit" data-sending="${esc(f.sending)}">${f.submit} ${icon('arrow', 'ico ico-sm')}</button></div>
       </form>
@@ -895,11 +897,12 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       <div id="admin-msg" class="admin-msg" role="status" hidden></div>
       <div id="tab-pending"></div><div id="tab-issued" hidden></div><div id="tab-rejected" hidden></div>
       <form id="tab-new" class="form" hidden novalidate>
-        <div class="row"><label>Emri *<input name="name" required maxlength="60"></label><label>Mbiemri *<input name="surname" required maxlength="60"></label></div>
+        <div class="row"><label>Emri<input name="name" maxlength="60"></label><label>Mbiemri<input name="surname" maxlength="60"></label></div>
         <div class="row"><label>Email<input type="email" name="email" maxlength="120"></label><label>Telefon<input type="tel" name="phone" maxlength="24"></label></div>
         <div class="row"><label>Produkti<input name="product" maxlength="120"></label><label>Data e blerjes (fillimi i garancisë)<input type="date" name="startDate"></label></div>
         <label>Nr. i kontratës ose faturës<input name="reference" maxlength="60"></label>
         <p class="form-error" role="alert" hidden></p>
+        <p class="form-hint">Plotësoni të paktën një fushë (emër, kontakt ose referencë). Të dhëna të pakta janë të lejuara.</p>
         <div class="actions"><button class="btn btn-primary" type="submit">Lësho certifikatën</button></div>
       </form>
     </div>

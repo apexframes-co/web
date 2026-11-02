@@ -333,7 +333,7 @@ export const sq = {
     altPath: '/en/privacy/',
     title: 'Politika e Privatësisë',
     metaDescription: 'Si i përpunon Apex Frames SHPK të dhënat personale të vizitorëve dhe klientëve: çfarë mbledhim, pse, sa kohë i ruajmë dhe cilat janë të drejtat tuaja.',
-    updated: 'Përditësuar më 31 tetor 2026',
+    updated: 'Përditësuar më 2 nëntor 2026',
     body: `
 <p>Kjo politikë shpjegon si <strong>Apex Frames SHPK</strong> (NUIS M62116046U), me seli në Innovation Hub, Piramida e Tiranës, Bulevardi "Dëshmorët e Kombit" 5, Tiranë ("ne"), përpunon të dhënat personale kur vizitoni www.apexframes.co ose na kontaktoni. Përpunimi bëhet në përputhje me Ligjin nr. 124/2024 "Për mbrojtjen e të dhënave personale".</p>
 <h2>1. Kontrolluesi i të dhënave</h2>
@@ -342,25 +342,27 @@ export const sq = {
 <ul>
 <li><strong>Të dhëna që na jepni vetë</strong> kur na shkruani me email, telefon, WhatsApp ose përmes formularit: emër, kompani, email, telefon, përshkrim i projektit dhe adresa e objektit.</li>
 <li><strong>Të dhëna kontraktuale</strong> kur bëheni klient: të dhënat e faturimit, matjet, specifikimet, kontratat dhe korrespondenca.</li>
-<li><strong>Kërkesa për certifikatë garancie</strong> (faqja <a href="/garancia/certifikata/">Certifikata e garancisë</a>): emri, mbiemri, emaili, telefoni dhe, nëse i jepni, produkti, data e blerjes dhe referenca e kontratës ose faturës. Pas miratimit ruhen edhe numri i certifikatës dhe datat e garancisë.</li>
+<li><strong>Kërkesa për certifikatë garancie</strong> (faqja <a href="/garancia/certifikata/">Certifikata e garancisë</a>): <strong>asnjë fushë personale nuk është e detyrueshme</strong>. Mund të jepni emrin, mbiemrin, emailin, telefonin, produktin, datën e blerjes dhe referencën e kontratës ose faturës; duhet të jepni vetëm të paktën një detaj që ta verifikojmë blerjen. Ne ruajmë vetëm çfarë jepni. Pas miratimit ruhen edhe numri i certifikatës dhe datat e garancisë.</li>
 </ul>
-<p>Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni. Ndryshe nga ai, formulari i certifikatës së garancisë i ruan të dhënat e mësipërme në sistemin tonë (hostuar në Netlify), me qëllim shqyrtimin e kërkesës dhe lëshimin e certifikatës. Për mbrojtje nga abuzimi përdorim një shenjë të koduar (hash) të adresës IP, jo vetë IP-në, dhe e ruajmë vetëm për kohë të shkurtër.</p>
+<p>Faqja nuk përdor cookies gjurmuese, mjete analitike ose reklama. Formulari i kontaktit nuk ruan të dhëna në serverin tonë: ai thjesht përgatit një email në aplikacionin tuaj, të cilin ju vendosni ta dërgoni. Ndryshe nga ai, formulari i certifikatës së garancisë i ruan të dhënat që plotësoni në sistemin tonë (hostuar në Netlify), me qëllim shqyrtimin e kërkesës dhe lëshimin e certifikatës. Për mbrojtje nga abuzimi përdorim një shenjë të koduar (hash) të adresës IP, jo vetë IP-në, dhe e ruajmë vetëm për kohë të shkurtër. Kodi i kërkesës që merrni nuk përmban të dhëna personale.</p>
 <p>Kontrolli publik i certifikatës (me numrin AF-…) tregon vetëm inicialet e mbajtësit, datat dhe statusin; emri i plotë, emaili dhe telefoni nuk shfaqen.</p>
 <h2>3. Pse i përpunojmë dhe baza ligjore</h2>
 <ul>
 <li>Për t'iu përgjigjur kërkesës suaj dhe për të përgatitur ofertën — hapa para lidhjes së kontratës, me kërkesën tuaj.</li>
+<li><strong>Pëlqimi juaj</strong> për të dhënat që plotësoni vullnetarisht te kërkesa për certifikatë garancie. Mund ta tërhiqni pëlqimin në çdo kohë (info@apexframes.co), pa cenuar ligjshmërinë e përpunimit që ka ndodhur më parë; pas miratimit, ruajtja e certifikatës mbështetet te përmbushja e detyrimit tonë të garancisë ndaj jush.</li>
 <li>Për zbatimin e kontratës: matje, prodhim, montim, dorëzim dhe garanci, përfshirë shqyrtimin e kërkesës dhe lëshimin e certifikatës së garancisë.</li>
 <li>Për detyrime ligjore, si faturimi i fiskalizuar dhe ruajtja e dokumenteve financiare.</li>
 <li>Për interes legjitim: mbrojtja e të drejtave tona dhe trajtimi i ankesave.</li>
 </ul>
 <h2>4. Me kë i ndajmë</h2>
 <p>Nuk i shesim të dhënat tuaja. Mund t'i ndajmë vetëm me sa është e nevojshme me furnizues dhe transportues për realizimin e porosisë, me ofruesit e shërbimeve të email-it dhe hostimit, me kontabilistin, ose me autoritetet kur kërkohet me ligj. Të gjithë veprojnë me marrëveshje të shkruar dhe detyrim konfidencialiteti.</p>
+<p><strong>Transferime jashtë Shqipërisë.</strong> Sistemi i certifikatave hostohet te Netlify, Inc. (SHBA), dhe emailet automatike (nëse aktivizohen) dërgohen përmes një ofruesi të emailit. Të dhënat mund të ruhen ose përpunohen jashtë Shqipërisë. Këto transferime mbështeten te marrëveshja e përpunimit të të dhënave e ofruesit dhe klauzolat standarde kontraktuale që ajo përfshin. Faqja nuk transferon të dhëna te rrjetet sociale pa veprimin tuaj.</p>
 <h2>5. Sa kohë i ruajmë</h2>
-<p>Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Kërkesat për certifikatë të refuzuara ruhen deri në 12 muaj. Certifikatat e lëshuara ruhen gjatë gjithë periudhës së garancisë (5 vjet) dhe për aq kohë sa kërkohet nga detyrimet ligjore. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar.</p>
+<p>Kërkesat që nuk kthehen në kontratë ruhen deri në 12 muaj. Kërkesat për certifikatë që nuk miratohen (në pritje ose të refuzuara) fshihen automatikisht pas 12 muajsh. Certifikatat e lëshuara ruhen gjatë periudhës së garancisë (5 vite); 12 muaj pas skadimit, të dhënat personale fshihen ose anonimizohen dhe mbeten vetëm numri, datat dhe statusi, pa asnjë të dhënë personale. Mund të kërkoni fshirjen më herët. Dokumentet kontraktuale dhe financiare ruhen të paktën 5 vjet, sipas legjislacionit fiskal shqiptar.</p>
 <h2>6. Të drejtat tuaja</h2>
-<p>Keni të drejtë të kërkoni akses, korrigjim, fshirje, kufizim të përpunimit, transferim të të dhënave dhe të kundërshtoni përpunimin. Na shkruani në <a href="mailto:info@apexframes.co">info@apexframes.co</a>; përgjigjemi brenda 30 ditëve. Keni gjithashtu të drejtë të ankoheni te Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale (idp.al).</p>
+<p>Keni të drejtë të kërkoni akses, korrigjim, fshirje, kufizim të përpunimit, transferim të të dhënave, të kundërshtoni përpunimin dhe të tërhiqni pëlqimin e dhënë. Na shkruani në <a href="mailto:info@apexframes.co">info@apexframes.co</a>; përgjigjemi brenda 30 ditëve. Keni gjithashtu të drejtë të ankoheni te Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale (idp.al).</p>
 <h2>7. Siguria</h2>
-<p>Zbatojmë masa teknike dhe organizative të arsyeshme: akses i kufizuar vetëm për personelin e autorizuar, komunikim nga adresa zyrtare e kompanisë dhe arkivim i strukturuar i dokumenteve.</p>
+<p>Zbatojmë masa teknike dhe organizative të arsyeshme: akses i kufizuar vetëm për personelin e autorizuar, komunikim nga adresa zyrtare e kompanisë dhe arkivim i strukturuar i dokumenteve. Paneli i brendshëm i certifikatave mbrohet me fjalëkalim dhe qasja kufizohet te personeli i autorizuar. Në rast shkeljeje të të dhënave që sjell rrezik, e njoftojmë Komisionerin brenda 72 orëve dhe, kur rreziku është i lartë, edhe personat e prekur.</p>
 <h2>8. Ndryshimet</h2>
 <p>Mund ta përditësojmë këtë politikë. Versioni në fuqi është gjithmonë ai i publikuar në këtë faqe, me datën e përditësimit.</p>`,
   },
@@ -702,7 +704,7 @@ export const en = {
     altPath: '/privatesia/',
     title: 'Privacy Policy',
     metaDescription: 'How Apex Frames SHPK processes the personal data of visitors and clients: what we collect, why, how long we keep it and what your rights are.',
-    updated: 'Last updated 31 October 2026',
+    updated: 'Last updated 2 November 2026',
     body: `
 <p>This policy explains how <strong>Apex Frames SHPK</strong> (Tax ID M62116046U), registered at Innovation Hub, Pyramid of Tirana, "Dëshmorët e Kombit" Blvd. 5, Tirana, Albania ("we"), processes personal data when you visit www.apexframes.co or contact us. Processing complies with Albanian Law No. 124/2024 on Personal Data Protection and, where applicable, the EU GDPR.</p>
 <h2>1. Data controller</h2>
@@ -711,25 +713,27 @@ export const en = {
 <ul>
 <li><strong>Data you give us</strong> by email, phone, WhatsApp or the contact form: name, company, email, phone, project description and site address.</li>
 <li><strong>Contract data</strong> once you become a client: billing details, measurements, specifications, contracts and correspondence.</li>
-<li><strong>Warranty certificate requests</strong> (the <a href="/en/warranty/certificate/">Warranty certificate</a> page): first name, last name, email, phone and, if you provide them, the product, purchase date and contract or invoice reference. After approval we also keep the certificate number and warranty dates.</li>
+<li><strong>Warranty certificate requests</strong> (the <a href="/en/warranty/certificate/">Warranty certificate</a> page): <strong>no personal field is mandatory</strong>. You may give your first name, last name, email, phone, product, purchase date and contract or invoice reference; you only need to give at least one detail so we can verify the purchase. We store only what you give. After approval we also keep the certificate number and warranty dates.</li>
 </ul>
-<p>This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send. Unlike it, the warranty certificate form stores the data above in our system (hosted on Netlify) in order to review the request and issue the certificate. To protect against abuse we use a hash of the IP address, not the IP itself, and keep it only for a short time.</p>
+<p>This website uses no tracking cookies, analytics or advertising. The contact form does not store data on our server: it simply prepares an email in your own mail app, which you choose whether to send. Unlike it, the warranty certificate form stores the details you fill in in our system (hosted on Netlify) in order to review the request and issue the certificate. To protect against abuse we use a hash of the IP address, not the IP itself, and keep it only for a short time. The request code you receive contains no personal data.</p>
 <p>The public certificate check (by AF-… number) shows only the holder’s initials, the dates and the status; the full name, email and phone are never shown.</p>
 <h2>3. Purposes and legal basis</h2>
 <ul>
 <li>To answer your request and prepare a quote — pre-contractual steps at your request.</li>
+<li><strong>Your consent</strong> for the details you voluntarily fill in on the warranty certificate request. You can withdraw consent at any time (info@apexframes.co), without affecting the lawfulness of earlier processing; after approval, keeping the certificate relies on performing our warranty obligation to you.</li>
 <li>To perform the contract: survey, manufacturing, installation, handover and warranty, including reviewing the request and issuing the warranty certificate.</li>
 <li>To meet legal obligations such as fiscalised invoicing and retention of financial records.</li>
 <li>Legitimate interest: protecting our rights and handling complaints.</li>
 </ul>
 <h2>4. Who we share it with</h2>
 <p>We never sell your data. We share it only as needed with suppliers and carriers to fulfil your order, with email and hosting providers, with our accountant, or with authorities where required by law. All act under written agreements and confidentiality obligations.</p>
+<p><strong>Transfers outside Albania.</strong> The certificate system is hosted by Netlify, Inc. (USA), and automatic emails (if enabled) are sent through an email provider. Data may be stored or processed outside Albania. These transfers rely on the provider’s data processing agreement and the standard contractual clauses it includes. The website does not transfer data to social networks without your action.</p>
 <h2>5. Retention</h2>
-<p>Enquiries that do not lead to a contract are kept for up to 12 months. Rejected certificate requests are kept for up to 12 months. Issued certificates are kept for the whole warranty period (5 years) and for as long as legal obligations require. Contract and financial documents are kept for at least 5 years under Albanian tax law.</p>
+<p>Enquiries that do not lead to a contract are kept for up to 12 months. Certificate requests that are not approved (pending or rejected) are deleted automatically after 12 months. Issued certificates are kept during the warranty (5 years); 12 months after expiry the personal data is deleted or anonymised and only the number, dates and status remain, with no personal data. You can ask for earlier erasure. Contract and financial documents are kept for at least 5 years under Albanian tax law.</p>
 <h2>6. Your rights</h2>
-<p>You may request access, rectification, erasure, restriction, data portability, or object to processing. Write to <a href="mailto:info@apexframes.co">info@apexframes.co</a>; we reply within 30 days. You may also lodge a complaint with the Albanian Commissioner for the Right to Information and Personal Data Protection (idp.al).</p>
+<p>You may request access, rectification, erasure, restriction, data portability, object to processing, and withdraw consent you have given. Write to <a href="mailto:info@apexframes.co">info@apexframes.co</a>; we reply within 30 days. You may also lodge a complaint with the Albanian Commissioner for the Right to Information and Personal Data Protection (idp.al).</p>
 <h2>7. Security</h2>
-<p>We apply reasonable technical and organisational measures: access limited to authorised staff, communication from official company addresses and structured document archiving.</p>
+<p>We apply reasonable technical and organisational measures: access limited to authorised staff, communication from official company addresses and structured document archiving. The internal certificate panel is password-protected and access is limited to authorised staff. In case of a personal data breach that poses a risk, we notify the Commissioner within 72 hours and, where the risk is high, the affected individuals.</p>
 <h2>8. Changes</h2>
 <p>We may update this policy. The version in force is always the one published on this page, with its update date.</p>`,
   },

@@ -28,12 +28,13 @@ export async function buildCertificatePdf(cert, { siteUrl = 'https://www.apexfra
   const centered = (s, x0, x1, top, size, font) => text(s, x0 + (x1 - x0 - font.widthOfTextAtSize(safe(font, s), size)) / 2, top, size, font);
 
   // fushat e shablonit: "Emri", "Data e blerjes", "Produkti" (shkruhen mbi vijat bosh)
-  text(`${cert.name} ${cert.surname}`, 100, 559.5, 12, bold, NAVY, 180);
+  const fullName = `${cert.name || ''} ${cert.surname || ''}`.trim();
+  if (fullName) text(fullName, 100, 559.5, 12, bold, NAVY, 180); // fusha mbetet bosh nëse emri nuk është dhënë
   const [yy, mm, dd] = cert.startDate.split('-');
   centered(dd, 149.9, 171.9, 577.5, 12, bold);
   centered(mm, 182.6, 204.6, 577.5, 12, bold);
   centered(yy, 215.4, 252.1, 577.5, 12, bold);
-  text(cert.product || '—', 122, 595.5, 12, bold, NAVY, 160);
+  if (cert.product) text(cert.product, 122, 595.5, 12, bold, NAVY, 160);
 
   // blloku i certifikatës (djathtas të të dhënave të klientit) + QR
   const bx = 318;
@@ -46,6 +47,9 @@ export async function buildCertificatePdf(cert, { siteUrl = 'https://www.apexfra
   const url = `${siteUrl}/garancia/certifikata/?n=${cert.number}`;
   const qr = await pdf.embedPng(await QRCode.toBuffer(url, { margin: 0, width: 320, color: { dark: '#2f425e', light: '#ffffff' }, errorCorrectionLevel: 'M' }));
   page.drawImage(qr, { x: 480, y: Y(588), width: 56, height: 56 });
+
+  // Shënim ligjor: garancia tregtare nuk cenon të drejtat ligjore të konsumatorit
+  centered('Kjo garanci tregtare nuk cenon të drejtat ligjore të konsumatorit sipas Ligjit nr. 9902/2008 “Për mbrojtjen e konsumatorit”.', 40, 555.5, 806, 6.6, regular);
 
   pdf.setTitle(`Certifikatë garancie ${cert.number}`);
   pdf.setAuthor('Apex Frames SHPK');

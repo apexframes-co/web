@@ -66,17 +66,76 @@ test('skadim, revokim dhe rikthim', async () => {
   clock = Date.parse('2026-11-03T10:00:00Z');
 });
 
-test('validim, honeypot, kohë, pëlqim, kufizim, origjinë', async () => {
+test('validim: fushat janë opsionale, formati kontrollohet vetëm nëse jepet, minimumi një detaj', async () => {
   const { call, applicant, store } = setup();
-  const bad = await call('request', { method: 'POST', body: applicant({ email: 'x', phone: '12', name: '' }) });
-  assert.equal(bad.status, 400); assert.deepEqual(Object.keys(bad.data.fields).sort(), ['email', 'name', 'phone']);
+  const bad = await call('request', { method: 'POST', body: applicant({ email: 'x', phone: '12' }) });
+  assert.equal(bad.status, 400); assert.deepEqual(Object.keys(bad.data.fields).sort(), ['email', 'phone']);
+  const empty = await call('request', { method: 'POST', body: applicant({ name: '', surname: '', email: '', phone: '', product: '', reference: '' }) });
+  assert.equal(empty.status, 400); assert.ok(empty.data.fields.empty, 'kërkesa krejt e zbrazët refuzohet');
+  const refOnly = await call('request', { method: 'POST', body: applicant({ name: '', surname: '', email: '', phone: '', reference: 'FAT-2026-114' }), ip: '4.4.4.4' });
+  assert.equal(refOnly.status, 200, 'mjafton vetëm referenca e faturës');
+  const nameOnly = await call('request', { method: 'POST', body: applicant({ surname: '', email: '', phone: '', product: '' }), ip: '4.4.4.5' });
+  assert.equal(nameOnly.status, 200);
   assert.equal((await call('request', { method: 'POST', body: applicant({ consent: false }) })).status, 400);
   assert.equal((await call('request', { method: 'POST', body: applicant({ ts: clock - 100 }) })).status, 400, 'shumë shpejt = bot');
+  const before = (await store.list('req/')).length;
   const hp = await call('request', { method: 'POST', body: applicant({ website: 'http://spam' }) });
-  assert.equal(hp.status, 200); assert.equal((await store.list('req/')).length, 0, 'honeypot nuk ruan asgjë');
+  assert.equal(hp.status, 200); assert.equal((await store.list('req/')).length, before, 'honeypot nuk ruan asgjë');
   assert.equal((await call('request', { method: 'POST', body: applicant(), headers: { origin: 'https://evil.example' } })).status, 403);
   for (let i = 0; i < 3; i++) assert.equal((await call('request', { method: 'POST', body: applicant({ email: 'same@example.com' }), ip: `5.5.5.${i}` })).status, 200);
   assert.equal((await call('request', { method: 'POST', body: applicant({ email: 'same@example.com' }), ip: '5.5.5.9' })).status, 429, 'maks 3 kërkesa/ditë për email');
+});
+
+test('kërkesë anonime: pa email/telefon, admini plotëson emrin, kontrolli publik pa inicialet', async () => {
+  const { call, login, applicant, mailer } = setup(); const token = await login();
+  const r = await call('request', { method: 'POST', body: applicant({ name: '', surname: '', email: '', phone: '', reference: 'FAT-114' }) });
+  assert.equal(r.data.mail, false); assert.equal(mailer.sent.length, 1, 'vetëm njoftimi i adminit, asnjë email klientit');
+  assert.ok(!mailer.sent[0].html.includes('FAT-114'), 'njoftimi i adminit nuk përmban të dhëna personale');
+  const code = r.data.code;
+  const st = await call(`status?code=${code}`); assert.equal(st.data.name, '');
+  const ap = await call('admin/approve', { method: 'POST', token, body: { code, startDate: '2026-11-01', name: 'Besnik', surname: 'Kola' } });
+  assert.equal(ap.data.cert.name, 'Besnik'); assert.equal(mailer.sent.length, 1, 'nuk ka email miratimi pa email klienti');
+  assert.equal((await call('verify?n=AF-0005657')).data.holder, 'B. K.');
+  const pdf = await call(`pdf?code=${code}`); assert.equal(pdf.status, 200);
+  // certifikatë krejt anonime
+  const r2 = await call('request', { method: 'POST', body: applicant({ name: '', surname: '', email: '', phone: '', reference: 'FAT-115' }), ip: '2.2.2.2' });
+  const ap2 = await call('admin/approve', { method: 'POST', token, body: { code: r2.data.code, startDate: '2026-11-01' } });
+  assert.equal(ap2.status, 200); assert.equal((await call('verify?n=AF-0005658')).data.holder, '');
+  assert.equal((await call(`pdf?code=${r2.data.code}`)).status, 200, 'PDF gjenerohet edhe pa emër');
+});
+
+test('e drejta e fshirjes: anonimizim i certifikatës dhe fshirje e kërkesës', async () => {
+  const { call, login, applicant, store } = setup(); const token = await login();
+  const { data: { code } } = await call('request', { method: 'POST', body: applicant() });
+  await call('admin/approve', { method: 'POST', token, body: { code, startDate: '2026-11-01' } });
+  const er = await call('admin/erase', { method: 'POST', token, body: { number: 'AF-0005657' } }); assert.equal(er.data.ok, true);
+  const c = await store.get('cert/AF-0005657'); const rq = await store.get(`req/${code}`);
+  for (const rec of [c, rq]) for (const f of ['name', 'surname', 'email', 'phone', 'reference']) assert.equal(rec[f], '', f);
+  const v = await call('verify?n=AF-0005657'); assert.equal(v.data.status, 'active'); assert.equal(v.data.holder, '', 'kontrolli publik vazhdon pa të dhëna personale');
+  assert.ok(!JSON.stringify(await store._dump()).includes('arben@example.com'), 'emaili nuk mbetet askund');
+  const r2 = await call('request', { method: 'POST', body: applicant({ email: 'b@example.com' }), ip: '2.2.2.2' });
+  assert.equal((await call('admin/erase', { method: 'POST', token, body: { code: r2.data.code } })).data.kept, 'nothing');
+  assert.equal(await store.get(`req/${r2.data.code}`), null);
+  assert.equal((await call('admin/erase', { method: 'POST', token, body: { number: 'AF-0009999' } })).status, 404);
+  assert.equal((await call('admin/erase', { method: 'POST', body: { number: 'AF-0005657' } })).status, 401);
+});
+
+test('pastrimi sipas afateve: kërkesat e vjetra fshihen, certifikatat anonimizohen 12 muaj pas skadimit', async () => {
+  const { call, login, applicant, store } = setup(); const token = await login();
+  const a = await call('request', { method: 'POST', body: applicant({ email: 'old@example.com' }), ip: '6.6.6.1' });          // do të mbetet pending
+  const b = await call('request', { method: 'POST', body: applicant({ email: 'rej@example.com' }), ip: '6.6.6.2' });
+  await call('admin/reject', { method: 'POST', token, body: { code: b.data.code, reason: 'x' } });
+  const c = await call('request', { method: 'POST', body: applicant({ email: 'ok@example.com' }), ip: '6.6.6.3' });
+  await call('admin/approve', { method: 'POST', token, body: { code: c.data.code, startDate: '2026-11-01' } });
+  const old = await call('request', { method: 'POST', body: applicant({ email: 'ok2@example.com' }), ip: '6.6.6.4' });
+  await call('admin/approve', { method: 'POST', token, body: { code: old.data.code, startDate: '2020-01-10' } }); // skadon 2025-01-10
+  const { purgeExpired } = await import('../netlify/lib/warranty-core.mjs');
+  assert.deepEqual(await purgeExpired(store, clock), { requests: 0, certificates: 1, counters: 0 }, 'sot: vetëm certifikata e skaduar para >12 muajsh');
+  assert.equal((await store.get('cert/AF-0005658')).erased, true); assert.equal((await store.get('cert/AF-0005657')).erased, undefined);
+  const later = await purgeExpired(store, Date.parse('2027-11-10T10:00:00Z'));
+  assert.equal(later.requests, 2, 'pending dhe rejected fshihen pas 12 muajsh'); assert.equal(await store.get(`req/${a.data.code}`), null);
+  assert.equal((await store.get(`req/${c.data.code}`)).status, 'approved', 'kërkesat e miratuara nuk fshihen');
+  assert.equal((await call('admin/purge', { method: 'POST', token })).status, 200);
 });
 
 test('admini: fjalëkalim i gabuar, kufizim, token i skaduar, miratim i dyfishtë', async () => {

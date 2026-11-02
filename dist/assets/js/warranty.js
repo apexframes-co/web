@@ -17,13 +17,14 @@
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const err = form.querySelector('.form-error'); err.hidden = true;
-    let ok = true;
-    form.querySelectorAll('[required]').forEach((f) => {
-      const bad = f.type === 'checkbox' ? !f.checked : !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value));
-      f.classList.toggle('invalid', bad); if (bad) ok = false;
-    });
     const fail = (m) => { err.textContent = m; err.hidden = false; };
-    if (!ok) return fail(T.fieldErr);
+    const consent = form.elements.consent; consent.classList.toggle('invalid', !consent.checked);
+    const mail = form.elements.email, phone = form.elements.phone;
+    const badMail = mail.value.trim() && !/^\S+@\S+\.\S+$/.test(mail.value.trim()), badPhone = phone.value.trim() && phone.value.replace(/\D/g, '').length < 6;
+    mail.classList.toggle('invalid', !!badMail); phone.classList.toggle('invalid', !!badPhone);
+    if (!consent.checked) return fail(T.consent);
+    if (badMail || badPhone) return fail(T.fieldErr);
+    if (!['name', 'surname', 'email', 'phone', 'reference'].some((n) => form.elements[n].value.trim())) return fail(T.needOne);
     const btn = form.querySelector('button[type=submit]'), label = btn.innerHTML;
     btn.disabled = true; btn.textContent = btn.dataset.sending;
     const d = Object.fromEntries(new FormData(form));
@@ -31,7 +32,7 @@
       const r = await fetch(api + 'request', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: d.name, surname: d.surname, email: d.email, phone: d.phone, product: d.product, purchaseDate: d.purchaseDate, reference: d.reference, website: d.website || '', ts: Number(d.ts), consent: true, lang }) });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) { showSuccess(j.code, j.mail); form.hidden = true; }
-      else if (j.error === 'validation') { Object.keys(j.fields || {}).forEach((n) => form.elements[n] && form.elements[n].classList.add('invalid')); fail(T.fieldErr); }
+      else if (j.error === 'validation') { Object.keys(j.fields || {}).forEach((n) => form.elements[n] && form.elements[n].classList.add('invalid')); fail(j.fields && j.fields.empty ? T.needOne : T.fieldErr); }
       else if (r.status === 429) fail(T.rate);
       else if (j.error === 'consent') fail(T.consent);
       else fail(T.generic);
@@ -48,7 +49,7 @@
     const again = el('button', 'btn btn-link', T.again); again.type = 'button';
     again.addEventListener('click', () => { q.value = code; run(); q.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
     success.append(el('p', 'cert-note', T.codeNote));
-    if (mailed) success.append(el('p', 'cert-note', T.mailNote));
+    success.append(el('p', 'cert-note', mailed ? T.mailNote : T.noMailNote));
     const act = el('div', 'actions'); act.append(copy, again); success.append(act);
     success.hidden = false;
     success.scrollIntoView({ behavior: 'smooth', block: 'center' });

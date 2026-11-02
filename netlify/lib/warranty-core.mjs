@@ -36,20 +36,26 @@ export function certStatus(cert, today) {
 /* ---------- validim ---------- */
 const NAME_RE = /^[\p{L}][\p{L}\p{M}\s.'’-]{1,59}$/u;
 const clean = (v, max) => String(v ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
-export function validateApplicant(body, { today, requireContact = true } = {}) {
+export function validateApplicant(body, { today, requireOne = true } = {}) {
   const v = {
     name: clean(body.name, 60), surname: clean(body.surname, 60), email: clean(body.email, 120).toLowerCase(),
     phone: clean(body.phone, 24), product: clean(body.product, 120), reference: clean(body.reference, 60), purchaseDate: clean(body.purchaseDate, 10),
   };
   const err = {};
-  if (!NAME_RE.test(v.name)) err.name = 'name';
-  if (!NAME_RE.test(v.surname)) err.surname = 'surname';
-  if (requireContact || v.email) if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email)) err.email = 'email';
-  if (requireContact || v.phone) if (!/^\+?[0-9\s().-]{6,24}$/.test(v.phone) || v.phone.replace(/\D/g, '').length < 6) err.phone = 'phone';
+  // Minimizim i të dhënave: asnjë fushë personale nuk është e detyrueshme; nëse jepet, vlerësohet formati.
+  if (v.name && !NAME_RE.test(v.name)) err.name = 'name';
+  if (v.surname && !NAME_RE.test(v.surname)) err.surname = 'surname';
+  if (v.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email)) err.email = 'email';
+  if (v.phone && (!/^\+?[0-9\s().-]{6,24}$/.test(v.phone) || v.phone.replace(/\D/g, '').length < 6)) err.phone = 'phone';
   if (v.purchaseDate && (!isoOk(v.purchaseDate) || v.purchaseDate > today || v.purchaseDate < '2000-01-01')) err.purchaseDate = 'purchaseDate';
+  // Të paktën një detaj identifikues/verifikues, që kërkesa të mos jetë e zbrazët (pa u detyruar asnjë fushë të veçantë).
+  if (requireOne && !Object.keys(err).length && !(v.name || v.surname || v.email || v.phone || v.reference)) err.empty = 'empty';
   return Object.keys(err).length ? { ok: false, errors: err } : { ok: true, value: v };
 }
-export const initials = (name, surname) => `${Array.from(name)[0]?.toUpperCase() || '?'}. ${Array.from(surname)[0]?.toUpperCase() || '?'}.`;
+export const initials = (name, surname) => {
+  const parts = [name, surname].map((x) => (Array.from(x || '')[0] || '').toUpperCase()).filter(Boolean);
+  return parts.length ? parts.join('. ') + '.' : '';
+};
 
 /* ---------- identifikues ---------- */
 export const newRequestCode = () => 'RQ-' + Array.from({ length: 8 }, () => CODE_ALPHABET[randomInt(CODE_ALPHABET.length)]).join('');
@@ -101,7 +107,7 @@ export async function createCertificate(store, req, { startDate, product, now })
   for (let i = 0; i < 5; i++) {
     const number = formatNumber(await allocateNumber(store));
     const cert = {
-      number, requestCode: req.code, name: req.name, surname: req.surname, email: req.email, phone: req.phone,
+      number, requestCode: req.code, name: req.name || '', surname: req.surname || '', email: req.email || '', phone: req.phone || '',
       product: product ?? req.product ?? '', reference: req.reference ?? '', startDate: start, validUntil: addYears(start, WARRANTY_YEARS),
       years: WARRANTY_YEARS, status: 'active', issuedAt: new Date(now).toISOString(),
     };
@@ -112,4 +118,31 @@ export async function createCertificate(store, req, { startDate, product, now })
 export function publicCert(cert, today) {
   const status = certStatus(cert, today);
   return { number: cert.number, holder: initials(cert.name, cert.surname), startDate: cert.startDate, validUntil: cert.validUntil, years: cert.years, status, daysLeft: status === 'active' || status === 'upcoming' ? daysBetween(today, cert.validUntil) : 0, today };
+}
+
+/* ---------- fshirje / anonimizim (e drejta e fshirjes) dhe pastrim sipas afateve ---------- */
+export const RETENTION_MONTHS = 12; // kërkesat e pamiratuara fshihen pas 12 muajsh; certifikatat anonimizohen 12 muaj pas skadimit
+export const PII_FIELDS = ['name', 'surname', 'email', 'phone', 'reference'];
+export const anonymize = (rec, nowMs) => { const o = { ...rec, erased: true, erasedAt: new Date(nowMs).toISOString() }; for (const f of PII_FIELDS) o[f] = ''; return o; };
+/** Fshin të dhënat personale të një certifikate (numri, datat dhe statusi mbeten, që kontrolli publik të vazhdojë të punojë). */
+export async function eraseCertificate(store, number, nowMs) {
+  const c = await store.get(`cert/${number}`); if (!c) return false;
+  await store.set(`cert/${number}`, anonymize(c, nowMs));
+  if (c.requestCode) { const r = await store.get(`req/${c.requestCode}`); if (r) await store.set(`req/${c.requestCode}`, anonymize(r, nowMs)); }
+  return true;
+}
+export async function purgeExpired(store, nowMs, months = RETENTION_MONTHS) {
+  const cutoff = new Date(nowMs); cutoff.setUTCMonth(cutoff.getUTCMonth() - months);
+  const cutoffIso = cutoff.toISOString(); let requests = 0, counters = 0;
+  for (const k of await store.list('req/')) {
+    const r = await store.get(k);
+    if (r && (r.status === 'pending' || r.status === 'rejected') && r.createdAt < cutoffIso) { await store.delete(k); requests++; }
+  }
+  const cutoffDate = cutoffIso.slice(0, 10); let certificates = 0;
+  for (const k of await store.list('cert/')) {
+    const c = await store.get(k);
+    if (c && !c.erased && c.validUntil < cutoffDate) { await eraseCertificate(store, c.number, nowMs); certificates++; } // 12 muaj pas skadimit të garancisë
+  }
+  for (const k of await store.list('rl/')) { const v = await store.get(k); if (!v || v.t < nowMs / 1000 - 2 * 86400) { await store.delete(k); counters++; } }
+  return { requests, certificates, counters };
 }

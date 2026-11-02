@@ -675,3 +675,6 @@ h1, h2 { letter-spacing: -.025em; text-wrap: balance; }
 .check-form .btn { flex: 0 0 auto; justify-content: center; }
 .cert-cta .btn, .cert-result .btn { max-width: 100%; }
 @media (max-width: 600px) { .check-form input { flex: 0 0 auto; width: 100%; } .check-form .btn { width: 100%; } }
+.form-hint { font-size: .9rem; color: var(--muted); background: var(--paper); border-radius: var(--r); padding: .85rem 1rem; margin-bottom: 1.5rem; }
+.form-info { font-size: .82rem; color: var(--muted); margin: 0 0 1.25rem; line-height: 1.55; }
+.form-info strong { color: var(--ink); }

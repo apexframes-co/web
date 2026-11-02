@@ -56,34 +56,48 @@
       const form = h('tr', { class: 'approve-row', hidden: true }, h('td', { colspan: 6 }, (() => {
         const date = h('input', { type: 'date', value: r.purchaseDate || data.today, 'aria-label': 'Data e fillimit' });
         const prod = h('input', { value: r.product || '', placeholder: 'Produkti', 'aria-label': 'Produkti', maxlength: 120 });
+        const nm = h('input', { value: r.name || '', placeholder: 'Emri (nga kontrata)', 'aria-label': 'Emri', maxlength: 60 });
+        const sn = h('input', { value: r.surname || '', placeholder: 'Mbiemri', 'aria-label': 'Mbiemri', maxlength: 60 });
         const go = h('button', { class: 'btn btn-primary', type: 'button', onclick: async () => {
           go.disabled = true;
-          const { ok, j } = await post('admin/approve', { code: r.code, startDate: date.value, product: prod.value });
+          const { ok, j } = await post('admin/approve', { code: r.code, startDate: date.value, product: prod.value, name: nm.value, surname: sn.value });
           if (!ok) { go.disabled = false; return msg(j.error === 'not_pending' ? 'Kërkesa është përpunuar tashmë.' : 'Miratimi dështoi. Kontrolloni datën.', 'bad'); }
-          await refresh(); msg(`U lëshua ${j.cert.number} për ${j.cert.name} ${j.cert.surname}. `, 'ok', [h('a', { href: mailto(j.cert) }, 'Dërgo email klientit'), ' · ', h('a', { href: '#', onclick: (e) => { e.preventDefault(); openPdf(j.cert.number); } }, 'Hap PDF-në')]);
+          await refresh(); msg(`U lëshua ${j.cert.number} për ${j.cert.name} ${j.cert.surname}. `, 'ok', [j.cert.email ? h('a', { href: mailto(j.cert) }, 'Dërgo email klientit') : h('span', null, 'Klienti nuk dha email: japini kodin ' + j.cert.requestCode), ' · ', h('a', { href: '#', onclick: (e) => { e.preventDefault(); openPdf(j.cert.number); } }, 'Hap PDF-në')]);
         } }, `Lësho ${data.next}`);
-        return h('div', { class: 'approve-form' }, h('label', null, 'Fillimi i garancisë (data e blerjes)', date), h('label', null, 'Produkti', prod), go);
+        return h('div', { class: 'approve-form' }, h('label', null, 'Fillimi i garancisë (data e blerjes)', date), h('label', null, 'Produkti', prod), h('label', null, 'Emri në certifikatë (opsional)', nm), h('label', null, 'Mbiemri (opsional)', sn), go);
       })()));
       return [h('tr', null,
-        h('td', null, r.code), h('td', null, fmt(r.createdAt)), h('td', null, `${r.name} ${r.surname}`),
-        h('td', null, h('a', { href: 'mailto:' + r.email }, r.email), h('br'), h('a', { href: 'tel:' + r.phone.replace(/[^\d+]/g, '') }, r.phone)),
+        h('td', null, r.code), h('td', null, fmt(r.createdAt)), h('td', null, `${r.name || ''} ${r.surname || ''}`.trim() || '—'),
+        h('td', null, r.email ? h('a', { href: 'mailto:' + r.email }, r.email) : null, r.email && r.phone ? h('br') : null, r.phone ? h('a', { href: 'tel:' + r.phone.replace(/[^\d+]/g, '') }, r.phone) : null, !r.email && !r.phone ? '—' : null),
         h('td', null, [r.product, r.purchaseDate && fmt(r.purchaseDate), r.reference].filter(Boolean).join(' · ') || '—'),
         h('td', { class: 'row-actions' },
           h('button', { class: 'btn btn-dark', type: 'button', onclick: () => { form.hidden = !form.hidden; } }, 'Aprovo'),
-          h('button', { class: 'btn btn-outline', type: 'button', onclick: async () => { const reason = prompt('Arsyeja e refuzimit (do t’i shfaqet klientit):', ''); if (reason === null) return; await post('admin/reject', { code: r.code, reason }); refresh(); } }, 'Refuzo'))), form];
+          h('button', { class: 'btn btn-outline', type: 'button', onclick: async () => { const reason = prompt('Arsyeja e refuzimit (do t’i shfaqet klientit):', ''); if (reason === null) return; await post('admin/reject', { code: r.code, reason }); refresh(); } }, 'Refuzo'),
+          h('button', { class: 'btn btn-outline', type: 'button', onclick: () => eraseRequest(r.code) }, 'Fshi'))), form];
     }).flat()) : h('p', { class: 'admin-empty' }, 'Asnjë kërkesë në pritje.'));
 
     draw('#tab-issued', data.certificates.length ? table(['Nr.', 'Mbajtësi', 'Kontakti', 'Produkti', 'Fillon', 'Skadon', 'Gjendja', 'Veprime'], data.certificates.map((c) => h('tr', null,
-      h('td', null, h('strong', null, c.number)), h('td', null, `${c.name} ${c.surname}`),
+      h('td', null, h('strong', null, c.number)), h('td', null, c.erased ? 'Të dhënat u fshinë' : `${c.name || ''} ${c.surname || ''}`.trim() || '—'),
       h('td', null, c.email ? h('a', { href: mailto(c) }, c.email) : '—', c.phone ? h('br') : null, c.phone || ''),
       h('td', null, c.product || '—'), h('td', null, fmt(c.startDate)), h('td', null, fmt(c.validUntil)),
       h('td', null, h('span', { class: `badge badge-${state[c.state][0]}` }, state[c.state][1]), c.daysLeft ? h('small', null, ` ${c.daysLeft} ditë`) : null),
       h('td', { class: 'row-actions' },
         h('button', { class: 'btn btn-dark', type: 'button', onclick: () => openPdf(c.number) }, 'PDF'),
+        c.erased ? null : h('button', { class: 'btn btn-outline', type: 'button', title: 'Fshin emrin, emailin, telefonin dhe referencën; numri, datat dhe statusi mbeten', onclick: () => eraseCert(c.number) }, 'Fshi të dhënat'),
         h('button', { class: 'btn btn-outline', type: 'button', onclick: async () => { if (c.status === 'revoked') { await post('admin/revoke', { number: c.number, restore: true }); } else { const reason = prompt(`Revoko ${c.number}? Shkruani arsyen:`, ''); if (reason === null) return; await post('admin/revoke', { number: c.number, reason }); } refresh(); } }, c.status === 'revoked' ? 'Rikthe' : 'Revoko'))))) : h('p', { class: 'admin-empty' }, 'Asnjë certifikatë e lëshuar ende.'));
 
-    draw('#tab-rejected', rejected.length ? table(['Kodi', 'Data', 'Klienti', 'Kontakti', 'Arsyeja'], rejected.map((r) => h('tr', null, h('td', null, r.code), h('td', null, fmt(r.createdAt)), h('td', null, `${r.name} ${r.surname}`), h('td', null, r.email), h('td', null, r.reason || '—')))) : h('p', { class: 'admin-empty' }, 'Asnjë kërkesë e refuzuar.'));
+    draw('#tab-rejected', rejected.length ? table(['Kodi', 'Data', 'Klienti', 'Kontakti', 'Arsyeja', ''], rejected.map((r) => h('tr', null, h('td', null, r.code), h('td', null, fmt(r.createdAt)), h('td', null, `${r.name || ''} ${r.surname || ''}`.trim() || '—'), h('td', null, r.email || r.phone || '—'), h('td', null, r.reason || '—'), h('td', { class: 'row-actions' }, h('button', { class: 'btn btn-outline', type: 'button', onclick: () => eraseRequest(r.code) }, 'Fshi'))))) : h('p', { class: 'admin-empty' }, 'Asnjë kërkesë e refuzuar.'));
+    const rejTable = $('#tab-rejected');
+    if (!rejTable.querySelector('.purge')) rejTable.append(h('p', { class: 'admin-empty purge' }, 'Kërkesat në pritje dhe të refuzuara fshihen automatikisht pas 12 muajsh. ', h('button', { class: 'btn btn-link', type: 'button', onclick: async () => { const { j } = await post('admin/purge', {}); msg(`U pastruan ${j.requests || 0} kërkesa të vjetra.`, 'ok'); refresh(); } }, 'Pastro tani')));
     const nf = $('#tab-new'); if (!nf.elements.startDate.value) nf.elements.startDate.value = data.today;
+  }
+  async function eraseCert(n) {
+    if (!confirm(`Të fshihen të dhënat personale të ${n}? Numri, datat dhe statusi mbeten, kështu që kontrolli online vazhdon të punojë. Veprimi nuk kthehet.`)) return;
+    const { ok } = await post('admin/erase', { number: n }); await refresh(); msg(ok ? `U fshinë të dhënat personale të ${n}.` : 'Fshirja dështoi.', ok ? 'ok' : 'bad');
+  }
+  async function eraseRequest(code) {
+    if (!confirm(`Të fshihet përfundimisht kërkesa ${code}? Veprimi nuk kthehet.`)) return;
+    const { ok } = await post('admin/erase', { code }); await refresh(); msg(ok ? `Kërkesa ${code} u fshi.` : 'Fshirja dështoi.', ok ? 'ok' : 'bad');
   }
   async function refresh() { const r = await call('admin/list'); data = await r.json(); render(); }
 

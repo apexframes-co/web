@@ -1,7 +1,7 @@
 // API e certifikatave të garancisë: kërkesë → miratim nga admini → numër AF-0005657+ → verifikim online.
 // createHandler injekton "store" dhe "mailer", prandaj testohet pa Netlify.
 import {
-  START_NUMBER, formatNumber, parseNumber, todayTirane, addYears, daysBetween, validateApplicant, newRequestCode, normalizeRequestCode,
+  START_NUMBER, formatNumber, parseNumber, todayTirane, addYears, validateApplicant, newRequestCode, normalizeRequestCode, eraseCertificate, purgeExpired,
   createCertificate, publicCert, hash, hit, signToken, verifyToken, passwordMatches,
 } from './warranty-core.mjs';
 import { buildCertificatePdf } from './cert-pdf.mjs';
@@ -20,13 +20,6 @@ const MAIL = {
     ok: (c, link, pdf) => `Hello ${c.name},<br><br>Your warranty certificate has been approved.<br><strong>No. ${c.number}</strong> · valid from ${c.startDate} to ${c.validUntil} (${c.years} years).<br><br>Download the PDF: <a href="${pdf}">${pdf}</a><br>Check the validity online: <a href="${link}">${link}</a><br><br>Apex Frames`,
   },
 };
-
-async function pruneRateLimits(store, nowMs) {
-  try {
-    const keys = (await store.list('rl/')).slice(0, 60);
-    await Promise.all(keys.map(async (k) => { const v = await store.get(k); if (!v || v.t < nowMs / 1000 - 2 * 86400) await store.delete(k); }));
-  } catch { /* best-effort */ }
-}
 
 export function createHandler({ store, mailer, env = process.env, now = () => Date.now() }) {
   const SITE = (env.SITE_URL || 'https://www.apexframes.co').replace(/\/$/, '');
@@ -56,23 +49,23 @@ export function createHandler({ store, mailer, env = process.env, now = () => Da
         const ts = Number(body.ts); if (!ts || t - ts < 1500 || t - ts > 6 * 3600 * 1000) return json({ error: 'timing' }, 400);
         if (body.consent !== true) return json({ error: 'consent' }, 400);
         const v = validateApplicant(body, { today }); if (!v.ok) return json({ error: 'validation', fields: v.errors }, 400);
-        if (!(await hit(store, `em/${hash(v.value.email, salt)}`, 3, 86400, t))) return json({ error: 'rate' }, 429);
+        if (v.value.email && !(await hit(store, `em/${hash(v.value.email, salt)}`, 3, 86400, t))) return json({ error: 'rate' }, 429);
         let rec = null;
         for (let i = 0; i < 5 && !rec; i++) { const c = newRequestCode(); const r = { code: c, status: 'pending', createdAt: new Date(t).toISOString(), lang: body.lang === 'en' ? 'en' : 'sq', ...v.value }; if (await store.setIfNew(`req/${c}`, r)) rec = r; }
         if (!rec) return json({ error: 'server' }, 500);
         const L = MAIL[rec.lang]; const link = `${SITE}${L.page}?kod=${rec.code}`;
         await Promise.all([
-          notify(rec.email, L.subjReq, L.req(rec, link)),
-          notify(env.ADMIN_NOTIFY_EMAIL || 'info@apexframes.co', `Kërkesë e re për certifikatë: ${esc(rec.name)} ${esc(rec.surname)}`, `Kërkesë e re (${rec.code}) nga ${esc(rec.name)} ${esc(rec.surname)}, ${esc(rec.email)}, ${esc(rec.phone)}.<br>Miratojeni te ${SITE}/admin/garancia/`),
+          rec.email ? notify(rec.email, L.subjReq, L.req(rec, link)) : null,
+          notify(env.ADMIN_NOTIFY_EMAIL || 'info@apexframes.co', `Kërkesë e re për certifikatë (${rec.code})`, `Kërkesë e re për certifikatë garancie (${rec.code}).<br>Shikojeni dhe miratojeni te ${SITE}/admin/garancia/ (të dhënat personale shihen vetëm te paneli).`),
         ]);
-        return json({ ok: true, code: rec.code, mail: mailer.enabled });
+        return json({ ok: true, code: rec.code, mail: Boolean(rec.email && mailer.enabled) });
       }
 
       if (route === 'status' && method === 'GET') {
         if (!(await hit(store, `ip-chk/${ipHash}`, 40, 600, t))) return json({ error: 'rate' }, 429);
         const code = normalizeRequestCode(url.searchParams.get('code')); if (!code) return json({ found: false });
         const r = await store.get(`req/${code}`); if (!r) return json({ found: false });
-        const out = { found: true, status: r.status === 'approving' ? 'pending' : r.status, code, name: `${r.name} ${r.surname}`, createdAt: r.createdAt, reason: r.status === 'rejected' ? r.reason || '' : undefined };
+        const out = { found: true, status: r.status === 'approving' ? 'pending' : r.status, code, name: `${r.name || ''} ${r.surname || ''}`.trim(), createdAt: r.createdAt, reason: r.status === 'rejected' ? r.reason || '' : undefined };
         if (r.status === 'approved' && r.number) { const c = await store.get(`cert/${r.number}`); if (c) { const pc = publicCert(c, today); Object.assign(out, { number: pc.number, startDate: pc.startDate, validUntil: pc.validUntil, years: pc.years, daysLeft: pc.daysLeft, today, certState: pc.status, product: c.product, pdf: c.status !== 'revoked' }); } }
         return json(out);
       }
@@ -108,7 +101,6 @@ export function createHandler({ store, mailer, env = process.env, now = () => Da
         if (route === 'admin/list' && method === 'GET') {
           const loadAll = async (prefix) => { const keys = await store.list(prefix); const out = []; for (let i = 0; i < keys.length; i += 25) out.push(...(await Promise.all(keys.slice(i, i + 25).map((k) => store.get(k))))); return out.filter(Boolean); };
           const [requests, certificates, counter] = await Promise.all([loadAll('req/'), loadAll('cert/'), store.get('counter')]);
-          await pruneRateLimits(store, t);
           requests.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
           certificates.sort((a, b) => b.number.localeCompare(a.number));
           return json({ today, next: formatNumber(counter ? counter.next : START_NUMBER), requests, certificates: certificates.map((c) => ({ ...c, state: publicCert(c, today).status, daysLeft: publicCert(c, today).daysLeft })) });
@@ -123,14 +115,17 @@ export function createHandler({ store, mailer, env = process.env, now = () => Da
             if (!(await store.setIfMatch(`req/${code}`, rec, cur.etag))) return json({ error: 'conflict' }, 409);
             return json({ ok: true });
           }
+          const edit = validateApplicant({ ...cur.data, name: body.name ?? cur.data.name, surname: body.surname ?? cur.data.surname, product: body.product ?? cur.data.product }, { today, requireOne: false });
+          if (!edit.ok) return json({ error: 'validation', fields: edit.errors }, 400);
+          const person = { ...cur.data, name: edit.value.name, surname: edit.value.surname };
           const startDate = body.startDate ? String(body.startDate) : cur.data.purchaseDate || today;
           if (!isoOk(startDate) || startDate < '2000-01-01' || startDate > addYears(today, 1)) return json({ error: 'validation', fields: { startDate: 'startDate' } }, 400);
           if (!(await store.setIfMatch(`req/${code}`, { ...cur.data, status: 'approving' }, cur.etag))) return json({ error: 'conflict' }, 409); // mbron nga miratimi i dyfishtë
           try {
-            const cert = await createCertificate(store, cur.data, { startDate, product: body.product != null ? String(body.product).slice(0, 120) : cur.data.product, now: t });
-            await store.set(`req/${code}`, { ...cur.data, status: 'approved', number: cert.number, startDate, approvedAt: new Date(t).toISOString() });
+            const cert = await createCertificate(store, person, { startDate, product: edit.value.product, now: t });
+            await store.set(`req/${code}`, { ...person, status: 'approved', number: cert.number, startDate, approvedAt: new Date(t).toISOString() });
             const L = MAIL[cur.data.lang || 'sq'];
-            if (cur.data.email) await notify(cur.data.email, L.subjOk, L.ok(cert, `${SITE}${L.page}?n=${cert.number}`, `${SITE}/api/warranty/pdf?code=${code}`));
+            if (person.email) await notify(cur.data.email, L.subjOk, L.ok(cert, `${SITE}${L.page}?n=${cert.number}`, `${SITE}/api/warranty/pdf?code=${code}`));
             return json({ ok: true, cert });
           } catch (e) { await store.set(`req/${code}`, cur.data); throw e; }
         }
@@ -144,7 +139,7 @@ export function createHandler({ store, mailer, env = process.env, now = () => Da
 
         if (route === 'admin/issue' && method === 'POST') {
           const body = await readJson(req); if (!body) return json({ error: 'bad_request' }, 400);
-          const v = validateApplicant(body, { today, requireContact: false }); if (!v.ok) return json({ error: 'validation', fields: v.errors }, 400);
+          const v = validateApplicant(body, { today }); if (!v.ok) return json({ error: 'validation', fields: v.errors }, 400);
           const startDate = body.startDate ? String(body.startDate) : today;
           if (!isoOk(startDate) || startDate < '2000-01-01' || startDate > addYears(today, 1)) return json({ error: 'validation', fields: { startDate: 'startDate' } }, 400);
           let rec; for (let i = 0; i < 5 && !rec; i++) { const code = newRequestCode(); const r = { code, status: 'approving', createdAt: new Date(t).toISOString(), lang: 'sq', direct: true, ...v.value }; if (await store.setIfNew(`req/${code}`, r)) rec = r; }
@@ -152,6 +147,18 @@ export function createHandler({ store, mailer, env = process.env, now = () => Da
           await store.set(`req/${rec.code}`, { ...rec, status: 'approved', number: cert.number, startDate, approvedAt: new Date(t).toISOString() });
           return json({ ok: true, cert, code: rec.code });
         }
+
+        if (route === 'admin/erase' && method === 'POST') {
+          const body = await readJson(req); if (!body) return json({ error: 'bad_request' }, 400);
+          const n = parseNumber(body.number);
+          if (n) { if (!(await eraseCertificate(store, n, t))) return json({ error: 'not_found' }, 404); return json({ ok: true, kept: 'number-dates-status' }); }
+          const code = normalizeRequestCode(body.code); const r = code && (await store.get(`req/${code}`));
+          if (!r) return json({ error: 'not_found' }, 404);
+          if (r.status === 'approved' && r.number) { await eraseCertificate(store, r.number, t); return json({ ok: true, kept: 'number-dates-status' }); }
+          await store.delete(`req/${code}`); return json({ ok: true, kept: 'nothing' });
+        }
+
+        if (route === 'admin/purge' && method === 'POST') return json({ ok: true, ...(await purgeExpired(store, t)) });
 
         if (route === 'admin/pdf' && method === 'GET') {
           const n = parseNumber(url.searchParams.get('n')); const c = n && (await store.get(`cert/${n}`)); if (!c) return json({ error: 'not_found' }, 404);

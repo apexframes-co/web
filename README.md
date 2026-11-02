@@ -54,5 +54,6 @@ Vendosni foton burimore, shtoni një rresht te `JOBS` në `scripts/make_images.p
 - **Afati:** 5 vite nga data e blerjes që vendos admini; skadimi llogaritet sipas orës së Tiranës.
 - **Të dhënat:** ruhen në Netlify Blobs (dyqani `warranty`). Funksioni: `netlify/functions/warranty.mjs`; logjika: `netlify/lib/`.
 - **Variablat e mjedisit:** shih `.env.example` (detyrueshme: `ADMIN_PASSWORD`).
-- **Testet:** `npm test` (7 teste të rrjedhës së plotë). Lokalisht: `npm run build && npm run dev:warranty` (ruajtje në memorie, admin: `test`).
+- **GDPR:** asnjë fushë personale nuk është e detyrueshme (kërkohet vetëm një detaj verifikues); admini mund të fshijë/anonimizojë; pastrim automatik ditor (`warranty-cleanup`). Shih `docs/procedurat-e-privatesise.md`.
+- **Testet:** `npm test` (10 teste: rrjedha, anonimiteti, fshirja, pastrimi, siguria). Lokalisht: `npm run build && npm run dev:warranty` (ruajtje në memorie, admin: `test`).
 - Nëse ndryshoni `netlify/assets/certificate-template.pdf`, ekzekutoni `npm run cert-assets`.
