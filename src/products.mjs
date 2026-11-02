@@ -4,14 +4,14 @@
 export const products = [
   {
     id: 'upvc', icon: 'window', image: 'window', related: ['aluminium', 'glazing', 'shutters'], posts: ['upvc-or-aluminium', 'window-condensation'],
-    slug: { sq: 'dritare-dyer-upvc', en: 'upvc-windows-doors' },
+    slug: { sq: 'dritare-dyer-pvc', en: 'pvc-upvc-windows-doors' },
     sq: {
-      name: 'Dritare & dyer uPVC',
-      metaTitle: 'Dritare dhe dyer uPVC në Tiranë | Apex Frames',
-      metaDesc: 'Dritare dhe dyer uPVC me përforcim çeliku, xham dopio ose i trefishtë dhe ngjyra të ndryshme brenda e jashtë. Matje në objekt, ofertë brenda 48 orëve, garanci 5 vjet.',
-      h1: 'Dritare dhe dyer uPVC',
-      answer: 'Dritaret uPVC (PVC) janë zgjedhja më e zakonshme për banesa dhe zyra: izolim termik dhe akustik të mirë, mirëmbajtje minimale dhe gamë të gjerë hapjesh dhe ngjyrash. Apex Frames i furnizon dhe i monton me dokumentacionin e prodhuesit.',
-      intro: 'Profilet uPVC kanë përforcim çeliku brenda. Thellësia e ndërtimit varion sipas sistemit (70, 76 ose 82 mm), dhe xhami mund të jetë dopio ose i trefishtë, me gaz argon, Low-E ose laminuar.',
+      name: 'Dritare & dyer PVC',
+      metaTitle: 'Dritare dhe dyer PVC në Tiranë: furnizim e montim | Apex Frames',
+      metaDesc: 'Dritare dhe dyer PVC me përforcim çeliku, xham dopio ose i trefishtë dhe ngjyra të ndryshme brenda e jashtë. Matje në objekt, ofertë brenda 48 orëve, garanci 5 vjet.',
+      h1: 'Dritare dhe dyer PVC',
+      answer: 'Dritaret PVC (uPVC) janë zgjedhja më e zakonshme për banesa dhe zyra: izolim termik dhe akustik të mirë, mirëmbajtje minimale dhe gamë të gjerë hapjesh dhe ngjyrash. Apex Frames i furnizon dhe i monton me dokumentacionin e prodhuesit.',
+      intro: 'Profilet PVC kanë përforcim çeliku brenda. Thellësia e ndërtimit varion sipas sistemit (70, 76 ose 82 mm), dhe xhami mund të jetë dopio ose i trefishtë, me gaz argon, Low-E ose laminuar.',
       features: [
         'Hapje anash, anim-hapje, fikse dhe me disa krahë',
         'Dritare për banjo dhe ambiente ndihmëse',
@@ -22,17 +22,17 @@ export const products = [
       ],
       bestFor: ['Apartamente dhe shtëpi private', 'Zyra dhe objekte me buxhet të kontrolluar', 'Rinovime ku kërkohet izolim më i mirë'],
       faq: [
-        { q: 'A janë dritaret uPVC të qëndrueshme?', a: 'Po, kur vijnë nga një sistem i certifikuar dhe montohen saktë. Profili ka përforcim çeliku dhe garancia jonë është 5 vjet për produktin (sipas prodhuesit) dhe 24 muaj për montimin.' },
+        { q: 'A janë dritaret PVC të qëndrueshme?', a: 'Po, kur vijnë nga një sistem i certifikuar dhe montohen saktë. Profili ka përforcim çeliku dhe garancia jonë është 5 vjet për produktin (sipas prodhuesit) dhe 24 muaj për montimin.' },
         { q: 'Cilat ngjyra mund të zgjedh?', a: 'E bardhë, dekor druri, e zezë (Jet Black) dhe antracit. Dritarja mund të ketë ngjyrë të ndryshme nga brenda dhe nga jashtë.' },
-        { q: 'Sa izolojnë dritaret uPVC?', a: 'Vlera varet nga sistemi dhe xhami i zgjedhur dhe jepet në deklaratën e performancës (DoP) të prodhuesit. Mund ta kërkoni para porosisë.' },
+        { q: 'Sa izolojnë dritaret PVC?', a: 'Vlera varet nga sistemi dhe xhami i zgjedhur dhe jepet në deklaratën e performancës (DoP) të prodhuesit. Mund ta kërkoni para porosisë.' },
       ],
     },
     en: {
-      name: 'uPVC windows & doors',
-      metaTitle: 'uPVC Windows and Doors in Tirana | Apex Frames',
+      name: 'PVC (uPVC) windows & doors',
+      metaTitle: 'PVC (uPVC) Windows and Doors in Tirana, Albania | Apex Frames',
       metaDesc: 'Steel-reinforced uPVC windows and doors with double or triple glazing and dual colours inside and out. On-site survey, quote within 48 hours, 5-year warranty.',
-      h1: 'uPVC windows and doors',
-      answer: 'uPVC (PVC) windows are the most common choice for homes and offices: good thermal and acoustic insulation, minimal maintenance and a wide range of openings and colours. Apex Frames supplies and installs them with the manufacturer’s documentation.',
+      h1: 'PVC (uPVC) windows and doors',
+      answer: 'PVC (uPVC) windows are the most common choice for homes and offices: good thermal and acoustic insulation, minimal maintenance and a wide range of openings and colours. Apex Frames supplies and installs them with the manufacturer’s documentation.',
       intro: 'uPVC profiles contain a steel reinforcement. Build depth varies by system (70, 76 or 82 mm), and glazing can be double or triple, with argon gas, Low-E or laminated glass.',
       features: [
         'Side-hung, tilt & turn, fixed and multi-sash',
@@ -55,7 +55,7 @@ export const products = [
     slug: { sq: 'dritare-dyer-alumini', en: 'aluminium-windows-doors' },
     sq: {
       name: 'Alumin me thyerje termike',
-      metaTitle: 'Dritare dhe dyer alumini me thyerje termike | Apex Frames',
+      metaTitle: 'Dritare dhe dyer alumini me thyerje termike në Tiranë | Apex Frames',
       metaDesc: 'Sisteme alumini me thyerje termike për dritare, dyer rrëshqitëse, panoramike dhe palosëse. Gamë e gjerë RAL, hapje të mëdha, profile të holla. Furnizim dhe montim në Shqipëri.',
       h1: 'Dritare dhe dyer alumini me thyerje termike',
       answer: 'Alumini me thyerje termike është zgjidhja për hapje të mëdha, profile të holla dhe objekte komerciale: rezistencë e lartë strukturore dhe gamë e gjerë ngjyrash RAL. Ndarja izoluese në profil ul humbjet e energjisë krahasuar me aluminin e thjeshtë.',
@@ -70,14 +70,14 @@ export const products = [
       ],
       bestFor: ['Hapje të mëdha dhe pamje panoramike', 'Biznese, hotele dhe objekte me trafik', 'Projekte me dizajn minimalist dhe profile të holla'],
       faq: [
-        { q: 'Alumin apo uPVC: cilin ta zgjedh?', a: 'uPVC është zakonisht më ekonomik dhe shumë i mirë për banesa; alumini lejon hapje më të mëdha dhe profile më të holla. Lexoni krahasimin tonë të detajuar në blog.' },
+        { q: 'Alumin apo PVC: cilin ta zgjedh?', a: 'PVC është zakonisht më ekonomik dhe shumë i mirë për banesa; alumini lejon hapje më të mëdha dhe profile më të holla. Lexoni krahasimin tonë të detajuar në blog.' },
         { q: 'Çfarë është thyerja termike?', a: 'Është një ndarje izoluese brenda profilit të aluminit që ndërpret kalimin e nxehtësisë nga brenda jashtë dhe anasjelltas.' },
         { q: 'A ofroni ngjyra RAL?', a: 'Po, ofrojmë gamë të gjerë ngjyrash RAL dhe imitacione druri.' },
       ],
     },
     en: {
       name: 'Thermally broken aluminium',
-      metaTitle: 'Thermally Broken Aluminium Windows and Doors | Apex Frames',
+      metaTitle: 'Thermally Broken Aluminium Windows and Doors, Tirana | Apex Frames',
       metaDesc: 'Thermal-break aluminium systems for windows, sliding, panoramic and folding doors. Wide RAL range, large openings, slim profiles. Supply and installation in Albania.',
       h1: 'Thermally broken aluminium windows and doors',
       answer: 'Thermally broken aluminium is the answer for large openings, slim profiles and commercial buildings: high structural strength and a wide RAL colour range. The insulating break inside the profile reduces energy loss compared with plain aluminium.',
@@ -103,13 +103,13 @@ export const products = [
     slug: { sq: 'dyer-hyrese-automatike', en: 'entrance-automatic-doors' },
     sq: {
       name: 'Dyer hyrëse & automatike',
-      metaTitle: 'Dyer hyrëse, me panel dhe automatike | Apex Frames',
-      metaDesc: 'Dyer hyrëse uPVC dhe alumini, dyer me panel sipas porosisë dhe dyer automatike me sensor për biznese dhe objekte publike. Furnizim dhe montim në Shqipëri.',
+      metaTitle: 'Dyer hyrëse PVC dhe alumini, automatike në Tiranë | Apex Frames',
+      metaDesc: 'Dyer hyrëse PVC dhe alumini, dyer me panel sipas porosisë dhe dyer automatike me sensor për biznese dhe objekte publike. Furnizim dhe montim në Shqipëri.',
       h1: 'Dyer hyrëse, me panel dhe automatike',
-      answer: 'Dyer për hyrje banesash, biznesesh dhe objektesh publike, në uPVC ose alumin: me një ose dy krahë, me panel sipas porosisë ose automatike me sensor.',
+      answer: 'Dyer për hyrje banesash, biznesesh dhe objektesh publike, në PVC ose alumin: me një ose dy krahë, me panel sipas porosisë ose automatike me sensor.',
       intro: 'Dera është pika e parë e kontaktit me objektin tuaj. Zgjidhim materialin, hapjen, xhamin dhe aksesorët sipas përdorimit: banim, dyqan, klinikë apo hyrje publike.',
       features: [
-        'Dyer hyrëse uPVC dhe alumini, me një ose dy krahë',
+        'Dyer hyrëse PVC dhe alumini, me një ose dy krahë',
         'Dyer me panel PVC (p.sh. antracit), me përmasa sipas porosisë',
         'Dyer automatike me fotoelement (sensor) dhe sistem automatizimi profesional',
         'Xham sigurie i laminuar (triplex) ose i kalitur',
@@ -124,7 +124,7 @@ export const products = [
     },
     en: {
       name: 'Entrance & automatic doors',
-      metaTitle: 'Entrance, Panel and Automatic Doors | Apex Frames',
+      metaTitle: 'Entrance, Panel and Automatic Doors in Tirana | Apex Frames',
       metaDesc: 'uPVC and aluminium entrance doors, made-to-order panel doors and sensor-operated automatic doors for businesses and public buildings. Supply and installation in Albania.',
       h1: 'Entrance, panel and automatic doors',
       answer: 'Doors for homes, businesses and public buildings, in uPVC or aluminium: single or double leaf, made-to-order panels or sensor-operated automatic doors.',
@@ -149,7 +149,7 @@ export const products = [
     slug: { sq: 'fasada-xhami', en: 'glass-facades' },
     sq: {
       name: 'Fasada xhami',
-      metaTitle: 'Fasada xhami curtain wall alumini | Apex Frames',
+      metaTitle: 'Fasada xhami curtain wall alumini në Shqipëri | Apex Frames',
       metaDesc: 'Fasada xhami (curtain wall) me strukturë alumini dhe termoizolim, sipas projektit të arkitektit. Xham termik, stop-sol dhe i laminuar. Ngjyra RAL të personalizuara.',
       h1: 'Fasada xhami (curtain wall)',
       answer: 'Fasadat curtain wall janë struktura alumini me termoizolim dhe xham që mbulojnë një fasadë ndërtese. Prodhohen sipas projektit të arkitektit, me përmasa, ndarje dhe ngjyra RAL të personalizuara.',
@@ -170,7 +170,7 @@ export const products = [
     },
     en: {
       name: 'Glass facades',
-      metaTitle: 'Aluminium Glass Curtain Wall Facades | Apex Frames',
+      metaTitle: 'Aluminium Glass Curtain Wall Facades in Albania | Apex Frames',
       metaDesc: 'Glass curtain wall facades with insulated aluminium structure, built to the architect’s design. Thermal, solar-control and laminated glass. Custom RAL colours.',
       h1: 'Glass facades (curtain wall)',
       answer: 'Curtain walls are insulated aluminium structures with glazing that cover a building facade. They are built to the architect’s design, with custom dimensions, divisions and RAL colours.',
@@ -241,11 +241,11 @@ export const products = [
     slug: { sq: 'grila-roleta', en: 'shutters-roller-blinds' },
     sq: {
       name: 'Grila & roleta',
-      metaTitle: 'Grila persiane, grila me litar dhe me motor | Apex Frames',
+      metaTitle: 'Grila persiane, me litar dhe me motor në Tiranë | Apex Frames',
       metaDesc: 'Grila persiane alumini, grila me litar PVC ose alumini, grila me motor dhe telekomandë dhe roleta të jashtme. Ngjyra RAL. Furnizim dhe montim në Shqipëri.',
       h1: 'Grila persiane, grila me litar dhe me motor',
       answer: 'Grilat dhe roletat ofrojnë hije, privatësi dhe siguri për dritaret dhe dyert. Ofrojmë grila persiane alumini, grila me litar (PVC ose alumini) dhe grila me motor dhe telekomandë, edhe për hapje të mëdha.',
-      intro: 'Grilat përshtaten me dritaret uPVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike. Për grilat me motor, motori zgjidhet sipas peshës dhe përmasave.',
+      intro: 'Grilat përshtaten me dritaret PVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike. Për grilat me motor, motori zgjidhet sipas peshës dhe përmasave.',
       features: [
         'Grila persiane alumini, fikse ose të hapshme, me lamela',
         'Grila me litar me kuti të jashtme ose të brendshme, PVC ose alumini',
@@ -257,12 +257,12 @@ export const products = [
       bestFor: ['Apartamente që duan hije dhe privatësi', 'Shtëpi me hapje të mëdha: grila me motor', 'Buxhet i kufizuar: grila me litar'],
       faq: [
         { q: 'Grila me litar apo me motor?', a: 'Litari është zgjidhje ekonomike dhe e thjeshtë; motori me telekomandë është më i rehatshëm, sidomos për hapje të mëdha ose të vështira për t’u arritur.' },
-        { q: 'A përshtaten me dritaret ekzistuese?', a: 'Grilat përshtaten me dritaret uPVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike.' },
+        { q: 'A përshtaten me dritaret ekzistuese?', a: 'Grilat përshtaten me dritaret PVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike.' },
       ],
     },
     en: {
       name: 'Shutters & roller blinds',
-      metaTitle: 'Louvred, Strap and Motorised Shutters | Apex Frames',
+      metaTitle: 'Louvred, Strap and Motorised Shutters in Tirana | Apex Frames',
       metaDesc: 'Aluminium louvred, strap-operated and motorised shutters with remote, plus external roller blinds. RAL colours. Supply and installation in Albania.',
       h1: 'Louvred, strap-operated and motorised shutters',
       answer: 'Shutters and roller blinds provide shade, privacy and security for windows and doors. We offer aluminium louvred shutters, strap-operated shutters (PVC or aluminium) and motorised shutters with remote control, even for large openings.',
@@ -287,7 +287,7 @@ export const products = [
     slug: { sq: 'rrjeta-kunder-insekteve', en: 'insect-screens' },
     sq: {
       name: 'Rrjeta kundër insekteve',
-      metaTitle: 'Rrjeta kundër insekteve (moskitiera) | Apex Frames',
+      metaTitle: 'Rrjeta kundër insekteve (moskitiera) në Tiranë | Apex Frames',
       metaDesc: 'Moskitiera për dritare dhe dyer: rrëshqitëse, vertikale me rrotullim, të fiksuara në kornizë dhe me palosje (plissé). Furnizim dhe montim në Shqipëri.',
       h1: 'Rrjeta kundër insekteve (moskitiera)',
       answer: 'Rrjetat kundër insekteve lejojnë ajrim pa mushkonja dhe insekte të tjera. Ofrojmë modele rrëshqitëse, vertikale me rrotullim, të fiksuara në kornizë dhe me palosje (plissé), për dritare dhe dyer.',
@@ -301,7 +301,7 @@ export const products = [
     },
     en: {
       name: 'Insect screens',
-      metaTitle: 'Insect Screens (Fly Screens) | Apex Frames',
+      metaTitle: 'Insect Screens (Fly Screens) in Tirana | Apex Frames',
       metaDesc: 'Insect screens for windows and doors: horizontal sliding, vertical roll-up, fixed frame and pleated (plissé). Supply and installation in Albania.',
       h1: 'Insect screens (fly screens)',
       answer: 'Insect screens let you ventilate without mosquitoes and other insects. We offer horizontal sliding, vertical roll-up, fixed-frame and pleated (plissé) models for windows and doors.',
@@ -319,7 +319,7 @@ export const products = [
     slug: { sq: 'tenda-pergola', en: 'awnings-pergolas' },
     sq: {
       name: 'Tenda & pergola',
-      metaTitle: 'Tenda dielli, marquise dhe pergola alumini | Apex Frames',
+      metaTitle: 'Tenda dielli dhe pergola alumini në Tiranë | Apex Frames',
       metaDesc: 'Tenda dielli manuale ose me motor, modele kasetë dhe klasike, pëlhurë kundër UV dhe pergola alumini për ballkone, tarraca dhe biznese.',
       h1: 'Tenda dielli, marquise dhe pergola',
       answer: 'Tendat dhe pergolat krijojnë hije dhe komoditet për ballkone, tarraca dhe ambiente biznesi. Ofrojmë tenda manuale ose me motor dhe pergola alumini, me ose pa tendë, sipas projektit.',
@@ -333,7 +333,7 @@ export const products = [
     },
     en: {
       name: 'Awnings & pergolas',
-      metaTitle: 'Awnings, Marquees and Aluminium Pergolas | Apex Frames',
+      metaTitle: 'Awnings and Aluminium Pergolas in Tirana | Apex Frames',
       metaDesc: 'Manual or motorised awnings, cassette and classic models, UV-certified fabric and aluminium pergolas for balconies, terraces and businesses.',
       h1: 'Awnings, marquees and pergolas',
       answer: 'Awnings and pergolas create shade and comfort for balconies, terraces and hospitality spaces. We offer manual or motorised awnings and aluminium pergolas, with or without canopy, to your project.',
@@ -351,7 +351,7 @@ export const products = [
     slug: { sq: 'kangjella-inox-alumini-xhami', en: 'stainless-aluminium-glass-railings' },
     sq: {
       name: 'Kangjella inox, alumini & xhami',
-      metaTitle: 'Kangjella inox, alumini dhe xhami | Apex Frames',
+      metaTitle: 'Kangjella inox, alumini dhe xhami në Tiranë | Apex Frames',
       metaDesc: 'Kangjella dhe parapete prej inoksi, alumini dhe xhami sigurie për ballkone, tarraca, shkallë dhe ambiente biznesi, prodhuar sipas matjeve në terren dhe projektit.',
       h1: 'Kangjella inox, alumini dhe xhami',
       answer: 'Kangjellat (parapetet) mbrojnë ballkonet, tarracat dhe shkallët pa e bllokuar pamjen. Prodhojmë kangjella prej inoksi dhe alumini, me xham sigurie të laminuar ose të kalitur, sipas matjeve në terren dhe projektit arkitektonik.',
@@ -373,7 +373,7 @@ export const products = [
     },
     en: {
       name: 'Stainless, aluminium & glass railings',
-      metaTitle: 'Stainless, Aluminium and Glass Railings | Apex Frames',
+      metaTitle: 'Stainless, Aluminium and Glass Railings in Tirana | Apex Frames',
       metaDesc: 'Railings and balustrades in stainless steel, aluminium and safety glass for balconies, terraces, stairs and commercial spaces, made to on-site measurements and design.',
       h1: 'Stainless, aluminium and glass railings',
       answer: 'Railings (balustrades) protect balconies, terraces and stairs without blocking the view. We make railings in stainless steel and aluminium, with laminated or tempered safety glass, to on-site measurements and the architectural design.',

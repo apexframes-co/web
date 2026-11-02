@@ -4,7 +4,7 @@ const DATE = '2026-10-31';
 export const morePosts = [
   /* ---------- 1. Dyer rrëshqitëse ---------- */
   {
-    id: 'sliding-doors-types', image: 'blackslider', date: DATE, updated: DATE, products: ['doors', 'aluminium', 'upvc'],
+    id: 'sliding-doors-types', image: 'blackslider', date: DATE, updated: '2026-11-02', products: ['doors', 'aluminium', 'upvc'],
     slug: { sq: 'dyer-rreshqitese-llojet-dhe-si-zgjidhen', en: 'sliding-doors-types-and-how-to-choose' },
     sq: {
       title: 'Dyer rrëshqitëse: ngritje-rrëshqitëse, PSK apo klasike?',
@@ -18,7 +18,7 @@ export const morePosts = [
 <tr><td>Rrëshqitëse klasike (Sliding)</td><td>Krahu rrëshqet në shina</td><td>Ballkone dhe hapje të thjeshta</td></tr>
 <tr><td>Paralel-rrëshqitëse me anim (PSK)</td><td>Krahu anohet dhe pastaj rrëshqet paralel përpara pjesës fikse</td><td>Kur doni ventilim dhe rrëshqitje në të njëjtën derë</td></tr>
 <tr><td>Palosëse (akordeon), alumin</td><td>Krahët palosen mbi njëri-tjetrin</td><td>Hapje shumë të gjera, lidhje brenda-jashtë</td></tr></tbody></table>` },
-        { h: 'Si të zgjidhni', html: `<ul><li><strong>Gjerësia e hapjes:</strong> hapjet shumë të gjera kërkojnë zakonisht sisteme ngritje-rrëshqitëse, panoramike ose palosëse nga alumini.</li><li><strong>Hapësira anash:</strong> krahët që rrëshqasin kanë nevojë për vend ku të ndalojnë.</li><li><strong>Profili dhe ngjyra:</strong> uPVC ose alumin; shih <a href="/blog/ngjyrat-e-dritareve-dhe-dyerve/">si zgjidhet ngjyra</a>.</li><li><strong>Xhami:</strong> dopio ose i trefishtë, i kalitur ose i laminuar për siguri.</li><li><strong>Rrjeta kundër insekteve:</strong> ofrohen modele rrëshqitëse dhe me palosje (plissé) për dyer.</li></ul>` },
+        { h: 'Si të zgjidhni', html: `<ul><li><strong>Gjerësia e hapjes:</strong> hapjet shumë të gjera kërkojnë zakonisht sisteme ngritje-rrëshqitëse, panoramike ose palosëse nga alumini.</li><li><strong>Hapësira anash:</strong> krahët që rrëshqasin kanë nevojë për vend ku të ndalojnë.</li><li><strong>Profili dhe ngjyra:</strong> PVC ose alumin; shih <a href="/blog/ngjyrat-e-dritareve-dhe-dyerve/">si zgjidhet ngjyra</a>.</li><li><strong>Xhami:</strong> dopio ose i trefishtë, i kalitur ose i laminuar për siguri.</li><li><strong>Rrjeta kundër insekteve:</strong> ofrohen modele rrëshqitëse dhe me palosje (plissé) për dyer.</li></ul>` },
         { h: 'Çfarë kontrollohet në vizitën teknike', html: `<p>Ekipi teknik verifikon kuotat, planin dhe gjendjen e strukturës mbajtëse, pastaj përgatit fletën e specifikimit që e miratoni para prodhimit. Për dyer të mëdha, këto matje përcaktojnë se cili sistem është i zbatueshëm.</p>` },
       ],
       faq: [
@@ -50,16 +50,16 @@ export const morePosts = [
 
   /* ---------- 2. Dera hyrëse ---------- */
   {
-    id: 'how-to-choose-entrance-door', image: 'door', date: DATE, updated: DATE, products: ['doors', 'upvc', 'aluminium'],
+    id: 'how-to-choose-entrance-door', image: 'door', date: DATE, updated: '2026-11-02', products: ['doors', 'upvc', 'aluminium'],
     slug: { sq: 'si-zgjidhet-dera-hyrese', en: 'how-to-choose-an-entrance-door' },
     sq: {
-      title: 'Si të zgjidhni derën hyrëse: uPVC, alumin, me panel apo automatike',
+      title: 'Si të zgjidhni derën hyrëse: PVC, alumin, me panel apo automatike',
       metaTitle: 'Si të zgjidhni derën hyrëse | Apex Frames',
       desc: 'Çfarë të kontrolloni kur zgjidhni derën hyrëse: materiali, paneli apo xhami, hapja e majtë ose e djathtë, xhami i sigurisë, brava dhe dyert automatike.',
       category: 'Zgjedhja e produktit', readMin: 4,
-      answer: 'Zgjidhni derën hyrëse sipas përdorimit: uPVC ose alumin për banesa dhe biznese, me panel të plotë kur doni privatësi dhe me xham sigurie kur doni dritë. Për hyrje biznesesh me trafik, dera automatike me sensor është më praktike. Përcaktoni hapjen e majtë ose të djathtë nga jashtë para porosisë.',
+      answer: 'Zgjidhni derën hyrëse sipas përdorimit: PVC ose alumin për banesa dhe biznese, me panel të plotë kur doni privatësi dhe me xham sigurie kur doni dritë. Për hyrje biznesesh me trafik, dera automatike me sensor është më praktike. Përcaktoni hapjen e majtë ose të djathtë nga jashtë para porosisë.',
       sections: [
-        { h: 'Pesë vendime para porosisë', html: `<ol><li><strong>Materiali:</strong> uPVC ose alumin; alumini përdoret për ngarkesë të lartë dhe trafik intensiv.</li><li><strong>Paneli apo xhami:</strong> dyer me panel PVC (p.sh. antracit), me përmasa sipas porosisë, ose me pjesë xhami; shfletoni <a href="/katalogu/">katalogun me modele</a>.</li><li><strong>Xhami i sigurisë:</strong> i laminuar (triplex) ose i kalitur; shih <a href="/blog/xham-i-laminuar-apo-i-kalitur/">dallimin mes tyre</a>.</li><li><strong>Hapja:</strong> e majtë ose e djathtë, e përcaktuar nga jashtë; çdo krah i një dere dykrahëshe mund të ketë hapje të ndryshme.</li><li><strong>Brava, doreza dhe aksesorë</strong> sipas objektit.</li></ol>` },
+        { h: 'Pesë vendime para porosisë', html: `<ol><li><strong>Materiali:</strong> PVC ose alumin; alumini përdoret për ngarkesë të lartë dhe trafik intensiv.</li><li><strong>Paneli apo xhami:</strong> dyer me panel PVC (p.sh. antracit), me përmasa sipas porosisë, ose me pjesë xhami; shfletoni <a href="/katalogu/">katalogun me modele</a>.</li><li><strong>Xhami i sigurisë:</strong> i laminuar (triplex) ose i kalitur; shih <a href="/blog/xham-i-laminuar-apo-i-kalitur/">dallimin mes tyre</a>.</li><li><strong>Hapja:</strong> e majtë ose e djathtë, e përcaktuar nga jashtë; çdo krah i një dere dykrahëshe mund të ketë hapje të ndryshme.</li><li><strong>Brava, doreza dhe aksesorë</strong> sipas objektit.</li></ol>` },
         { h: 'Dyer automatike për biznese', html: `<p>Për hyrje dyqanesh, klinikash dhe objektesh publike ofrojmë dyer automatike me fotoelement (sensor) dhe sistem automatizimi profesional. Dera hapet vetë kur afrohet personi dhe nuk kërkon prekje.</p>` },
         { h: 'Çfarë të kërkoni nga furnizuesi', html: `<ul><li>deklaratën e performancës (DoP) dhe shenjën CE të prodhuesit;</li><li>fletën e specifikimit me hapjen e konfirmuar para prodhimit;</li><li>garancinë: 5 vjet për produktin dhe 24 muaj për montimin;</li><li>procesverbalin e dorëzimit pas montimit.</li></ul>` },
       ],
@@ -88,7 +88,7 @@ export const morePosts = [
 
   /* ---------- 3. Thyerja termike ---------- */
   {
-    id: 'what-is-a-thermal-break', image: 'profile', date: DATE, updated: DATE, products: ['aluminium', 'facades'],
+    id: 'what-is-a-thermal-break', image: 'profile', date: DATE, updated: '2026-11-02', products: ['aluminium', 'facades'],
     slug: { sq: 'cfare-eshte-thyerja-termike', en: 'what-is-a-thermal-break' },
     sq: {
       title: 'Çfarë është thyerja termike në profilet e aluminit?',
@@ -104,7 +104,7 @@ export const morePosts = [
       ],
       faq: [
         { q: 'A është alumini me thyerje termike i përshtatshëm për dimër?', a: 'Po, kur sistemi dhe xhami zgjidhen drejt dhe montimi është i mirë. Vlerat konkrete jepen në deklaratën e performancës.' },
-        { q: 'Çfarë ndryshon nga uPVC?', a: 'Të dyja mund të izolojnë mirë; alumini lejon profile më të holla dhe hapje më të mëdha. Lexoni krahasimin tonë të detajuar uPVC kundrejt aluminit.' },
+        { q: 'Çfarë ndryshon nga PVC?', a: 'Të dyja mund të izolojnë mirë; alumini lejon profile më të holla dhe hapje më të mëdha. Lexoni krahasimin tonë të detajuar PVC kundrejt aluminit.' },
       ],
     },
     en: {
@@ -128,7 +128,7 @@ export const morePosts = [
 
   /* ---------- 4. Laminuar vs kalitur ---------- */
   {
-    id: 'laminated-or-tempered-glass', image: 'glassdoors', date: DATE, updated: DATE, products: ['glazing', 'doors', 'railings'],
+    id: 'laminated-or-tempered-glass', image: 'glassdoors', date: DATE, updated: '2026-11-02', products: ['glazing', 'doors', 'railings'],
     slug: { sq: 'xham-i-laminuar-apo-i-kalitur', en: 'laminated-or-tempered-glass' },
     sq: {
       title: 'Xham i laminuar apo i kalitur? Cili është më i sigurt',
@@ -174,11 +174,11 @@ export const morePosts = [
 
   /* ---------- 5. Tenda dhe pergola ---------- */
   {
-    id: 'cassette-or-classic-awnings', image: 'awning', date: DATE, updated: DATE, products: ['awnings', 'shutters'],
+    id: 'cassette-or-classic-awnings', image: 'awning', date: DATE, updated: '2026-11-02', products: ['awnings', 'shutters'],
     slug: { sq: 'tende-dielli-me-kasete-apo-klasike', en: 'cassette-or-classic-awnings' },
     sq: {
       title: 'Tendë dielli me kasetë apo klasike? Si të zgjidhni për tarracën',
-      metaTitle: 'Tendë me kasetë apo klasike | Apex Frames',
+      metaTitle: 'Tendë dielli me kasetë apo klasike për tarracën | Apex Frames',
       desc: 'Tenda me kasetë apo klasike, manuale apo me motor, dhe kur ia vlen një pergola alumini. Çfarë të vlerësoni për ballkonin ose tarracën tuaj.',
       category: 'Zgjedhja e produktit', readMin: 4,
       answer: 'Tenda me kasetë e mbron pëlhurën kur mblidhet dhe ka pamje më të pastër; modelet klasike janë më të thjeshta. Motori jep rehati, ndërsa mekanizmi manual është më ekonomik. Për ambiente më të mëdha, një pergola alumini me ose pa tendë është alternativa.',
@@ -220,17 +220,17 @@ export const morePosts = [
 
   /* ---------- 6. Ngjyrat ---------- */
   {
-    id: 'window-and-door-colours', image: 'shutters', date: DATE, updated: DATE, products: ['upvc', 'aluminium', 'shutters'],
+    id: 'window-and-door-colours', image: 'shutters', date: DATE, updated: '2026-11-02', products: ['upvc', 'aluminium', 'shutters'],
     slug: { sq: 'ngjyrat-e-dritareve-dhe-dyerve', en: 'window-and-door-colours' },
     sq: {
       title: 'Cilën ngjyrë të zgjidhni për dritaret: e bardhë, antracit apo dekor druri?',
-      metaTitle: 'Ngjyrat e dritareve dhe dyerve | Apex Frames',
-      desc: 'Ngjyrat e disponueshme për dritaret uPVC dhe aluminin, ngjyra e ndryshme brenda e jashtë, RAL dhe imitacione druri, dhe si ta harmonizoni me fasadën.',
+      metaTitle: 'Ngjyrat e dritareve: e bardhë, antracit apo dekor druri? | Apex Frames',
+      desc: 'Ngjyrat e disponueshme për dritaret PVC dhe aluminin, ngjyra e ndryshme brenda e jashtë, RAL dhe imitacione druri, dhe si ta harmonizoni me fasadën.',
       category: 'Zgjedhja e produktit', readMin: 4,
-      answer: 'Për uPVC ofrohen e bardha, dekor druri, e zeza (Jet Black) dhe antracit, edhe me ngjyrë të ndryshme brenda e jashtë. Për aluminin ka gamë të gjerë RAL dhe imitacione druri. Zgjidhni sipas fasadës, grilave dhe pamjes së brendshme, dhe kërkoni mostra para porosisë.',
+      answer: 'Për PVC ofrohen e bardha, dekor druri, e zeza (Jet Black) dhe antracit, edhe me ngjyrë të ndryshme brenda e jashtë. Për aluminin ka gamë të gjerë RAL dhe imitacione druri. Zgjidhni sipas fasadës, grilave dhe pamjes së brendshme, dhe kërkoni mostra para porosisë.',
       sections: [
         { h: 'Ngjyrat sipas materialit', html: `<table><thead><tr><th>Produkti</th><th>Ngjyrat</th></tr></thead><tbody>
-<tr><td>Dritare dhe dyer uPVC</td><td>E bardhë, dekor druri, e zezë (Jet Black), antracit; ngjyrë e ndryshme brenda dhe jashtë</td></tr>
+<tr><td>Dritare dhe dyer PVC</td><td>E bardhë, dekor druri, e zezë (Jet Black), antracit; ngjyrë e ndryshme brenda dhe jashtë</td></tr>
 <tr><td>Dritare dhe dyer alumini</td><td>Gamë e gjerë RAL dhe imitacione druri</td></tr>
 <tr><td>Dyer me panel PVC</td><td>P.sh. antracit, me përmasa sipas porosisë</td></tr>
 <tr><td>Grila persiane alumini</td><td>Ngjyra standarde dhe speciale RAL</td></tr></tbody></table>` },
@@ -238,13 +238,13 @@ export const morePosts = [
         { h: 'Mostra dhe vizualizime', html: `<p>Ofrojmë mostra ngjyrash dhe vizualizime, që ta shihni zgjedhjen para prodhimit. Ngjyrat e errëta nxehen më shumë në diell; pyesni për sistemin e zgjedhur nëse dritaret janë shumë të ekspozuara.</p>` },
       ],
       faq: [
-        { q: 'A mund të ketë dritarja ngjyrë të ndryshme brenda e jashtë?', a: 'Po, për dritaret uPVC mund të zgjidhet ngjyrë e ndryshme nga brenda dhe nga jashtë.' },
+        { q: 'A mund të ketë dritarja ngjyrë të ndryshme brenda e jashtë?', a: 'Po, për dritaret PVC mund të zgjidhet ngjyrë e ndryshme nga brenda dhe nga jashtë.' },
         { q: 'A ka ngjyra RAL?', a: 'Po, për aluminin ofrojmë gamë të gjerë RAL dhe imitacione druri.' },
       ],
     },
     en: {
       title: 'Which Colour for Your Windows: White, Anthracite or Woodgrain?',
-      metaTitle: 'Window and Door Colours | Apex Frames',
+      metaTitle: 'Window Colours: White, Anthracite or Woodgrain? | Apex Frames',
       desc: 'The colours available for uPVC and aluminium windows, different colours inside and out, RAL and wood effects, and how to match your facade.',
       category: 'Choosing products', readMin: 4,
       answer: 'uPVC comes in white, woodgrain, black (Jet Black) and anthracite, even with a different colour inside and outside. Aluminium offers a wide RAL range and wood finishes. Choose by facade, shutters and interior look, and ask for samples before ordering.',
@@ -266,7 +266,7 @@ export const morePosts = [
 
   /* ---------- 7. Curtain wall ---------- */
   {
-    id: 'curtain-wall-facades', image: 'facade', date: DATE, updated: DATE, products: ['facades', 'glazing', 'aluminium'],
+    id: 'curtain-wall-facades', image: 'facade', date: DATE, updated: '2026-11-02', products: ['facades', 'glazing', 'aluminium'],
     slug: { sq: 'fasada-xhami-curtain-wall-cfare-duhet-te-dini', en: 'curtain-wall-facades-what-to-know' },
     sq: {
       title: 'Fasada xhami (curtain wall): çfarë duhet të dini para projektit',
@@ -312,11 +312,11 @@ export const morePosts = [
 
   /* ---------- 8. Zhurma ---------- */
   {
-    id: 'reduce-street-noise', image: 'aluminium', date: DATE, updated: DATE, products: ['glazing', 'upvc', 'aluminium'],
+    id: 'reduce-street-noise', image: 'aluminium', date: DATE, updated: '2026-11-02', products: ['glazing', 'upvc', 'aluminium'],
     slug: { sq: 'si-te-zvogeloni-zhurmen-nga-rruga-me-dritare', en: 'reduce-street-noise-with-windows' },
     sq: {
       title: 'Si të zvogëloni zhurmën nga rruga me dritare të reja',
-      metaTitle: 'Zhurma nga rruga: dritare akustike | Apex Frames',
+      metaTitle: 'Si të zvogëloni zhurmën nga rruga me dritare akustike | Apex Frames',
       desc: 'Çfarë ndikon në izolimin akustik të dritareve: xhami akustik, guarnicionet, profili dhe montimi. Si lexohet vlera Rw dhe çfarë të pyesni.',
       category: 'Këshilla', readMin: 4,
       answer: 'Izolimi nga zhurma varet nga katër gjëra: xhami (akustik ose i laminuar), guarnicionet dhe profili, montimi hermetik dhe ajrimi. Vlera Rw në deklaratën e performancës tregon izolimin: sa më e lartë, aq më pak zhurmë kalon. Një dritare e hapur ose me çarje e anulon efektin.',
@@ -332,7 +332,7 @@ export const morePosts = [
     },
     en: {
       title: 'How to Reduce Street Noise with New Windows',
-      metaTitle: 'Street Noise: Acoustic Windows | Apex Frames',
+      metaTitle: 'How to Reduce Street Noise with Acoustic Windows | Apex Frames',
       desc: 'What affects window sound insulation: acoustic glass, seals, profile and installation. How to read the Rw value and what to ask.',
       category: 'Advice', readMin: 4,
       answer: 'Noise insulation depends on four things: the glass (acoustic or laminated), the seals and profile, airtight installation and ventilation. The Rw value in the Declaration of Performance shows the insulation: the higher, the less noise gets through. An open or leaky window cancels the effect.',
@@ -350,7 +350,7 @@ export const morePosts = [
 
   /* ---------- 9. Rrjeta kundër insekteve ---------- */
   {
-    id: 'insect-screens-guide', image: 'pleated', date: DATE, updated: DATE, products: ['screens', 'aluminium', 'upvc'],
+    id: 'insect-screens-guide', image: 'pleated', date: DATE, updated: '2026-11-02', products: ['screens', 'aluminium', 'upvc'],
     slug: { sq: 'rrjeta-kunder-insekteve-cilin-model-te-zgjidhni', en: 'insect-screens-which-type-to-choose' },
     sq: {
       title: 'Rrjeta kundër insekteve: cilin model të zgjidhni për derë ose dritare',
@@ -396,7 +396,7 @@ export const morePosts = [
 
   /* ---------- 10. Kangjella me xham ---------- */
   {
-    id: 'glass-railings-guide', image: 'railing', date: DATE, updated: DATE, products: ['railings', 'glazing', 'doors'],
+    id: 'glass-railings-guide', image: 'railing', date: DATE, updated: '2026-11-02', products: ['railings', 'glazing', 'doors'],
     slug: { sq: 'kangjella-me-xham-cfare-duhet-te-dini', en: 'glass-railings-what-to-know' },
     sq: {
       title: 'Kangjella me xham, inox dhe alumin: çfarë të dini para porosisë',

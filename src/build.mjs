@@ -7,14 +7,23 @@ import { company as C, sq, en } from './content.mjs';
 import { routes, ui } from './ui.mjs';
 import { products } from './products.mjs';
 import { posts as basePosts } from './blog.mjs';
+import { productExtra, postExtra, pageExtra, faqExtra } from './content-extra.mjs';
+import { postExtra2 } from './content-extra2.mjs';
 import { morePosts } from './blog-more.mjs';
 const posts = [...basePosts, ...morePosts];
+// përmbajtje shtesë (thellësi SEO/AEO): seksione + pyetje për artikujt, udhëzues për produktet
+for (const l of ['sq', 'en']) {
+  for (const post of posts) { const ex = (postExtra[post.id] || postExtra2[post.id])?.[l]; if (ex) { post[l].sections = [...post[l].sections, ...ex.sections]; post[l].faq = [...post[l].faq, ...ex.faq]; } }
+  for (const p of products) { const ex = productExtra[p.id]?.[l]; if (ex) { p[l].guide = ex.guide; p[l].faq = [...p[l].faq, ...ex.faq]; } }
+}
+const extraBlock = (lang, id) => (pageExtra[id] ? `\n<section class="section section-tight"><div class="container narrow"><div class="prose">${pageExtra[id][lang]}</div></div></section>` : '');
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
 const LANGS = ['sq', 'en'];
 const content = { sq, en };
-const SITE_DATE = '2026-10-31';
+const SITE_DATE = '2026-11-02';
+const INDEXNOW_KEY = '50cb06343eddc8338461ecc930633918';
 const year = new Date().getFullYear();
 
 rmSync(DIST, { recursive: true, force: true });
@@ -104,7 +113,7 @@ const preloadFor = (name, sizes) => {
 const ORG = C.url + '/#organization';
 const SITE = C.url + '/#website';
 const PHONE = '+' + C.phoneHref.replace('+', '');
-const orgNode = () => ({
+const orgNode = (lang) => ({
   '@type': 'HomeAndConstructionBusiness',
   '@id': ORG,
   name: 'Apex Frames',
@@ -117,8 +126,11 @@ const orgNode = () => ({
   telephone: PHONE,
   foundingDate: '2026-09-14',
   address: { '@type': 'PostalAddress', streetAddress: C.street, addressLocality: 'Tirana', addressCountry: 'AL' },
+  geo: { '@type': 'GeoCoordinates', latitude: 41.3231, longitude: 19.8214 },
+  hasMap: 'https://www.google.com/maps/search/?api=1&query=Piramida+e+Tiran%C3%ABs',
   areaServed: { '@type': 'Country', name: 'Albania' },
   sameAs: [C.linkedin, C.instagram],
+  hasOfferCatalog: { '@type': 'OfferCatalog', name: lang === 'sq' ? 'Produktet dhe shërbimet e Apex Frames' : 'Apex Frames products and services', itemListElement: products.map((p) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: p[lang].name, url: abs(pp(lang, p)) } })) },
   knowsAbout: ['uPVC windows', 'Aluminium windows', 'Doors', 'Glass facades', 'Glazing', 'Shutters', 'Awnings', 'Window installation'],
   contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: C.email, telephone: PHONE, availableLanguage: ['sq', 'en'] },
 });
@@ -131,7 +143,7 @@ function head({ lang, title, desc, path, alt, og, ogAlt, type = 'website', graph
   const ogUrl = abs(og || '/assets/img/og-image.png');
   const l2 = other(lang);
   const sqPath = lang === 'sq' ? path : alt;
-  const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [orgNode(), siteNode(), ...graph] });
+  const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [orgNode(lang), siteNode(), ...graph] });
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -146,6 +158,10 @@ ${alt ? `<link rel="alternate" hreflang="${lang}" href="${url}">
 <link rel="alternate" hreflang="${l2}" href="${abs(alt)}">
 <link rel="alternate" hreflang="x-default" href="${abs(sqPath)}">` : ''}`}
 <meta name="theme-color" content="#2f425e">
+<meta name="geo.region" content="AL-11">
+<meta name="geo.placename" content="Tiranë">
+<meta name="geo.position" content="41.3231;19.8214">
+<meta name="ICBM" content="41.3231, 19.8214">
 <meta property="og:type" content="${type}">
 <meta property="og:site_name" content="Apex Frames">
 <meta property="og:title" content="${esc(title)}">
@@ -314,7 +330,7 @@ ${footer(lang)}
   writeFileSync(file, html);
   pages.push({ lang, key, id, path, alt, title, desc, html, og, lastmod, noindex, images });
 }
-const pageNode = (lang, url, title, desc, type, extra = {}) => ({ '@type': type, '@id': url + '#webpage', url, name: title, description: desc, isPartOf: { '@id': SITE }, about: { '@id': ORG }, inLanguage: lang, breadcrumb: { '@id': url + '#breadcrumb' }, dateModified: SITE_DATE, ...extra });
+const pageNode = (lang, url, title, desc, type, extra = {}) => ({ '@type': type, '@id': url + '#webpage', url, name: title, description: desc, isPartOf: { '@id': SITE }, about: { '@id': ORG }, inLanguage: lang, breadcrumb: { '@id': url + '#breadcrumb' }, datePublished: '2026-10-31', dateModified: SITE_DATE, ...extra });
 
 /* ---------- faqet ---------- */
 for (const lang of LANGS) {
@@ -407,7 +423,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       <div><dt>${pg.facts[3]}</dt><dd>${pg.activity}</dd></div>
     </dl>
   </div>
-</section>
+</section>${extraBlock(lang, 'about')}
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: 'about', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'AboutPage'), breadcrumbNode(url, cr.all)] });
   }
@@ -422,6 +438,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const body = `${pageHero({ crumbHtml: cr.html, label: pg.label, h1: pg.h1, lead: pg.lead })}
 <section class="section section-tight">
   <div class="container">
+    <h2 class="sr">${pg.h1}</h2>
     <div class="tiles tiles-text">${products.map((p) => tile(lang, p)).join('')}</div>
     <p class="fineprint" data-reveal>${pg.note}</p>
   </div>
@@ -455,6 +472,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       ${p.gallery ? `<div class="gallery${p.gallery.length === 1 ? ' gallery-1' : ''}">${p.gallery.map((g) => `<figure>${img(g, lang, { sizes: '(max-width: 600px) 100vw, 380px' })}</figure>`).join('')}</div>` : ''}
       <h2>${pr.bestFor}</h2>
       <ul class="chips">${t.bestFor.map((x) => `<li>${x}</li>`).join('')}</ul>
+      ${t.guide ? `<h2>${t.guide.h}</h2><div class="prose">${t.guide.html}</div>` : ''}
       <h2>${pr.faq}</h2>
       ${faqList(t.faq)}
     </div>
@@ -494,7 +512,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     <ol class="svc-list">${c.services.items.map((s, i) => `<li data-reveal><span class="idx">0${i + 1}</span><div><h2>${s.title}</h2><p>${s.text}</p></div>${checks(u.servicesBullets[i])}</li>`).join('')}</ol>
     <div class="chips-block" data-reveal><h2>${c.services.modesTitle}</h2><ul class="chips">${c.services.modes.map((m) => `<li>${m}</li>`).join('')}</ul></div>
   </div>
-</section>
+</section>${extraBlock(lang, 'services')}
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: 'services', path, alt: alt(id), title: pg.title, desc: pg.desc, og: '/assets/img/photos/aluminium-og.jpg', ogAlt: ALT.aluminium[lang], preload: preloadFor('aluminium', '(max-width: 920px) 100vw, 480px'), body, graph: [pageNode(lang, url, pg.title, pg.desc, 'WebPage'), breadcrumbNode(url, cr.all)] });
   }
@@ -522,7 +540,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       </div>
     </div>
   </div>
-</section>
+</section>${extraBlock(lang, 'process')}
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: 'process', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'WebPage'), breadcrumbNode(url, cr.all)] });
   }
@@ -537,6 +555,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const body = `${pageHero({ crumbHtml: cr.html, label: pg.label, h1: pg.h1, lead: c.partners.lead })}
 <section class="section section-tight">
   <div class="container">
+    <h2 class="sr">${c.partners.title}</h2>
     <ul class="cols-4">${c.partners.items.map((x) => `<li data-reveal><h3>${x.title}</h3><p>${x.text}</p></li>`).join('')}</ul>
   </div>
 </section>
@@ -545,7 +564,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     <div class="col-head">${secHead('', pg.offerTitle, pg.offerTitle)}</div>
     <div data-reveal>${checks(pg.offer)}</div>
   </div>
-</section>
+</section>${extraBlock(lang, 'partners')}
 ${ctaBand(lang, c.partners.title, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: '', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'WebPage'), breadcrumbNode(url, cr.all)] });
   }
@@ -561,6 +580,7 @@ ${ctaBand(lang, c.partners.title, u.home.ctaText)}`;
     const body = `${pageHero({ crumbHtml: cr.html, label: pg.label, h1: pg.h1, lead: pg.lead })}
 <section class="section section-tight">
   <div class="container">
+    <h2 class="sr">${c.warranty.title}</h2>
     <div class="figures">${c.warranty.items.map((x) => `<div data-reveal><span class="fig">${x.value}</span><h3>${x.title}</h3><p>${x.text}</p></div>`).join('')}</div>
   </div>
 </section>
@@ -578,7 +598,7 @@ ${ctaBand(lang, c.partners.title, u.home.ctaText)}`;
     </div>
     <div class="side-stack"><div class="aside-card" data-reveal><h2>${pg.docsTitle}</h2>${checks(pg.docs)}</div></div>
   </div>
-</section>
+</section>${extraBlock(lang, 'warranty')}
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     wrap({ lang, key: id, id, current: '', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'WebPage'), breadcrumbNode(url, cr.all)] });
   }
@@ -590,7 +610,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const path = rp(lang, id);
     const url = abs(path);
     const cr = crumbs(lang, [{ name: pg.label, path }]);
-    const items = [...c.faq.items, ...u.extraFaq];
+    const items = [...c.faq.items, ...u.extraFaq, ...faqExtra[lang]];
     const body = `${pageHero({ crumbHtml: cr.html, label: pg.label, h1: pg.h1, lead: pg.lead })}
 <section class="section section-tight">
   <div class="container narrow">${faqList(items)}</div>
@@ -644,7 +664,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
       <p class="form-note">${f.note}</p>
     </form>
   </div>
-</section>`;
+</section>${extraBlock(lang, 'contact')}`;
     wrap({ lang, key: id, id, current: '', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'ContactPage'), breadcrumbNode(url, cr.all)] });
   }
 
@@ -735,7 +755,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}
     const url = abs(path);
     const cr = crumbs(lang, [{ name: pg.label, path }]);
     const body = `${pageHero({ crumbHtml: cr.html, label: pg.label, h1: pg.h1, lead: pg.lead })}
-<section class="section section-tight"><div class="container"><div class="post-grid">${posts.map((p) => postCard(lang, p)).join('')}</div></div></section>
+<section class="section section-tight"><div class="container"><h2 class="sr">${pg.h1}</h2><div class="post-grid">${posts.map((p) => postCard(lang, p)).join('')}</div></div></section>
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
     const blog = { '@type': 'Blog', '@id': url + '#blog', name: pg.h1, url, inLanguage: lang, publisher: { '@id': ORG }, blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p[lang].title, url: abs(bp(lang, p)), datePublished: p.date })) };
     wrap({ lang, key: id, id, current: 'blog', path, alt: alt(id), title: pg.title, desc: pg.desc, body, graph: [pageNode(lang, url, pg.title, pg.desc, 'CollectionPage', { mainEntity: { '@id': url + '#blog' } }), blog, breadcrumbNode(url, cr.all)] });
@@ -781,7 +801,7 @@ ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
 </article>
 <section class="section section-paper"><div class="container"><div class="sec-head"><h2>${u.home.blogTitle}</h2></div><div class="post-grid post-grid-2">${others.map((x) => postCard(lang, x)).join('')}</div></div></section>
 ${ctaBand(lang, u.home.ctaTitle, u.home.ctaText)}`;
-    const article = { '@type': 'BlogPosting', '@id': url + '#article', headline: t.title, description: t.desc, image: [abs(og)], datePublished: post.date, dateModified: post.updated, author: { '@id': ORG }, publisher: { '@id': ORG }, mainEntityOfPage: { '@id': url + '#webpage' }, inLanguage: lang, articleSection: t.category, wordCount: text.split(' ').length, isPartOf: { '@id': abs(rp(lang, 'blog')) + '#blog' } };
+    const article = { '@type': 'BlogPosting', '@id': url + '#article', headline: t.title, description: t.desc, image: [abs(og)], datePublished: post.date, dateModified: post.updated, author: { '@id': ORG }, publisher: { '@id': ORG }, mainEntityOfPage: { '@id': url + '#webpage' }, inLanguage: lang, articleSection: t.category, keywords: [t.category, ...prods.map((p) => p[lang].name)].join(', '), wordCount: text.split(' ').length, isPartOf: { '@id': abs(rp(lang, 'blog')) + '#blog' } };
     wrap({ lang, key: 'post:' + post.id, id: post.id, current: 'blog', path, alt: alt2, title: t.metaTitle || `${t.title} | Apex Frames`, desc: t.desc, og, ogAlt: ALT[post.image][lang], type: 'article', article: { date: post.date, updated: post.updated, category: t.category }, preload: preloadFor(post.image, '(max-width: 820px) 100vw, 820px'), body, lastmod: post.updated, graph: [pageNode(lang, url, t.title, t.desc, 'WebPage', { mainEntity: { '@id': url + '#article' } }), article, faqNode(url, t.faq), breadcrumbNode(url, cr.all)] });
   }
 
@@ -856,7 +876,7 @@ ${ps.filter((p) => p.key.startsWith('post:')).map(li).join('\n')}
 };
 w('llms.txt', `# Apex Frames
 
-> Apex Frames SHPK (NUIS ${C.nuis}) është kompani në Tiranë, Shqipëri, që furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC me sisteme të certifikuara europiane. / Apex Frames SHPK is a Tirana-based company supplying and installing premium aluminium and uPVC windows, doors and glass facades in Albania.
+> Apex Frames SHPK (NUIS ${C.nuis}) është kompani në Tiranë, Shqipëri, që furnizon dhe monton dritare, dyer dhe fasada premium PVC dhe alumini me sisteme të certifikuara europiane. / Apex Frames SHPK is a Tirana-based company supplying and installing premium aluminium and uPVC windows, doors and glass facades in Albania.
 
 Faktet kryesore / Key facts:
 - Kontakt / Contact: ${C.email}, ${C.phoneDisplay}, ${C.street}, ${C.city}, Albania
@@ -927,7 +947,15 @@ w('_headers', `/*
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
 `);
-w('_redirects', `/produktet/shkalle-helikoidale-parapete/  /produktet/kangjella-inox-alumini-xhami/  301\n/en/products/spiral-stairs-balustrades/  /en/products/stainless-aluminium-glass-railings/  301\n`);
+w('_redirects', [
+  ['/produktet/shkalle-helikoidale-parapete/', '/produktet/kangjella-inox-alumini-xhami/'],
+  ['/en/products/spiral-stairs-balustrades/', '/en/products/stainless-aluminium-glass-railings/'],
+  ['/produktet/dritare-dyer-upvc/', '/produktet/dritare-dyer-pvc/'],
+  ['/en/products/upvc-windows-doors/', '/en/products/pvc-upvc-windows-doors/'],
+  ['/blog/dritare-upvc-apo-alumini/', '/blog/dritare-pvc-apo-alumini/'],
+  ['/en/blog/upvc-or-aluminium-windows/', '/en/blog/pvc-upvc-or-aluminium-windows/'],
+].map(([from, to]) => `${from}  ${to}  301`).join('\n') + '\n');
+w(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 w('.well-known/security.txt', `Contact: mailto:${C.email}\nExpires: 2027-10-31T00:00:00.000Z\nPreferred-Languages: sq, en\nCanonical: ${abs('/.well-known/security.txt')}\n`);
 
 console.log(`${pages.length} faqe (${pages.length / 2} për gjuhë) → dist/`);

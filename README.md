@@ -12,7 +12,10 @@ Faqe statike dygjuhëshe (shqip `/`, anglisht `/en/`), 54 faqe, pa framework, pa
 | `src/build.mjs` | Gjeneratori: faqet, schema JSON-LD, sitemap, robots, llms.txt, RSS, `_headers` |
 | `assets/` | CSS, JS, logo, foto (`assets/img/photos`) |
 | `scripts/make_images.py` | Përgatit fotot (pret, heq vijat, WebP + JPG për OG) |
-| `scripts/audit.mjs` | Audit SEO (titujt, përshkrimet, H1, alt, linqet, hreflang, JSON-LD) |
+| `scripts/audit.mjs` | Audit bazë SEO (titujt, përshkrimet, H1, alt, linqet, JSON-LD) |
+| `scripts/audit-deep.mjs` | Audit i thelluar: hreflang reciprok, hierarkia e titujve, thellësia e përmbajtjes, linqet e brendshme, schema |
+| `scripts/indexnow.mjs` | Njofton Bing/Yandex për URL-të e reja pas publikimit (IndexNow) |
+| `src/content-extra*.mjs` | Përmbajtje shtesë për thellësi SEO/AEO (udhëzues produktesh, seksione e pyetje artikujsh) |
 
 ## Komandat
 ```bash
@@ -36,3 +39,10 @@ Vendosni foton burimore, shtoni një rresht te `JOBS` në `scripts/make_images.p
 - Pa emra markash prodhuesish.
 - Fotot janë vizualizime ilustruese; shënohen si të tilla.
 - Nëse shtoni Google Analytics ose pixel, përditësoni Politikën e Privatësisë dhe shtoni banner cookies.
+
+## SEO / AEO pas publikimit
+1. Google Search Console: shtoni `https://www.apexframes.co/` dhe dërgoni `sitemap.xml`; kërkoni indeksim për faqen kryesore.
+2. Bing Webmaster Tools: importoni nga Search Console; pastaj `node scripts/indexnow.mjs`.
+3. Google Business Profile për adresën në Tiranë; pastaj shtojeni lidhjen te `sameAs` në `src/build.mjs`.
+4. Termat: në shqip përdorni "PVC" (jo "uPVC"); në anglisht "PVC (uPVC)".
+5. Pas çdo ndryshimi: `npm run build && node scripts/audit.mjs && node scripts/audit-deep.mjs`.

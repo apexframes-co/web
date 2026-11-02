@@ -5,27 +5,27 @@ const DATE = '2026-10-31';
 
 export const posts = [
   {
-    id: 'upvc-or-aluminium', image: 'family', date: DATE, updated: DATE, products: ['upvc', 'aluminium'],
-    slug: { sq: 'dritare-upvc-apo-alumini', en: 'upvc-or-aluminium-windows' },
+    id: 'upvc-or-aluminium', image: 'family', date: DATE, updated: '2026-11-02', products: ['upvc', 'aluminium'],
+    slug: { sq: 'dritare-pvc-apo-alumini', en: 'pvc-upvc-or-aluminium-windows' },
     sq: {
-      title: 'Dritare uPVC apo alumini? Si të zgjidhni të duhurën',
-      desc: 'Krahasim praktik mes dritareve uPVC dhe aluminit me thyerje termike: izolim, profile, ngjyra, hapje të mëdha, mirëmbajtje dhe kur ia vlen secila.',
+      title: 'Dritare PVC apo alumini? Si të zgjidhni të duhurën',
+      desc: 'Krahasim praktik mes dritareve PVC dhe aluminit me thyerje termike: izolim, profile, ngjyra, hapje të mëdha, mirëmbajtje dhe kur ia vlen secila.',
       category: 'Zgjedhja e produktit', readMin: 5,
-      answer: 'Zgjidhni uPVC kur doni izolim të mirë me kosto më të ulët për banesa. Zgjidhni alumin me thyerje termike kur ju duhen hapje të mëdha, profile të holla ose objekt komercial. Të dyja, kur janë të certifikuara dhe të montuara mirë, janë zgjidhje afatgjata.',
+      answer: 'Zgjidhni PVC kur doni izolim të mirë me kosto më të ulët për banesa. Zgjidhni alumin me thyerje termike kur ju duhen hapje të mëdha, profile të holla ose objekt komercial. Të dyja, kur janë të certifikuara dhe të montuara mirë, janë zgjidhje afatgjata.',
       sections: [
-        { h: 'Krahasimi në një tabelë', html: `<table><thead><tr><th>Kriteri</th><th>uPVC</th><th>Alumin me thyerje termike</th></tr></thead><tbody>
+        { h: 'Krahasimi në një tabelë', html: `<table><thead><tr><th>Kriteri</th><th>PVC</th><th>Alumin me thyerje termike</th></tr></thead><tbody>
 <tr><td>Izolimi termik</td><td>Shumë i mirë; vlera sipas DoP</td><td>Shumë i mirë me thyerje termike; vlera sipas DoP</td></tr>
 <tr><td>Profili</td><td>Më i trashë</td><td>Më i hollë, më shumë xham</td></tr>
 <tr><td>Hapje të mëdha</td><td>Të mundshme me sisteme ngritje-rrëshqitëse</td><td>Ideal për panoramike dhe rrëshqitëse të mëdha</td></tr>
 <tr><td>Ngjyra</td><td>E bardhë, dekor druri, e zezë, antracit</td><td>Gamë e gjerë RAL dhe imitacione druri</td></tr>
 <tr><td>Mirëmbajtje</td><td>Minimale</td><td>Minimale</td></tr>
 <tr><td>Kosto</td><td>Zakonisht më ekonomik</td><td>Zakonisht më e lartë</td></tr></tbody></table>` },
-        { h: 'Kur ta zgjidhni uPVC', html: `<p>uPVC është zgjedhja e zakonshme për apartamente dhe shtëpi: izolim të mirë, mirëmbajtje të thjeshtë dhe çmim të arsyeshëm. Është i përshtatshëm edhe për rinovime, kur qëllimi është të përmirësohet rehatia dhe izolimi.</p>` },
+        { h: 'Kur ta zgjidhni PVC', html: `<p>PVC është zgjedhja e zakonshme për apartamente dhe shtëpi: izolim të mirë, mirëmbajtje të thjeshtë dhe çmim të arsyeshëm. Është i përshtatshëm edhe për rinovime, kur qëllimi është të përmirësohet rehatia dhe izolimi.</p>` },
         { h: 'Kur ta zgjidhni aluminin', html: `<p>Alumini kërkohet kur projekti ka hapje të mëdha, dyer rrëshqitëse ose palosëse, ose një pamje minimaliste me profile të holla. Është zgjedhje e zakonshme edhe për biznese, hotele dhe fasada.</p>` },
         { h: 'Çfarë ka më shumë rëndësi se materiali', html: `<p>Dy dritare nga i njëjti material mund të performojnë shumë ndryshe. Kontrolloni:</p><ul><li><strong>Sistemin e profilit</strong> dhe numrin e dhomave ajrore;</li><li><strong>Xhamin</strong>: dopio ose i trefishtë, Low-E, argon;</li><li><strong>Montimin</strong>: izolimi perimetral dhe mbyllja përcaktojnë rezultatin real;</li><li><strong>Dokumentin DoP</strong> të prodhuesit me vlerat e certifikuara.</li></ul>` },
       ],
       faq: [
-        { q: 'Cili është më i qëndrueshëm: uPVC apo alumini?', a: 'Të dyja janë afatgjata kur vijnë nga një sistem i certifikuar dhe montohen saktë. Garancia jonë është 5 vjet për produktin dhe 24 muaj për montimin.' },
+        { q: 'Cili është më i qëndrueshëm: PVC apo alumini?', a: 'Të dyja janë afatgjata kur vijnë nga një sistem i certifikuar dhe montohen saktë. Garancia jonë është 5 vjet për produktin dhe 24 muaj për montimin.' },
         { q: 'Cili izolon më mirë?', a: 'Nuk ka përgjigje të vetme: izolimi varet nga sistemi, xhami dhe montimi. Krahasoni vlerën Uw në deklaratën e performancës të secilit sistem.' },
       ],
     },
@@ -53,15 +53,15 @@ export const posts = [
     },
   },
   {
-    id: 'what-affects-window-prices', image: 'sliding', date: DATE, updated: DATE, products: ['upvc', 'aluminium', 'glazing'],
+    id: 'what-affects-window-prices', image: 'sliding', date: DATE, updated: '2026-11-02', products: ['upvc', 'aluminium', 'glazing'],
     slug: { sq: 'cfare-ndikon-ne-cmimin-e-dritareve', en: 'what-affects-window-prices' },
     sq: {
       title: 'Çfarë ndikon në çmimin e dritareve dhe dyerve?',
-      desc: '8 faktorët që përcaktojnë çmimin e dritareve uPVC dhe alumini, si t’i krahasoni dy oferta drejt dhe çfarë mund të mos përfshihet.',
+      desc: '8 faktorët që përcaktojnë çmimin e dritareve PVC dhe alumini, si t’i krahasoni dy oferta drejt dhe çfarë mund të mos përfshihet.',
       category: 'Çmimet dhe oferta', readMin: 5,
       answer: 'Çmimi varet nga sistemi i profilit, madhësia, xhami, lloji i hapjes, ngjyra, aksesorët dhe montimi. Dy oferta krahasohen drejt vetëm kur specifikojnë të njëjtat elemente. Apex Frames nuk jep çmime verbale: çmimi shkruhet vetëm në ofertën e detajuar, pas matjes.',
       sections: [
-        { h: '8 faktorët kryesorë', html: `<ol><li><strong>Sistemi i profilit</strong> (uPVC ose alumin, thellësia e ndërtimit, numri i dhomave).</li><li><strong>Përmasat</strong>: sipërfaqja në m² dhe numri i krahëve.</li><li><strong>Xhami</strong>: dopio ose i trefishtë, Low-E, akustik, i laminuar, i kalitur.</li><li><strong>Lloji i hapjes</strong>: fikse, anim-hapje, rrëshqitëse, ngritje-rrëshqitëse.</li><li><strong>Ngjyra</strong>: e bardhë, dekor druri, RAL, ngjyrë e ndryshme brenda e jashtë.</li><li><strong>Aksesorët</strong>: mekanizma, doreza, bravë, grila, rrjeta.</li><li><strong>Montimi</strong> dhe çmontimi i dritareve ekzistuese.</li><li><strong>Transporti</strong> dhe vendndodhja e objektit.</li></ol>` },
+        { h: '8 faktorët kryesorë', html: `<ol><li><strong>Sistemi i profilit</strong> (PVC ose alumin, thellësia e ndërtimit, numri i dhomave).</li><li><strong>Përmasat</strong>: sipërfaqja në m² dhe numri i krahëve.</li><li><strong>Xhami</strong>: dopio ose i trefishtë, Low-E, akustik, i laminuar, i kalitur.</li><li><strong>Lloji i hapjes</strong>: fikse, anim-hapje, rrëshqitëse, ngritje-rrëshqitëse.</li><li><strong>Ngjyra</strong>: e bardhë, dekor druri, RAL, ngjyrë e ndryshme brenda e jashtë.</li><li><strong>Aksesorët</strong>: mekanizma, doreza, bravë, grila, rrjeta.</li><li><strong>Montimi</strong> dhe çmontimi i dritareve ekzistuese.</li><li><strong>Transporti</strong> dhe vendndodhja e objektit.</li></ol>` },
         { h: 'Si t’i krahasoni dy oferta', html: `<p>Kërkoni që çdo ofertë të tregojë të njëjtat elemente:</p><ul><li>sistemin e profilit dhe thellësinë;</li><li>përbërjen e xhamit;</li><li>markën dhe llojin e aksesorëve;</li><li>nëse montimi dhe pastrimi janë të përfshira;</li><li>garancinë për produktin dhe për montimin;</li><li>afatin e prodhimit dhe vlefshmërinë e ofertës;</li><li>nëse çmimi është përfundimtar.</li></ul>` },
         { h: 'Çfarë mund të mos përfshihet', html: `<p>Në përgjithësi nuk përfshihen kostot e prishjes strukturore ose të ndërhyrjeve civile jashtë fushës së montimit, materialet e furnizuara nga klienti dhe taksat doganore kur zbatohen. Në Apex Frames këto listohen veçmas në ofertë.</p>` },
         { h: 'Si merrni një ofertë të saktë', html: `<p>Çmimi i saktë del vetëm pas matjes. Procesi: kontakti, vizita teknike dhe matja, oferta e detajuar brenda 48 orëve, e vlefshme 30 ditë. Çmimi në ofertë është përfundimtar, pa kosto të fshehura.</p>` },
@@ -91,7 +91,7 @@ export const posts = [
     },
   },
   {
-    id: 'double-or-triple-glazing', image: 'glassroof', date: DATE, updated: DATE, products: ['glazing', 'facades'],
+    id: 'double-or-triple-glazing', image: 'glassroof', date: DATE, updated: '2026-11-02', products: ['glazing', 'facades'],
     slug: { sq: 'xham-dopio-apo-i-trefishte', en: 'double-or-triple-glazing' },
     sq: {
       title: 'Xham dopio apo i trefishtë? Argon, Low-E dhe si zgjidhet',
@@ -129,7 +129,7 @@ export const posts = [
     },
   },
   {
-    id: 'window-condensation', image: 'window', date: DATE, updated: DATE, products: ['upvc', 'glazing'],
+    id: 'window-condensation', image: 'window', date: DATE, updated: '2026-11-02', products: ['upvc', 'glazing'],
     slug: { sq: 'kondensimi-ne-dritare', en: 'window-condensation' },
     sq: {
       title: 'Pse djersijnë dritaret? Kondensimi dhe si zgjidhet',
@@ -165,10 +165,10 @@ export const posts = [
     },
   },
   {
-    id: 'declaration-of-performance-ce-marking', image: 'building', date: DATE, updated: DATE, products: ['aluminium', 'upvc', 'facades'],
+    id: 'declaration-of-performance-ce-marking', image: 'building', date: DATE, updated: '2026-11-02', products: ['aluminium', 'upvc', 'facades'],
     slug: { sq: 'deklarata-e-performances-dop-shenja-ce', en: 'declaration-of-performance-ce-marking' },
     sq: {
-      title: 'Deklarata e performancës (DoP) dhe shenja CE: si t’i lexoni', metaTitle: 'DoP dhe shenja CE: si t’i lexoni | Apex Frames',
+      title: 'Deklarata e performancës (DoP) dhe shenja CE: si t’i lexoni', metaTitle: 'DoP dhe shenja CE e dritareve: si t’i lexoni | Apex Frames',
       desc: 'Çfarë janë DoP dhe shenja CE për dritaret dhe dyert sipas EN 14351-1, çfarë vlerash përmbajnë dhe pse duhet t’i kërkoni para porosisë.',
       category: 'Standarde dhe dokumente', readMin: 4,
       answer: 'Deklarata e performancës (DoP) është dokumenti i prodhuesit që tregon vlerat e certifikuara të një dritareje ose dere, sipas standardit EN 14351-1 dhe Rregullores (BE) 305/2011. Shenja CE tregon se prodhuesi merr përgjegjësinë për ato vlera. Kërkojini të dyja para se të porosisni.',
@@ -184,7 +184,7 @@ export const posts = [
       ],
     },
     en: {
-      title: 'Declaration of Performance (DoP) and CE Marking: How to Read Them', metaTitle: 'DoP and CE Marking: How to Read Them | Apex Frames',
+      title: 'Declaration of Performance (DoP) and CE Marking: How to Read Them', metaTitle: 'DoP and CE Marking for Windows: How to Read Them | Apex Frames',
       desc: 'What the DoP and CE marking mean for windows and doors under EN 14351-1, which values they contain and why you should request them before ordering.',
       category: 'Standards and documents', readMin: 4,
       answer: 'The Declaration of Performance (DoP) is the manufacturer’s document stating a window’s or door’s certified values, under EN 14351-1 and Regulation (EU) 305/2011. The CE marking shows the manufacturer takes responsibility for those values. Ask for both before ordering.',
@@ -201,7 +201,7 @@ export const posts = [
     },
   },
   {
-    id: 'rope-or-motorised-shutters', image: 'roller', date: DATE, updated: DATE, products: ['shutters', 'upvc', 'aluminium'],
+    id: 'rope-or-motorised-shutters', image: 'roller', date: DATE, updated: '2026-11-02', products: ['shutters', 'upvc', 'aluminium'],
     slug: { sq: 'grila-me-litar-apo-me-motor', en: 'strap-or-motorised-shutters' },
     sq: {
       title: 'Grila me litar apo me motor? Kuti e jashtme apo e brendshme', metaTitle: 'Grila me litar apo me motor? | Apex Frames',
@@ -212,14 +212,14 @@ export const posts = [
         { h: 'Litar apo motor', html: `<table><thead><tr><th>Kriteri</th><th>Me litar</th><th>Me motor</th></tr></thead><tbody>
 <tr><td>Përdorimi</td><td>Manual, me litar</td><td>Me telekomandë</td></tr>
 <tr><td>Hapje të mëdha</td><td>Më pak praktike</td><td>Zgjidhje e përshtatshme, me pjesë përforcuese për përmasa të mëdha</td></tr>
-<tr><td>Materiali</td><td>PVC ose alumin</td><td>Përshtatet me dritaret uPVC dhe alumini</td></tr>
+<tr><td>Materiali</td><td>PVC ose alumin</td><td>Përshtatet me dritaret PVC dhe alumini</td></tr>
 <tr><td>Montimi</td><td>I shpejtë</td><td>Motori zgjidhet sipas peshës dhe përmasave</td></tr>
 <tr><td>Kostoja</td><td>Zgjidhje ekonomike</td><td>Zakonisht më e lartë</td></tr></tbody></table>` },
         { h: 'Kuti e jashtme apo e brendshme', html: `<ul><li><strong>Kutia e jashtme:</strong> ideale për montim të shpejtë dhe akses të lehtë.</li><li><strong>Kutia e brendshme:</strong> pamje më e pastër dhe integrim estetik në fasadë.</li></ul><p>Zgjedhja merret para matjes, sepse kutia ndikon në pamjen e fasadës dhe në hapësirën e disponueshme.</p>` },
-        { h: 'Çfarë të pyesni para porosisë', html: `<ul><li>A përshtatet grila me dritaren tuaj (uPVC ose alumin)?</li><li>Cila ngjyrë përputhet me profilin e dritares ose derës?</li><li>Për grilat me motor: cili motor zgjidhet sipas peshës dhe përmasave?</li><li>A merrni udhëzues për përdorimin e telekomandës në dorëzim?</li></ul>` },
+        { h: 'Çfarë të pyesni para porosisë', html: `<ul><li>A përshtatet grila me dritaren tuaj (PVC ose alumin)?</li><li>Cila ngjyrë përputhet me profilin e dritares ose derës?</li><li>Për grilat me motor: cili motor zgjidhet sipas peshës dhe përmasave?</li><li>A merrni udhëzues për përdorimin e telekomandës në dorëzim?</li></ul>` },
       ],
       faq: [
-        { q: 'A përshtaten grilat me dritaret ekzistuese?', a: 'Grilat përshtaten me dritaret uPVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike.' },
+        { q: 'A përshtaten grilat me dritaret ekzistuese?', a: 'Grilat përshtaten me dritaret PVC dhe alumini; përputhshmërinë e konfirmojmë gjatë vizitës teknike.' },
         { q: 'A merret udhëzues për telekomandën?', a: 'Po, për grilat me motor japim udhëzues përdorimi të telekomandës në dorëzim.' },
       ],
     },
@@ -245,7 +245,7 @@ export const posts = [
     },
   },
   {
-    id: 'window-installation-8-steps', image: 'aluminium', date: DATE, updated: DATE, products: ['upvc', 'aluminium', 'doors'],
+    id: 'window-installation-8-steps', image: 'aluminium', date: DATE, updated: '2026-11-02', products: ['upvc', 'aluminium', 'doors'],
     slug: { sq: 'montimi-i-dritareve-8-hapa', en: 'window-installation-8-steps' },
     sq: {
       title: 'Montimi i dritareve në 8 hapa: çfarë të kërkoni nga montuesi', metaTitle: 'Montimi i dritareve në 8 hapa | Apex Frames',

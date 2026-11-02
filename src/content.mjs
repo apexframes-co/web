@@ -26,9 +26,9 @@ export const sq = {
   altLabel: 'EN',
   altName: 'English',
   meta: {
-    title: 'Apex Frames | Dritare, Dyer & Fasada Alumini dhe uPVC në Tiranë',
+    title: 'Dritare, Dyer & Fasada PVC e Alumini në Tiranë | Apex Frames',
     description:
-      'Apex Frames furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe uPVC në Tiranë. Vizitë teknike, ofertë brenda 48 orëve, garanci 5 vjet për produktin.',
+      'Apex Frames furnizon dhe monton dritare, dyer dhe fasada premium alumini dhe PVC në Tiranë. Vizitë teknike, ofertë brenda 48 orëve, garanci 5 vjet për produktin.',
   },
   skip: 'Kalo te përmbajtja',
   nav: {
@@ -47,7 +47,7 @@ export const sq = {
     eyebrow: 'Sisteme dritaresh, dyersh & fasadash',
     title: 'Saktësi europiane për çdo <em>hapje</em>.',
     lead:
-      'Apex Frames furnizon dhe monton sisteme premium alumini dhe uPVC për dritare, dyer dhe fasada — duke bashkuar dizajnin, qëndrueshmërinë dhe efiçencën energjetike në çdo projekt.',
+      'Apex Frames furnizon dhe monton sisteme premium alumini dhe PVC për dritare, dyer dhe fasada — duke bashkuar dizajnin, qëndrueshmërinë dhe efiçencën energjetike në çdo projekt.',
     primary: 'Kërko ofertë',
     secondary: 'Shiko produktet',
     stats: [
@@ -91,7 +91,7 @@ export const sq = {
     eyebrow: 'Produktet',
     title: 'Gamë e plotë për çdo projekt.',
     lead:
-      'Nga dritarja e një apartamenti te fasada e një qendre tregtare — sisteme uPVC dhe alumini termik, xhama sipas porosisë dhe aksesorë që e plotësojnë zgjidhjen.',
+      'Nga dritarja e një apartamenti te fasada e një qendre tregtare — sisteme PVC dhe alumini termik, xhama sipas porosisë dhe aksesorë që e plotësojnë zgjidhjen.',
     more: 'Shiko detajet',
     less: 'Mbyll detajet',
     note:
@@ -99,8 +99,8 @@ export const sq = {
     items: [
       {
         icon: 'window',
-        title: 'Dritare & dyer uPVC',
-        text: 'Profile uPVC me përforcim çeliku për banesa, zyra dhe objekte komerciale.',
+        title: 'Dritare & dyer PVC',
+        text: 'Profile PVC me përforcim çeliku për banesa, zyra dhe objekte komerciale.',
         points: [
           'Hapje anash, anim-hapje, fikse dhe me disa krahë',
           'Forma speciale (me hark)',
@@ -271,8 +271,8 @@ export const sq = {
         a: 'Oferta e detajuar dërgohet brenda 48 orëve nga vizita teknike dhe vlen 30 ditë nga data e lëshimit.',
       },
       {
-        q: 'Cili është ndryshimi mes uPVC dhe aluminit?',
-        a: 'uPVC ofron izolim shumë të mirë termik me kosto më të ulët dhe është ideal për banesa. Alumini termik lejon profile më të holla, hapje më të mëdha dhe ngjyra RAL — i preferuar për fasada, dyer rrëshqitëse dhe objekte komerciale. Ju ndihmojmë të zgjidhni sipas objektit, buxhetit dhe dizajnit.',
+        q: 'Cili është ndryshimi mes PVC dhe aluminit?',
+        a: 'PVC ofron izolim shumë të mirë termik me kosto më të ulët dhe është ideal për banesa. Alumini termik lejon profile më të holla, hapje më të mëdha dhe ngjyra RAL — i preferuar për fasada, dyer rrëshqitëse dhe objekte komerciale. Ju ndihmojmë të zgjidhni sipas objektit, buxhetit dhe dizajnit.',
       },
       {
         q: 'Si funksionon pagesa?',
@@ -306,7 +306,7 @@ export const sq = {
       type: 'Lloji i klientit',
       types: ['Familje / individ', 'Kompani ndërtimi', 'Arkitekt / projektues', 'Zhvillues', 'Rishitës / montues', 'Tjetër'],
       interest: 'Interesohem për',
-      interests: ['Dritare uPVC', 'Dritare alumini', 'Dyer', 'Fasadë', 'Grila / rrjeta', 'Tjetër'],
+      interests: ['Dritare PVC', 'Dritare alumini', 'Dyer', 'Fasadë', 'Grila / rrjeta', 'Tjetër'],
       message: 'Përshkrim i shkurtër i projektit',
       messagePh: 'P.sh. apartament 3+1 në Tiranë, 8 dritare dhe 1 derë ballkoni...',
       consent:
@@ -319,7 +319,7 @@ export const sq = {
     },
   },
   footer: {
-    tagline: 'Sisteme premium alumini dhe uPVC për dritare, dyer dhe fasada.',
+    tagline: 'Sisteme premium alumini dhe PVC për dritare, dyer dhe fasada.',
     company: 'Kompania',
     legal: 'Ligjore',
     privacy: 'Politika e Privatësisë',
@@ -398,7 +398,7 @@ export const en = {
   altLabel: 'SQ',
   altName: 'Shqip',
   meta: {
-    title: 'Apex Frames | Aluminium & uPVC Windows and Doors in Tirana',
+    title: 'PVC & Aluminium Windows, Doors and Facades in Tirana | Apex Frames',
     description:
       'Apex Frames supplies and installs premium aluminium and uPVC windows, doors and facades in Tirana. Site survey, quote within 48 hours, 5-year product warranty.',
   },
